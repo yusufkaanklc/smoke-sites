@@ -1,0 +1,335 @@
+{
+  "slug": "mesafe",
+  "name": "Mesafe",
+  "theme": {
+    "preset": "yumusak",
+    "colors": {
+      "bg": "#F2EEE9",
+      "surface": "#FFFFFF",
+      "ink": "#1E1A2B",
+      "muted": "#5B5566",
+      "brand": "#3F2D6E",
+      "brandInk": "#FFFFFF",
+      "accent": "#9A4A12",
+      "line": "#E2DAD0",
+      "glow": "#F4B98A"
+    }
+  },
+  "seo": {
+    "title": "Mesafe – Ona yazmadan önce buraya yaz",
+    "description": "Ayrılıktan sonra eski sevgiliye yazma dürtüsü için Türkçe koç: sayaç, panik tuşu ve gönderilmeyen mesajlar kasası."
+  },
+  "header_cta": "Erken erişim",
+  "hero": {
+    "title": "Ona yazmadan önce buraya yaz",
+    "subtitle": "Gece 02.14'te telefonu eline aldığında Mesafe devreye girer: 90 saniyelik nefes, Türkçe konuşan bir koç ve göndermediğin mesajlar için bir kasa. Kaç gündür yazmadığını da o sayar.",
+    "cta": "Premium'u al",
+    "secondary": "Nasıl çalışır?",
+    "note": "iOS ve Android için geliştiriliyor."
+  },
+  "benefits_title": "{name} ne yapar?",
+  "benefits": [
+    {
+      "title": "Dürtü anında fren",
+      "text": "Panik tuşuna bas: 90 saniyelik nefes ve tek bir soru. Dürtü bir dalga gibi yükselip iner; Mesafe o birkaç dakikayı seninle geçirir.",
+      "scene": "panik"
+    },
+    {
+      "title": "Söyle ama gönderme",
+      "text": "Ona söylemek istediklerini kasaya yaz. Kimseye gitmez; istersen bir hafta sonra açıp yeniden okursun.",
+      "scene": "kasa"
+    },
+    {
+      "title": "Türkçe konuşan koç",
+      "text": "Gece de gündüz de yazabileceğin bir koç. Yumuşak mı net mi konuşacağını sen seçersin.",
+      "scene": "koc"
+    }
+  ],
+  "steps_title": "Nasıl çalışır?",
+  "steps": [
+    {
+      "title": "Başlat",
+      "text": "Son mesajlaşma tarihini gir, sayaç oradan saymaya başlasın."
+    },
+    {
+      "title": "Dürtü gelince bas",
+      "text": "Panik tuşu, nefes ve koç tek dokunuş uzakta."
+    },
+    {
+      "title": "Günleri biriktir",
+      "text": "Her sabah kısa bir kontrol, hafta sonunda ilerlemeni gör."
+    }
+  ],
+  "pricing": {
+    "title": "Fiyatlar",
+    "subtitle": "Sayaç ve panik tuşu ücretsiz olacak. Premium sınırsız koç sohbetini, kasayı ve programları açar.",
+    "currency": "₺",
+    "plans": [
+      {
+        "id": "aylik",
+        "name": "Aylık",
+        "price": 199,
+        "period": "ay",
+        "features": [
+          "Sınırsız koç sohbeti",
+          "Gönderilmeyenler kasası",
+          "Günlük kontrol ve ruh hali grafiği"
+        ],
+        "cta": "Aylık planı al"
+      },
+      {
+        "id": "yillik",
+        "name": "Yıllık",
+        "price": 1199,
+        "period": "yıl",
+        "badge": "En avantajlı",
+        "note": "Ayda yaklaşık ₺100'e denk gelir",
+        "features": [
+          "Aylık plandaki her şey",
+          "30, 60 ve 90 günlük programlar",
+          "Kilit ekranında sayaç"
+        ],
+        "cta": "Yıllık planı al"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "{name} ne zaman çıkacak?",
+      "a": "Şu an geliştiriliyor. E-posta bırakırsan çıktığı gün haber veririz."
+    },
+    {
+      "q": "Kasaya yazdıklarım birine gider mi?",
+      "a": "Hayır. Kasaya yazdıkların hiçbir kişiye gönderilmeyecek. Hesabını ve tüm kayıtlarını tek dokunuşla silebileceksin."
+    },
+    {
+      "q": "Terapinin yerine geçer mi?",
+      "a": "Hayır. {name} bir alışkanlık ve destek aracı olarak tasarlanıyor; psikolojik danışmanlığın yerine geçmez. Kendini çok kötü hissettiğin günlerde bir uzmana ya da güvendiğin birine ulaşmanı öneririz."
+    },
+    {
+      "q": "İptal edebilecek miyim?",
+      "a": "Abonelikler App Store ve Google Play üzerinden yönetilecek; istediğin zaman iptal edilebilecek."
+    }
+  ],
+  "bottom": {
+    "title": "Yazmak istediğin gece için bir fren",
+    "text": "Çıktığında ilk kullananlardan ol.",
+    "cta": "Premium'u al"
+  },
+  "modal": {
+    "early_offer": null
+  },
+  "legal": {
+    "controller": "Yusuf Kağan Kılıç",
+    "contact_email": "yusufkaankilic.yk@gmail.com",
+    "consent_version": "v1"
+  },
+  "ads": [
+    {
+      "id": "sorun",
+      "angle": "sorun",
+      "headline": "Gece 02.14. Mesaj yazıldı, gönder tuşu bekliyor.",
+      "sub": "Mesafe, göndermeden önce 90 saniye ister.",
+      "scene": "panik"
+    },
+    {
+      "id": "sonuc",
+      "angle": "sonuc",
+      "headline": "Yazmadığın her gün burada birikir",
+      "sub": "Sayaç, panik tuşu ve Türkçe koç tek uygulamada.",
+      "scene": "sayac"
+    },
+    {
+      "id": "fiyat",
+      "angle": "fiyat",
+      "headline": "Gece 3'te de cevap veren Türkçe koç",
+      "scene": "koc",
+      "show_price": true
+    }
+  ],
+  "demo": {
+    "floats": [
+      {
+        "icon": "flame",
+        "title": "12 gün",
+        "text": "Ona yazmadan"
+      },
+      {
+        "icon": "lock",
+        "title": "Kasada 7 mesaj",
+        "text": "Hiçbiri gönderilmedi"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "sayac",
+        "caption": "Sayaç",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Sayaç",
+            "title": "Ona yazmadığın süre"
+          },
+          {
+            "type": "ring",
+            "label": "Hedef: 30 gün",
+            "value": "12 gün",
+            "progress": 0.4
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "flame",
+                "title": "En uzun seri",
+                "meta": "Bugün yenilendi",
+                "value": "12 gün"
+              },
+              {
+                "icon": "award",
+                "title": "İlk hafta tamam",
+                "meta": "5 gün önce",
+                "value": "7/7"
+              }
+            ]
+          },
+          {
+            "type": "bars",
+            "label": "Yazma dürtüsü (bu hafta)",
+            "bars": [
+              {
+                "label": "Pt",
+                "value": 6
+              },
+              {
+                "label": "Sa",
+                "value": 5
+              },
+              {
+                "label": "Ça",
+                "value": 5
+              },
+              {
+                "label": "Pe",
+                "value": 3
+              },
+              {
+                "label": "Cu",
+                "value": 4
+              },
+              {
+                "label": "Ct",
+                "value": 2
+              },
+              {
+                "label": "Pz",
+                "value": 1
+              }
+            ],
+            "highlight": 6
+          }
+        ]
+      },
+      {
+        "id": "panik",
+        "caption": "Panik tuşu",
+        "blocks": [
+          {
+            "type": "toast",
+            "text": "02.14 · Önce 90 saniye",
+            "icon": "moon"
+          },
+          {
+            "type": "header",
+            "eyebrow": "Şu an",
+            "title": "Önce nefes al"
+          },
+          {
+            "type": "ring",
+            "label": "Nefes",
+            "value": "90 sn",
+            "progress": 1
+          },
+          {
+            "type": "button",
+            "text": "Dürtü geçti"
+          }
+        ]
+      },
+      {
+        "id": "kasa",
+        "caption": "Gönderilmeyenler",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Kasa",
+            "title": "Ona değil, buraya"
+          },
+          {
+            "type": "type",
+            "text": "Şarkımız çaldı, yazacaktım",
+            "placeholder": "Ona söylemek istediğin şey"
+          },
+          {
+            "type": "chips",
+            "items": [
+              "Özlem",
+              "Öfke",
+              "Merak"
+            ],
+            "active": 0
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "lock",
+                "title": "Kasaya kaydedildi",
+                "meta": "Kimseye gönderilmedi",
+                "new": true
+              },
+              {
+                "icon": "archive",
+                "title": "Geçen hafta",
+                "meta": "3 mesaj",
+                "value": "Aç"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "koc",
+        "caption": "Koç",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Koç · 02.20",
+            "title": "Konuşalım"
+          },
+          {
+            "type": "chat",
+            "messages": [
+              {
+                "from": "user",
+                "text": "Sadece nasıl olduğunu sorsam?"
+              },
+              {
+                "from": "app",
+                "text": "Cevap gelirse ne olmasını umuyorsun?"
+              },
+              {
+                "from": "user",
+                "text": "Bilmiyorum, barışmayı galiba"
+              },
+              {
+                "from": "app",
+                "text": "O zaman bu bir kapı aralama. Sabah hâlâ istersen birlikte düşünelim."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
