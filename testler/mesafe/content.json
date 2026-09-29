@@ -25,7 +25,13 @@
     "subtitle": "Gece 02.14'te telefonu eline aldığında Mesafe devreye girer: 90 saniyelik nefes, Türkçe konuşan bir koç ve göndermediğin mesajlar için bir kasa. Kaç gündür yazmadığını da o sayar.",
     "cta": "Premium'u al",
     "secondary": "Nasıl çalışır?",
-    "note": "iOS ve Android için geliştiriliyor."
+    "eyebrow": "Yakında · iOS ve Android",
+    "highlight": "buraya yaz",
+    "points": [
+      "Panik tuşu ücretsiz",
+      "Kasadaki mesajlar kimseye gitmez",
+      "Türkçe konuşan koç"
+    ]
   },
   "benefits_title": "{name} ne yapar?",
   "benefits": [
@@ -331,5 +337,188 @@
         ]
       }
     ]
-  }
+  },
+  "benefits_eyebrow": "Üç temel özellik",
+  "moments_label": "Yazma isteğinin geldiği anlar",
+  "moments": [
+    "Gece 02.14",
+    "Şarkınız çaldığında",
+    "Story'sini gördüğünde",
+    "Ortak arkadaşın düğününde",
+    "Doğum gününde",
+    "Eski fotoğraflar önüne düştüğünde",
+    "Yıl dönümünüzde",
+    "Pazar akşamı yalnızken"
+  ],
+  "statement": {
+    "eyebrow": "Neden Mesafe?",
+    "text": "Ayrılıktan sonra en zor an, mesajı yazıp *gönder tuşunun üstünde* beklediğin o birkaç saniye. Mesafe o saniyeleri uzatmak için tasarlanıyor: önce nefes, sonra koç, en son karar. *Karar yine senin.*"
+  },
+  "features_eyebrow": "İçinde neler var",
+  "features_title": "Zor anlar için küçük araçlar",
+  "features": [
+    {
+      "icon": "siren",
+      "title": "Panik tuşu",
+      "text": "Tek dokunuşla 90 saniyelik nefes akışı başlar. Ücretsiz sürümde de olacak.",
+      "blocks": [
+        {
+          "type": "ring",
+          "label": "Nefes al, ver",
+          "value": "90 sn",
+          "progress": 1
+        },
+        {
+          "type": "button",
+          "text": "Dürtü geçti"
+        }
+      ]
+    },
+    {
+      "icon": "flame",
+      "title": "Sayaç",
+      "text": "Son mesajdan bu yana geçen süre, gün ve saatle.",
+      "block": {
+        "type": "stat",
+        "label": "Ona yazmadan",
+        "value": "12 gün",
+        "progress": 0.4
+      }
+    },
+    {
+      "icon": "lock",
+      "title": "Gönderilmeyenler kasası",
+      "text": "Yazdıkların kasada kalır. Bir hafta sonra açıp yeniden okuyabilirsin.",
+      "blocks": [
+        {
+          "type": "type",
+          "text": "Sana yazacaktım ama",
+          "placeholder": "Ona söylemek istediğin şey"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "icon": "lock",
+              "title": "Kasaya kaydedildi",
+              "meta": "Kimseye gönderilmedi",
+              "new": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "message-circle",
+      "title": "Türkçe koç",
+      "text": "Yumuşak mı net mi konuşacağını sen seçersin. Gece de gündüz de yazabilirsin.",
+      "blocks": [
+        {
+          "type": "chips",
+          "items": [
+            "Yumuşak",
+            "Net"
+          ],
+          "active": 0
+        },
+        {
+          "type": "chat",
+          "messages": [
+            {
+              "from": "user",
+              "text": "Yine yazmak istiyorum"
+            },
+            {
+              "from": "app",
+              "text": "Anlat, önce burada konuşalım."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "chart-no-axes-column",
+      "title": "Dürtü grafiği",
+      "text": "Hangi gün ve saatlerde zorlandığını görür, o anlara hazırlıklı girersin.",
+      "block": {
+        "type": "bars",
+        "label": "Yazma dürtüsü (bu hafta)",
+        "bars": [
+          {
+            "label": "Pt",
+            "value": 6
+          },
+          {
+            "label": "Sa",
+            "value": 5
+          },
+          {
+            "label": "Ça",
+            "value": 5
+          },
+          {
+            "label": "Pe",
+            "value": 3
+          },
+          {
+            "label": "Cu",
+            "value": 4
+          },
+          {
+            "label": "Ct",
+            "value": 2
+          },
+          {
+            "label": "Pz",
+            "value": 1
+          }
+        ],
+        "highlight": 6
+      }
+    },
+    {
+      "icon": "smartphone",
+      "title": "Kilit ekranında sayaç",
+      "text": "Telefonu her açtığında kaç gündür yazmadığını görürsün."
+    }
+  ],
+  "compare": {
+    "eyebrow": "Fark",
+    "title": "Aynı gece, iki farklı sabah",
+    "without": {
+      "label": "Mesafe olmadan",
+      "items": [
+        "Mesaj 02.14'te gider",
+        "Cevap beklerken uykusuz bir gece",
+        "Sabah pişmanlık ve baştan başlamak"
+      ]
+    },
+    "with": {
+      "label": "Mesafe ile",
+      "items": [
+        "Panik tuşu ve 90 saniyelik nefes",
+        "Söylemek istediklerin kasaya yazılır",
+        "Sabah sayaç bir gün daha ileride"
+      ]
+    }
+  },
+  "facts_label": "Kısaca Mesafe",
+  "facts": [
+    {
+      "value": "90 sn",
+      "label": "Panik tuşunun nefes akışı"
+    },
+    {
+      "value": "7/24",
+      "label": "Koça yazabileceğin saatler"
+    },
+    {
+      "value": "0",
+      "label": "Kasadan birine giden mesaj"
+    },
+    {
+      "value": "1 dk",
+      "label": "Sabah kontrolünün süresi"
+    }
+  ]
 }

@@ -204,11 +204,13 @@
     var split = SplitText.create(".hero-title", { type: "lines", mask: "lines", linesClass: "line" });
     if (shape) G.set(shape, { xPercent: -50, yPercent: -50, x: 0, y: 0 });
     var tl = G.timeline({ defaults: { ease: "expo.out" } });
-    tl.set([".hero-title", ".lead", ".hero-actions", ".hero-note", ".phone-wrap", ".stage-shape", ".stage-orbit", ".float"], { visibility: "visible" })
-      .from(split.lines, { yPercent: 108, duration: 1.15, stagger: 0.085 })
+    tl.set([".hero-title", ".lead", ".hero-actions", ".hero-note", ".phone-wrap", ".stage-shape", ".stage-orbit", ".float", ".hero-copy .hero-pill", ".hero-points"], { visibility: "visible" })
+      .from(".hero-copy .hero-pill", { y: 14, autoAlpha: 0, scale: 0.94, duration: 0.9 }, 0)
+      .from(split.lines, { yPercent: 108, duration: 1.15, stagger: 0.085 }, 0.08)
       .from(".lead", { y: 20, autoAlpha: 0, duration: 1 }, 0.3)
       .from(".hero-actions > *", { y: 18, autoAlpha: 0, duration: 0.9, stagger: 0.08 }, 0.45)
-      .from(".hero-note", { autoAlpha: 0, duration: 0.8 }, 0.65)
+      .from(".hero-points li", { y: 12, autoAlpha: 0, duration: 0.7, stagger: 0.07 }, 0.6)
+      .from(".hero-note", { autoAlpha: 0, duration: 0.8 }, 0.75)
       .from(".stage-shape", { scale: 0.4, autoAlpha: 0, duration: 1.5, ease: "expo.out" }, 0.05)
       .from(".stage-orbit", { scale: 0.7, autoAlpha: 0, duration: 1.6, ease: "expo.out" }, 0.2)
       .from(phone, { y: 140, rotationX: 28, rotation: 9, autoAlpha: 0, duration: 1.4, ease: "smk-spring" }, 0.15)
@@ -219,6 +221,9 @@
       tl.from(f, { x: dir * 70, y: dir * 30, scale: 0.55, autoAlpha: 0, duration: 1.1, ease: "smk-spring" }, 1.05 + i * 0.16);
       G.to(f, { yPercent: dir * 9, duration: 2.8 + i * 0.6, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 2.2 + i * 0.5 });
     });
+    // highlighter sweeps under the key phrase once the line has landed
+    var hls = qsa(".hero-title .hl");
+    if (hls.length) tl.fromTo(hls, { backgroundSize: "0% 0.3em" }, { backgroundSize: "100% 0.3em", duration: 0.9, stagger: 0.12, ease: "power3.inOut" }, 0.95);
     tl.add(function () { split.revert(); });
     demo.show(0, { force: true, delay: 0.9 });
     root.classList.remove("motion");
@@ -231,6 +236,79 @@
       G.from(s.words, { yPercent: 110, duration: 1, stagger: 0.05, ease: "expo.out",
         scrollTrigger: { trigger: h, start: "top 86%", once: true }, onComplete: function () { s.revert(); } });
     });
+
+    // reading progress
+    var prog = qs(".progress i");
+    if (prog) G.to(prog, { scaleX: 1, ease: "none", scrollTrigger: { start: 0, end: "max", scrub: 0.3 } });
+
+    // hero backdrop drifts slower than the page
+    if (qs(".stage-bg")) G.to(".stage-bg", { yPercent: 16, ease: "none", scrollTrigger: { trigger: ".stage", start: "top top", end: "bottom top", scrub: true } });
+
+    // moments: endless tapes; scrolling speeds them up, then they settle back
+    var mqs = qsa(".mq");
+    if (mqs.length) {
+      var loops = mqs.map(function (row) {
+        var track = qs(".mq-track", row), rev = row.classList.contains("mq--b");
+        var dur = Math.max(18, track.scrollWidth / 2 / 55);
+        return G.fromTo(track, { xPercent: rev ? -50 : 0 }, { xPercent: rev ? 0 : -50, duration: dur, ease: "none", repeat: -1 });
+      });
+      var settle = null;
+      ScrollTrigger.create({ trigger: ".moments", start: "top bottom", end: "bottom top",
+        onToggle: function (self) { loops.forEach(function (l) { if (self.isActive) l.play(); else l.pause(); }); },
+        onUpdate: function (self) {
+          var boost = 1 + Math.min(Math.abs(self.getVelocity()) / 320, 5);
+          loops.forEach(function (l) { G.to(l, { timeScale: boost, duration: 0.2, overwrite: true }); });
+          if (settle) settle.kill();
+          settle = G.delayedCall(0.18, function () { loops.forEach(function (l) { G.to(l, { timeScale: 1, duration: 1.4, ease: "power2.out", overwrite: true }); }); });
+        } });
+      G.fromTo(".mq--a", { rotation: -4.2, xPercent: -2 }, { rotation: -1.4, xPercent: 2, ease: "none", scrollTrigger: { trigger: ".moments", start: "top bottom", end: "bottom top", scrub: 0.6 } });
+      G.fromTo(".mq--b", { rotation: 3.4, xPercent: 2 }, { rotation: 0.8, xPercent: -2, ease: "none", scrollTrigger: { trigger: ".moments", start: "top bottom", end: "bottom top", scrub: 0.6 } });
+    }
+
+    // statement lights up word by word while it scrolls through the viewport
+    var stx = qs(".statement-text");
+    if (stx) {
+      var sw = SplitText.create(stx, { type: "words" });
+      G.fromTo(sw.words, { opacity: 0.13 }, { opacity: 1, stagger: 0.1, ease: "none",
+        scrollTrigger: { trigger: stx, start: "top 80%", end: "bottom 42%", scrub: 0.5 } });
+      if (qs(".statement .eyebrow")) G.from(".statement .eyebrow", { x: -20, autoAlpha: 0, duration: 0.8, ease: "expo.out", scrollTrigger: { trigger: ".statement", start: "top 85%", once: true } });
+    }
+
+    // features: cards rise in row order, their mini screens play; hover replays them
+    qsa(".bento-card").forEach(function (card, i) {
+      var scr = qs(".bento-screen", card), at = (i % 3) * 0.09;
+      var btl = G.timeline({ scrollTrigger: { trigger: card, start: "top 86%", once: true } });
+      btl.from(card, { y: 70, autoAlpha: 0, scale: 0.96, duration: 1.1, ease: "expo.out" }, at)
+        .from(qs(".bento-ic", card), { scale: 0.3, rotation: -25, duration: 0.9, ease: "smk-spring" }, at + 0.15)
+        .from(qsa(".bento-copy > h3, .bento-copy > p", card), { y: 16, autoAlpha: 0, duration: 0.7, stagger: 0.06, ease: "expo.out" }, at + 0.2);
+      if (scr) {
+        var live = null;
+        btl.add(function () { live = runScene(scr); }, at + 0.45);
+        card.addEventListener("mouseenter", function () { if (live && !live.isActive()) live = runScene(scr); });
+      }
+    });
+
+    // compare: the two cards slide in from their sides, items follow
+    if (qs(".cmp")) {
+      G.timeline({ scrollTrigger: { trigger: ".cmp", start: "top 80%", once: true } })
+        .from(".cmp-card--without", { x: -50, autoAlpha: 0, duration: 1.05, ease: "expo.out" })
+        .from(".cmp-card--with", { x: 50, autoAlpha: 0, duration: 1.05, ease: "expo.out" }, 0.12)
+        .from(".cmp-card--without li", { y: 14, autoAlpha: 0, duration: 0.6, stagger: 0.08, ease: "expo.out" }, 0.35)
+        .from(".cmp-card--with li", { y: 14, autoAlpha: 0, duration: 0.6, stagger: 0.1, ease: "expo.out" }, 0.6)
+        .from(".cmp-card--with .cmp-ic", { scale: 0, rotation: -40, duration: 0.7, stagger: 0.1, ease: "smk-spring" }, 0.66);
+    }
+
+    // facts: rise and count
+    var facts = qsa(".fact");
+    if (facts.length) {
+      var ftl = G.timeline({ scrollTrigger: { trigger: ".facts-grid", start: "top 84%", once: true } });
+      facts.forEach(function (f, i) {
+        ftl.from(f, { y: 36, autoAlpha: 0, duration: 1, ease: "expo.out" }, i * 0.1)
+          .fromTo(f, { borderTopColor: "rgba(0,0,0,0)" }, { borderTopColor: cssVar("--ink"), duration: 0.8, ease: "power2.out" }, i * 0.1 + 0.1);
+        var dd = qs("dd", f);
+        if (dd.hasAttribute("data-count")) countUp(ftl, dd, i * 0.1 + 0.15, 1.4);
+      });
+    }
 
     // steps: line draws with scroll, nodes pop as it reaches them
     var list = qs(".steps-list");
@@ -346,6 +424,11 @@
     });
 
     mm.add("(hover: hover) and (pointer: fine)", function () {
+      var spots = qsa(".bento-card").map(function (card) {
+        var move = function (e) { var r = card.getBoundingClientRect(); card.style.setProperty("--mx", (e.clientX - r.left) + "px"); card.style.setProperty("--my", (e.clientY - r.top) + "px"); };
+        card.addEventListener("pointermove", move, { passive: true });
+        return function () { card.removeEventListener("pointermove", move); };
+      });
       var rx = G.quickTo(phone, "rotationX", { duration: 0.9, ease: "power3" });
       var ry = G.quickTo(phone, "rotationY", { duration: 0.9, ease: "power3" });
       var onMove = function (e) {
@@ -368,7 +451,7 @@
         addEventListener("pointermove", move, { passive: true });
         return move;
       });
-      return function () { removeEventListener("pointermove", onMove); mags.forEach(function (m) { removeEventListener("pointermove", m); }); G.set(phone, { rotationX: 0, rotationY: 0 }); };
+      return function () { removeEventListener("pointermove", onMove); mags.forEach(function (m) { removeEventListener("pointermove", m); }); spots.forEach(function (off) { off(); }); G.set(phone, { rotationX: 0, rotationY: 0 }); };
     });
   }
 
