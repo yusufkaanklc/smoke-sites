@@ -204,17 +204,19 @@
     var split = SplitText.create(".hero-title", { type: "lines", mask: "lines", linesClass: "line" });
     if (shape) G.set(shape, { xPercent: -50, yPercent: -50, x: 0, y: 0 });
     var tl = G.timeline({ defaults: { ease: "expo.out" } });
-    tl.set([".hero-title", ".lead", ".hero-actions", ".hero-note", ".phone-wrap", ".stage-shape", ".stage-orbit", ".float", ".hero-copy .hero-pill", ".hero-points"], { visibility: "visible" })
-      .from(".hero-copy .hero-pill", { y: 14, autoAlpha: 0, scale: 0.94, duration: 0.9 }, 0)
+    var has = function (s) { return !!qs(s); }; // optional hero parts are skipped quietly
+    tl.set([".hero-title", ".lead", ".hero-actions", ".hero-note", ".phone-wrap", ".stage-shape", ".stage-orbit", ".float", ".hero-copy .hero-pill", ".hero-points"].filter(has), { visibility: "visible" });
+    if (has(".hero-copy .hero-pill")) tl.from(".hero-copy .hero-pill", { y: 14, autoAlpha: 0, scale: 0.94, duration: 0.9 }, 0);
+    tl
       .from(split.lines, { yPercent: 108, duration: 1.15, stagger: 0.085 }, 0.08)
       .from(".lead", { y: 20, autoAlpha: 0, duration: 1 }, 0.3)
       .from(".hero-actions > *", { y: 18, autoAlpha: 0, duration: 0.9, stagger: 0.08 }, 0.45)
-      .from(".hero-points li", { y: 12, autoAlpha: 0, duration: 0.7, stagger: 0.07 }, 0.6)
-      .from(".hero-note", { autoAlpha: 0, duration: 0.8 }, 0.75)
       .from(".stage-shape", { scale: 0.4, autoAlpha: 0, duration: 1.5, ease: "expo.out" }, 0.05)
       .from(".stage-orbit", { scale: 0.7, autoAlpha: 0, duration: 1.6, ease: "expo.out" }, 0.2)
       .from(phone, { y: 140, rotationX: 28, rotation: 9, autoAlpha: 0, duration: 1.4, ease: "smk-spring" }, 0.15)
       .from(".ph-caption", { y: 14, autoAlpha: 0, duration: 0.6 }, 0.95);
+    if (has(".hero-points")) tl.from(".hero-points li", { y: 12, autoAlpha: 0, duration: 0.7, stagger: 0.07 }, 0.6);
+    if (has(".hero-note")) tl.from(".hero-note", { autoAlpha: 0, duration: 0.8 }, 0.75);
     // UI cards pop out of the phone once it has landed, then drift gently
     qsa(".float").forEach(function (f, i) {
       var dir = f.classList.contains("float--1") ? 1 : -1;
