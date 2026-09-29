@@ -1,0 +1,301 @@
+{
+  "slug": "kontrol",
+  "name": "Harcadım",
+  "theme": {
+    "preset": "net"
+  },
+  "seo": {
+    "title": "Kontrol sayfası – Harcadım (örnek)",
+    "description": "Sesle harcama kaydı ve aylık bütçe takibi."
+  },
+  "header_cta": "Erken erişim",
+  "hero": {
+    "title": "Harcamanı söyle, bütçen kendini tutsun",
+    "subtitle": "“Markete 340 lira” demen yeterli. Harcadım kaydı kategoriye ayırır, ay sonu nereye gittiğini tek ekranda gösterir.",
+    "cta": "Premium'u al",
+    "secondary": "Nasıl çalışır?",
+    "note": "iOS ve Android için geliştiriliyor."
+  },
+  "benefits_title": "Harcadım ne yapar?",
+  "benefits": [
+    {
+      "title": "Üç saniyede kayıt",
+      "text": "Tuşa basılı tut, tutarı ve yeri söyle. Yazmak ve kategori seçmek yok.",
+      "scene": "sesle-kayit"
+    },
+    {
+      "title": "Ay sonu sürprizi yok",
+      "text": "Bir kategoride bütçene yaklaştığında haber verir, paranın hangi gün nereye gittiğini gösterir.",
+      "scene": "uyari"
+    },
+    {
+      "title": "Günlük Türkçeyi anlar",
+      "text": "“Dün akşam dışarıda yemek, iki yüz elli” gibi cümleleri doğru tarih ve kategoriyle kaydeder.",
+      "scene": "anlar"
+    }
+  ],
+  "steps_title": "Nasıl çalışır?",
+  "steps": [
+    {
+      "title": "Söyle",
+      "text": "Harcamanı konuşarak ekle."
+    },
+    {
+      "title": "Onayla",
+      "text": "Tutar ve kategoriyi tek dokunuşla doğrula."
+    },
+    {
+      "title": "Gör",
+      "text": "Aylık tabloya ve bütçe uyarılarına bak."
+    }
+  ],
+  "pricing": {
+    "title": "Fiyatlar",
+    "subtitle": "Temel kayıt ücretsiz olacak. Premium sınırsız sesli kayıt ve bütçe uyarıları içerir.",
+    "currency": "₺",
+    "plans": [
+      {
+        "id": "aylik",
+        "name": "Aylık",
+        "price": 79,
+        "period": "ay",
+        "features": [
+          "Sınırsız sesli kayıt",
+          "Bütçe uyarıları",
+          "Aylık rapor"
+        ],
+        "cta": "Aylık planı al"
+      },
+      {
+        "id": "yillik",
+        "name": "Yıllık",
+        "price": 599,
+        "period": "yıl",
+        "badge": "En avantajlı",
+        "note": "Ayda ₺50'ye denk gelir",
+        "features": [
+          "Aylık plandaki her şey",
+          "Excel'e aktarma",
+          "Ortak bütçe (2 kişi)"
+        ],
+        "cta": "Yıllık planı al"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "{name} ne zaman çıkacak?",
+      "a": "Şu an geliştiriliyor. E-posta bırakırsan çıktığı gün haber veririz."
+    },
+    {
+      "q": "Ses kayıtlarım saklanıyor mu?",
+      "a": "Planlanan sürümde ses, harcamaya dönüştürüldükten sonra silinecek; yalnızca metin kaydı tutulacak."
+    },
+    {
+      "q": "Banka hesabımı bağlamam gerekecek mi?",
+      "a": "Hayır. {name} banka bağlantısı istemeden çalışacak şekilde tasarlanıyor."
+    },
+    {
+      "q": "İptal edebilecek miyim?",
+      "a": "Abonelikler App Store ve Google Play üzerinden yönetilecek; istediğin zaman iptal edilebilecek."
+    }
+  ],
+  "bottom": {
+    "title": "Harcamalarını konuşarak takip et",
+    "text": "Çıktığında ilk kullananlardan ol.",
+    "cta": "Premium'u al"
+  },
+  "modal": {
+    "early_offer": null
+  },
+  "legal": {
+    "controller": "Yusuf Kağan Kılıç",
+    "contact_email": "iletisim@ornek.com",
+    "consent_version": "v1"
+  },
+  "ads": [
+    {
+      "id": "sorun",
+      "angle": "sorun",
+      "headline": "Ay sonu “para nereye gitti?” demekten yoruldun mu?",
+      "sub": "Harcadım, harcamanı söylediğin an kaydeder.",
+      "scene": "uyari"
+    },
+    {
+      "id": "sonuc",
+      "angle": "sonuc",
+      "headline": "Harcamanı söyle, bütçen kendini tutsun",
+      "sub": "Yazmak yok, kategori seçmek yok.",
+      "scene": "sesle-kayit"
+    },
+    {
+      "id": "fiyat",
+      "angle": "fiyat",
+      "headline": "Sesle bütçe takibi, bir kahve fiyatına",
+      "scene": "butce",
+      "show_price": true
+    }
+  ],
+  "demo": {
+    "scenes": [
+      {
+        "id": "sesle-kayit",
+        "caption": "Sesle kayıt",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Bugün",
+            "title": "Ne harcadın?"
+          },
+          {
+            "type": "voice",
+            "transcript": "Markete 340 lira",
+            "prompt": "Basılı tut ve söyle"
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "🛒",
+                "title": "Market",
+                "meta": "Az önce, sesle eklendi",
+                "value": "₺340",
+                "new": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "butce",
+        "caption": "Aylık bütçe",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Eylül",
+            "title": "Bu ay"
+          },
+          {
+            "type": "stat",
+            "label": "Bütçeden kalan",
+            "value": "₺4.180",
+            "progress": 0.62
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "🛒",
+                "title": "Market",
+                "meta": "14 kayıt",
+                "value": "₺2.140"
+              },
+              {
+                "icon": "☕",
+                "title": "Kafe",
+                "meta": "9 kayıt",
+                "value": "₺860"
+              },
+              {
+                "icon": "🚌",
+                "title": "Ulaşım",
+                "meta": "22 kayıt",
+                "value": "₺1.250"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "uyari",
+        "caption": "Bütçe uyarısı",
+        "blocks": [
+          {
+            "type": "toast",
+            "text": "Kafe bütçenin %85'ini kullandın",
+            "icon": "bell"
+          },
+          {
+            "type": "header",
+            "eyebrow": "Son 7 gün",
+            "title": "Nereye gitti?"
+          },
+          {
+            "type": "bars",
+            "label": "Günlük harcama (₺)",
+            "bars": [
+              {
+                "label": "Pt",
+                "value": 220
+              },
+              {
+                "label": "Sa",
+                "value": 140
+              },
+              {
+                "label": "Ça",
+                "value": 380
+              },
+              {
+                "label": "Pe",
+                "value": 90
+              },
+              {
+                "label": "Cu",
+                "value": 460
+              },
+              {
+                "label": "Ct",
+                "value": 310
+              },
+              {
+                "label": "Pz",
+                "value": 170
+              }
+            ],
+            "highlight": 4
+          },
+          {
+            "type": "chips",
+            "items": [
+              "Market",
+              "Kafe",
+              "Ulaşım",
+              "Fatura"
+            ],
+            "active": 1
+          }
+        ]
+      },
+      {
+        "id": "anlar",
+        "caption": "Günlük Türkçe",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Yeni kayıt",
+            "title": "Yaz ya da söyle"
+          },
+          {
+            "type": "type",
+            "text": "dün akşam dışarıda yemek 250",
+            "placeholder": "Harcamanı yaz"
+          },
+          {
+            "type": "chat",
+            "messages": [
+              {
+                "from": "app",
+                "text": "Restoran, ₺250, dün 20:00 olarak ekliyorum. Doğru mu?"
+              },
+              {
+                "from": "user",
+                "text": "Evet, doğru"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
