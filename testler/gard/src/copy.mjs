@@ -93,7 +93,7 @@ export const TR = {
     html: `<h1>KVKK aydınlatma metni</h1>
   <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 10. maddesi kapsamında, Gard ön tanıtım sayfasında işlenen kişisel veriler hakkında seni bilgilendirmek için hazırlandı.</p>
   <h2>Veri sorumlusu</h2>
-  <p>Yusuf Kağan Kılıç<br>İletişim: <a href="mailto:yusufkaankilic.yk@gmail.com">yusufkaankilic.yk@gmail.com</a></p>
+  <p>Yusuf Kağan Kılıç<br>İletişim: <a href="mailto:support@yusufkaanklc.dev">support@yusufkaanklc.dev</a></p>
   <h2>Hangi verileri işliyoruz?</h2>
   <ul>
     <li><strong>E-posta adresin ve seçtiğin plan:</strong> yalnızca formu doldurup onay verirsen.</li>
@@ -104,7 +104,7 @@ export const TR = {
   <h2>Saklama ve aktarım</h2>
   <p>Veriler veri sorumlusunun kontrolündeki sunucuda saklanır ve üçüncü kişilerle paylaşılmaz, satılmaz. Site Cloudflare altyapısı üzerinden sunulduğu için bağlantı sırasında IP adresin teknik olarak Cloudflare tarafından işlenebilir. E-posta adresin ürün yayına çıktığında yapılacak bilgilendirmeden sonra, ürün yayına çıkmazsa en geç 12 ay içinde silinir.</p>
   <h2>Hakların</h2>
-  <p>KVKK'nın 11. maddesi uyarınca verilerinin işlenip işlenmediğini öğrenme, düzeltilmesini veya silinmesini isteme ve rızanı geri alma hakların var. Bunun için <a href="mailto:yusufkaankilic.yk@gmail.com">yusufkaankilic.yk@gmail.com</a> adresine yazman yeterli; talebini en geç 30 gün içinde sonuçlandırırız.</p>
+  <p>KVKK'nın 11. maddesi uyarınca verilerinin işlenip işlenmediğini öğrenme, düzeltilmesini veya silinmesini isteme ve rızanı geri alma hakların var. Bunun için <a href="mailto:support@yusufkaanklc.dev">support@yusufkaanklc.dev</a> adresine yazman yeterli; talebini en geç 30 gün içinde sonuçlandırırız.</p>
   <p class="legal-meta">Sürüm: v1</p>`,
   },
 };
@@ -201,7 +201,7 @@ export const EN = {
     html: `<h1>Privacy notice</h1>
   <p>This notice explains what personal data is processed on the Guard pre-launch page, as required by the EU General Data Protection Regulation (GDPR) and similar laws.</p>
   <h2>Data controller</h2>
-  <p>Yusuf Kağan Kılıç<br>Contact: <a href="mailto:yusufkaankilic.yk@gmail.com">yusufkaankilic.yk@gmail.com</a></p>
+  <p>Yusuf Kağan Kılıç<br>Contact: <a href="mailto:support@yusufkaanklc.dev">support@yusufkaanklc.dev</a></p>
   <h2>What data we process</h2>
   <ul>
     <li><strong>Your email address and the plan you chose:</strong> only if you fill in the form and give your consent.</li>
@@ -212,7 +212,7 @@ export const EN = {
   <h2>Storage and sharing</h2>
   <p>Data is stored on a server under the controller's control and is not shared with third parties or sold. Because the site is served through Cloudflare, your IP address may be processed technically by Cloudflare while you connect. Your email address is deleted after the launch announcement, or within 12 months at the latest if the product does not launch.</p>
   <h2>Your rights</h2>
-  <p>You can ask whether your data is processed, request access, correction or deletion, object to processing, withdraw your consent at any time and lodge a complaint with your data protection authority. Write to <a href="mailto:yusufkaankilic.yk@gmail.com">yusufkaankilic.yk@gmail.com</a>; we respond within 30 days.</p>
+  <p>You can ask whether your data is processed, request access, correction or deletion, object to processing, withdraw your consent at any time and lodge a complaint with your data protection authority. Write to <a href="mailto:support@yusufkaanklc.dev">support@yusufkaanklc.dev</a>; we respond within 30 days.</p>
   <p class="legal-meta">Version: v1-en</p>`,
   },
 };
