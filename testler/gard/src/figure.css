@@ -1,0 +1,20 @@
+/* Gard figure: pose skeleton + live annotations. Colors come from --fg / --dim / --hot on the host. */
+.gf-chin{stroke:var(--dim);stroke-width:1.5;fill:none}
+.gf-chin.is-hot{stroke:var(--hot)}
+.gf-tag{fill:var(--dim);font:800 12px/1 Archivo,sans-serif;letter-spacing:.14em}
+.gf-floor{stroke:var(--dim);stroke-width:1.5;opacity:.55}
+.gf-bone{stroke:var(--fg);stroke-width:4;stroke-linecap:round;fill:none}
+.gf-rear .gf-bone{stroke:var(--dim)}
+.gf-head{fill:var(--bg);stroke:var(--fg);stroke-width:4}
+.gf-joint{fill:var(--bg);stroke:var(--fg);stroke-width:2.5}
+.gf-fist{fill:var(--bg);stroke:var(--fg);stroke-width:5}
+.gf-fist--rear{stroke:var(--dim)}
+.gf-fist--rear.is-hot{stroke:var(--hot);fill:var(--hot)}
+.gf-ghost{fill:none;stroke:var(--fg);stroke-width:2;stroke-dasharray:4 5;opacity:0}
+.gf-ring{fill:none;stroke:var(--hot);stroke-width:2.5;opacity:0}
+.gf-lead{fill:none;stroke:var(--hot);stroke-width:2;opacity:0}
+.gf-flaglbl{fill:var(--hot);font:800 12px/1 Archivo,sans-serif;letter-spacing:.14em;text-anchor:end;opacity:0}
+.gf-flag{fill:var(--hot);font:900 27px/1 Archivo,sans-serif;text-anchor:end;opacity:0}
+.gf-flagsub{fill:var(--fg);font:700 14px/1 Figtree,sans-serif;text-anchor:end;opacity:0}
+.gf-ok{fill:var(--fg);font:900 21px/1 Archivo,sans-serif;opacity:0}
+.gf-okmark{fill:none;stroke:var(--hot);stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;opacity:0}
