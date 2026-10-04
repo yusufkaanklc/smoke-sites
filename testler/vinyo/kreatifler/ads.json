@@ -1,0 +1,62 @@
+[
+  {
+    "file": "ad-sorun-story.html",
+    "id": "sorun",
+    "angle": "sorun",
+    "format": "story",
+    "scene": "sinir",
+    "headline": "Avusturya sınırına 40 km kaldı, vinyet yok",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-sorun-square.html",
+    "id": "sorun",
+    "angle": "sorun",
+    "format": "square",
+    "scene": "sinir",
+    "headline": "Avusturya sınırına 40 km kaldı, vinyet yok",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-sonuc-story.html",
+    "id": "sonuc",
+    "angle": "sonuc",
+    "format": "story",
+    "scene": "rota",
+    "headline": "Münih–Budapeşte: 2 vinyet, toplam €25,80",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-sonuc-square.html",
+    "id": "sonuc",
+    "angle": "sonuc",
+    "format": "square",
+    "scene": "rota",
+    "headline": "Münih–Budapeşte: 2 vinyet, toplam €25,80",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-fiyat-story.html",
+    "id": "fiyat",
+    "angle": "fiyat",
+    "format": "story",
+    "scene": "maliyet",
+    "headline": "Tüm rotaların vinyet planı ayda ₺49",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-fiyat-square.html",
+    "id": "fiyat",
+    "angle": "fiyat",
+    "format": "square",
+    "scene": "maliyet",
+    "headline": "Tüm rotaların vinyet planı ayda ₺49",
+    "w": 540,
+    "h": 540
+  }
+]

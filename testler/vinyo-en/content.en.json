@@ -1,0 +1,424 @@
+{
+  "lang": "en",
+  "slug": "vinyo-en",
+  "name": "Vinyo",
+  "theme": {
+    "preset": "net"
+  },
+  "seo": {
+    "title": "Vinyo: which European vignettes your route needs, and the cost",
+    "description": "Enter your route and see which countries need a vignette or toll, the total cost, and when to buy. Coming soon: join the early access list."
+  },
+  "header_cta": "Early access",
+  "hero": {
+    "eyebrow": "Coming soon · iOS and Android",
+    "title": "Your road trip's vignettes, planned on one screen",
+    "highlight": "planned on one screen",
+    "subtitle": "Type in your route and see which countries need a vignette, what it all costs, and when to buy. Vinyo doesn't sell vignettes; it builds the plan.",
+    "points": [
+      "Countries and prices on your route",
+      "Total vignette cost",
+      "Reminder before each border"
+    ],
+    "cta": "Get early access",
+    "secondary": "How it works",
+    "note": "In development for iOS and Android."
+  },
+  "demo": {
+    "floats": [
+      {
+        "icon": "bell",
+        "title": "Border in 25 mi",
+        "text": "Buy your vignette"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "route",
+        "caption": "Route plan",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Munich → Budapest",
+            "title": "Countries needing a vignette"
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "map-pin",
+                "title": "Austria",
+                "meta": "10-day",
+                "value": "€12.80"
+              },
+              {
+                "icon": "map-pin",
+                "title": "Hungary",
+                "meta": "10-day",
+                "value": "€13.00"
+              }
+            ]
+          },
+          {
+            "type": "stat",
+            "label": "Total vignettes",
+            "value": "€25.80",
+            "progress": 0.5
+          }
+        ]
+      },
+      {
+        "id": "border",
+        "caption": "Border reminder",
+        "blocks": [
+          {
+            "type": "toast",
+            "text": "Austria in 25 mi: buy your vignette",
+            "icon": "bell"
+          },
+          {
+            "type": "header",
+            "eyebrow": "On the road",
+            "title": "Next border"
+          },
+          {
+            "type": "ring",
+            "label": "Austrian border",
+            "value": "25 mi",
+            "progress": 0.8
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "map-pin",
+                "title": "Austria",
+                "meta": "10-day",
+                "value": "€12.80"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "plate",
+        "caption": "Plate-linked vignette",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Your car",
+            "title": "Plate and dates"
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "car",
+                "title": "ABC 1234",
+                "meta": "Hungary e-vignette",
+                "value": "10 days"
+              },
+              {
+                "icon": "calendar-check",
+                "title": "Starts",
+                "meta": "Aug 12",
+                "value": "Saved"
+              }
+            ]
+          },
+          {
+            "type": "chips",
+            "items": [
+              "Austria",
+              "Hungary",
+              "Slovenia"
+            ],
+            "active": 1
+          }
+        ]
+      },
+      {
+        "id": "cost",
+        "caption": "Cost by country",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Road costs",
+            "title": "Vignette compared"
+          },
+          {
+            "type": "bars",
+            "label": "10-day vignette (€)",
+            "bars": [
+              {
+                "label": "Czechia",
+                "value": 12
+              },
+              {
+                "label": "Austria",
+                "value": 13
+              },
+              {
+                "label": "Hungary",
+                "value": 13
+              },
+              {
+                "label": "Slovenia",
+                "value": 15
+              }
+            ],
+            "highlight": 3
+          },
+          {
+            "type": "stat",
+            "label": "Munich → Budapest",
+            "value": "€25.80",
+            "progress": 0.5
+          }
+        ]
+      }
+    ]
+  },
+  "benefits_eyebrow": "Three things it does",
+  "benefits_title": "What {name} does",
+  "benefits": [
+    {
+      "title": "Lists the vignettes on your route",
+      "text": "Enter where you start and where you end. See which countries need a vignette and what each costs.",
+      "scene": "route"
+    },
+    {
+      "title": "Reminds you before the border",
+      "text": "A notification arrives before you enter a country that needs one, with a tap to the official shop.",
+      "scene": "border"
+    },
+    {
+      "title": "Shows the total up front",
+      "text": "Know the full vignette bill before you leave, with a country-by-country comparison.",
+      "scene": "cost"
+    }
+  ],
+  "moments_label": "When the vignette question comes up",
+  "moments": [
+    "The night before you leave",
+    "25 miles from the Austrian border",
+    "Before entering Hungary",
+    "At a fuel stop",
+    "Passing through Slovenia",
+    "When you change the route",
+    "Driving the same road back",
+    "Packing the car in the evening"
+  ],
+  "statement": {
+    "eyebrow": "Why {name}?",
+    "text": "Every European country has its own vignette rules, validity periods and shop. *A route through three countries means three separate searches.* {name} builds the list the moment you enter your route. *You leave knowing what to buy, where, and when.*"
+  },
+  "features_eyebrow": "What's inside",
+  "features_title": "Small tools for before the drive",
+  "features": [
+    {
+      "icon": "route",
+      "title": "Route plan",
+      "text": "Enter start and end and get the countries that need a vignette.",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "icon": "map-pin",
+              "title": "Austria",
+              "meta": "10-day",
+              "value": "€12.80"
+            },
+            {
+              "icon": "map-pin",
+              "title": "Hungary",
+              "meta": "10-day",
+              "value": "€13.00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "bell",
+      "title": "Border reminder",
+      "text": "A notification before you enter a vignette country.",
+      "blocks": [
+        {
+          "type": "toast",
+          "text": "Austria in 25 mi: buy your vignette",
+          "icon": "bell"
+        }
+      ]
+    },
+    {
+      "icon": "wallet",
+      "title": "Total cost",
+      "text": "The whole route's vignette bill in one number.",
+      "block": {
+        "type": "stat",
+        "label": "Total vignettes",
+        "value": "€25.80",
+        "progress": 0.5
+      }
+    },
+    {
+      "icon": "car",
+      "title": "Plate saved",
+      "text": "E-vignettes are tied to your plate; save it once."
+    },
+    {
+      "icon": "calendar-check",
+      "title": "Expiry tracking",
+      "text": "See when a vignette ends so it doesn't lapse on the drive home."
+    },
+    {
+      "icon": "shield-check",
+      "title": "No selling",
+      "text": "Vinyo doesn't sell vignettes; it is designed to send you to the official shop."
+    }
+  ],
+  "compare": {
+    "eyebrow": "The difference",
+    "title": "Same road, two ways to prepare",
+    "without": {
+      "label": "Without Vinyo",
+      "items": [
+        "A separate search per country",
+        "No idea of the total",
+        "Vignette remembered at the border"
+      ]
+    },
+    "with": {
+      "label": "With Vinyo",
+      "items": [
+        "One list for your route",
+        "Total visible before you leave",
+        "Reminder lands before the border"
+      ]
+    }
+  },
+  "facts_label": "Vinyo at a glance",
+  "facts": [
+    {
+      "value": "1 screen",
+      "label": "Route, countries and prices"
+    },
+    {
+      "value": "10 days",
+      "label": "A common vignette length"
+    },
+    {
+      "value": "0",
+      "label": "Vignettes sold in the app"
+    },
+    {
+      "value": "24/7",
+      "label": "Border reminders running"
+    }
+  ],
+  "steps_title": "How it works",
+  "steps": [
+    {
+      "title": "Enter your route",
+      "text": "Type your start and destination."
+    },
+    {
+      "title": "See the plan",
+      "text": "Countries, durations and prices are listed."
+    },
+    {
+      "title": "Get reminded",
+      "text": "A notification arrives before each border."
+    }
+  ],
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "The route plan will be free. Premium unlocks border reminders, plate saving and expiry tracking.",
+    "currency": "$",
+    "plans": [
+      {
+        "id": "monthly",
+        "name": "Monthly",
+        "price": 2.99,
+        "period": "mo",
+        "features": [
+          "Border reminders",
+          "Plate saving",
+          "Expiry tracking"
+        ],
+        "cta": "Get monthly"
+      },
+      {
+        "id": "yearly",
+        "name": "Yearly",
+        "price": 14.99,
+        "period": "yr",
+        "badge": "Best value",
+        "note": "About $1.25 a month",
+        "features": [
+          "Everything in Monthly",
+          "Multiple cars",
+          "Past routes"
+        ],
+        "cta": "Get yearly"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "When will {name} launch?",
+      "a": "It's in development. Leave your email and we'll tell you the day it's out."
+    },
+    {
+      "q": "Will I buy the vignette in the app?",
+      "a": "No. {name} builds the plan and sends you to each country's official shop. That's the design goal."
+    },
+    {
+      "q": "Which countries will it cover?",
+      "a": "The first version aims at European countries that use vignettes. The full list will be set before launch."
+    },
+    {
+      "q": "Can I cancel?",
+      "a": "Subscriptions will be managed through the App Store and Google Play, and can be cancelled any time."
+    }
+  ],
+  "bottom": {
+    "title": "Have the plan ready before you drive",
+    "text": "Be among the first to use it.",
+    "cta": "Get early access"
+  },
+  "modal": {
+    "early_offer": null
+  },
+  "legal": {
+    "controller": "Yusuf Kağan Kılıç",
+    "contact_email": "yusufkaankilic.yk@gmail.com",
+    "consent_version": "v1-en"
+  },
+  "ads": [
+    {
+      "id": "problem",
+      "angle": "sorun",
+      "headline": "25 miles to Austria and no vignette yet",
+      "sub": "Vinyo reminds you about each vignette before the border.",
+      "scene": "border"
+    },
+    {
+      "id": "result",
+      "angle": "sonuc",
+      "headline": "Munich to Budapest: 2 vignettes, €25.80 total",
+      "sub": "Enter your route, see countries and prices on one screen.",
+      "scene": "route"
+    },
+    {
+      "id": "price",
+      "angle": "fiyat",
+      "headline": "Every route's vignette plan, $2.99 a month",
+      "sub": "Border reminders, plate saving and expiry tracking.",
+      "scene": "cost",
+      "show_price": true
+    }
+  ]
+}

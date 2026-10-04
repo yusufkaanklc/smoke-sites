@@ -1,0 +1,423 @@
+{
+  "slug": "vinyo",
+  "name": "Vinyo",
+  "theme": {
+    "preset": "net"
+  },
+  "seo": {
+    "title": "Vinyo: Avrupa yolunda hangi vinyet, ne kadar, ne zaman",
+    "description": "Rotanı gir; hangi ülkede vinyet ya da otoyol ücreti gerektiğini, toplam tutarı ve ne zaman alman gerektiğini tek ekranda gör. Yakında, erken erişim listesi açık."
+  },
+  "header_cta": "Erken erişim",
+  "hero": {
+    "eyebrow": "Yakında · iOS ve Android",
+    "title": "Rotanın vinyet planı tek ekranda",
+    "highlight": "vinyet planı",
+    "subtitle": "Rotanı gir; hangi ülkede vinyet gerektiğini, toplam tutarı ve ne zaman alacağını gör. Vinyo vinyet satmaz, plan çıkarır.",
+    "points": [
+      "Rotadaki ülkeler ve tutarlar",
+      "Toplam vinyet maliyeti",
+      "Sınırdan önce hatırlatma"
+    ],
+    "cta": "Premium'u al",
+    "secondary": "Nasıl çalışır?",
+    "note": "iOS ve Android için geliştiriliyor."
+  },
+  "demo": {
+    "floats": [
+      {
+        "icon": "bell",
+        "title": "Sınıra 40 km",
+        "text": "Vinyetini al"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "rota",
+        "caption": "Rota planı",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Münih → Budapeşte",
+            "title": "Vinyet gereken ülkeler"
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "map-pin",
+                "title": "Avusturya",
+                "meta": "10 günlük",
+                "value": "€12,80"
+              },
+              {
+                "icon": "map-pin",
+                "title": "Macaristan",
+                "meta": "10 günlük",
+                "value": "€13,00"
+              }
+            ]
+          },
+          {
+            "type": "stat",
+            "label": "Toplam vinyet",
+            "value": "€25,80",
+            "progress": 0.5
+          }
+        ]
+      },
+      {
+        "id": "sinir",
+        "caption": "Sınır hatırlatması",
+        "blocks": [
+          {
+            "type": "toast",
+            "text": "Avusturya'ya 40 km: vinyetini al",
+            "icon": "bell"
+          },
+          {
+            "type": "header",
+            "eyebrow": "Yolculuk",
+            "title": "Sıradaki sınır"
+          },
+          {
+            "type": "ring",
+            "label": "Avusturya sınırı",
+            "value": "40 km",
+            "progress": 0.8
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "map-pin",
+                "title": "Avusturya",
+                "meta": "10 günlük",
+                "value": "€12,80"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "plaka",
+        "caption": "Plakaya bağlı vinyet",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Aracın",
+            "title": "Plaka ve süre"
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "car",
+                "title": "34 ABC 123",
+                "meta": "Macaristan e-matrica",
+                "value": "10 gün"
+              },
+              {
+                "icon": "calendar-check",
+                "title": "Başlangıç",
+                "meta": "12 Ağustos",
+                "value": "Kayıtlı"
+              }
+            ]
+          },
+          {
+            "type": "chips",
+            "items": [
+              "Avusturya",
+              "Macaristan",
+              "Slovenya"
+            ],
+            "active": 1
+          }
+        ]
+      },
+      {
+        "id": "maliyet",
+        "caption": "Ülke ülke maliyet",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Yol masrafı",
+            "title": "Vinyet karşılaştırması"
+          },
+          {
+            "type": "bars",
+            "label": "10 günlük vinyet (€)",
+            "bars": [
+              {
+                "label": "Çekya",
+                "value": 12
+              },
+              {
+                "label": "Avusturya",
+                "value": 13
+              },
+              {
+                "label": "Macaristan",
+                "value": 13
+              },
+              {
+                "label": "Slovenya",
+                "value": 15
+              }
+            ],
+            "highlight": 3
+          },
+          {
+            "type": "stat",
+            "label": "Münih → Budapeşte",
+            "value": "€25,80",
+            "progress": 0.5
+          }
+        ]
+      }
+    ]
+  },
+  "benefits_eyebrow": "Üç temel özellik",
+  "benefits_title": "{name} ne yapar?",
+  "benefits": [
+    {
+      "title": "Rotadaki vinyetleri çıkarır",
+      "text": "Çıkış ve varış noktasını gir. Hangi ülkede vinyet gerektiğini ve her birinin tutarını listeler.",
+      "scene": "rota"
+    },
+    {
+      "title": "Sınırdan önce hatırlatır",
+      "text": "Vinyet gereken ülkeye girmeden önce bildirim gelir. Resmi satış sitesine tek dokunuşla gidersin.",
+      "scene": "sinir"
+    },
+    {
+      "title": "Toplamı baştan gösterir",
+      "text": "Yola çıkmadan vinyet masrafının toplamını ve ülke ülke karşılaştırmasını görürsün.",
+      "scene": "maliyet"
+    }
+  ],
+  "moments_label": "Vinyet sorusunun çıktığı anlar",
+  "moments": [
+    "Çıkıştan bir gün önce",
+    "Avusturya sınırına 40 km kala",
+    "Macaristan'a girmeden",
+    "Benzin istasyonunda mola",
+    "Slovenya'dan geçerken",
+    "Rotayı değiştirdiğinde",
+    "Aynı yolu geri dönerken",
+    "Yola çıkmadan akşam"
+  ],
+  "statement": {
+    "eyebrow": "Neden {name}?",
+    "text": "Avrupa'da her ülkenin vinyet kuralı, süresi ve satış sitesi ayrı. *Rotan üç ülkeden geçiyorsa üç ayrı araştırma* demek. {name} rotayı girdiğin anda listeyi çıkarır. *Neyi nereden ve ne zaman alacağını bilerek yola çıkarsın.*"
+  },
+  "features_eyebrow": "İçinde neler var",
+  "features_title": "Yol öncesi için küçük araçlar",
+  "features": [
+    {
+      "icon": "route",
+      "title": "Rota planı",
+      "text": "Çıkış ve varış gir, vinyet gereken ülkeler listelensin.",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "icon": "map-pin",
+              "title": "Avusturya",
+              "meta": "10 günlük",
+              "value": "€12,80"
+            },
+            {
+              "icon": "map-pin",
+              "title": "Macaristan",
+              "meta": "10 günlük",
+              "value": "€13,00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "bell",
+      "title": "Sınır hatırlatması",
+      "text": "Vinyet gereken ülkeye girmeden bildirim.",
+      "blocks": [
+        {
+          "type": "toast",
+          "text": "Avusturya'ya 40 km: vinyetini al",
+          "icon": "bell"
+        }
+      ]
+    },
+    {
+      "icon": "wallet",
+      "title": "Toplam maliyet",
+      "text": "Tüm rotanın vinyet masrafı tek rakamda.",
+      "block": {
+        "type": "stat",
+        "label": "Toplam vinyet",
+        "value": "€25,80",
+        "progress": 0.5
+      }
+    },
+    {
+      "icon": "car",
+      "title": "Plaka kaydı",
+      "text": "E-vinyetler plakaya bağlı; plakanı bir kez kaydedersin."
+    },
+    {
+      "icon": "calendar-check",
+      "title": "Süre takibi",
+      "text": "Vinyetin bitiş gününü gör, dönüş yolunda süresi bitmesin."
+    },
+    {
+      "icon": "shield-check",
+      "title": "Satış yapmaz",
+      "text": "Vinyo vinyet satmaz; seni resmi satış sitesine yönlendirmesi tasarlanıyor."
+    }
+  ],
+  "compare": {
+    "eyebrow": "Fark",
+    "title": "Aynı yol, iki farklı hazırlık",
+    "without": {
+      "label": "Vinyo olmadan",
+      "items": [
+        "Her ülke için ayrı arama",
+        "Toplam masraf bilinmez",
+        "Sınırda vinyet aklına gelir"
+      ]
+    },
+    "with": {
+      "label": "Vinyo ile",
+      "items": [
+        "Rotaya göre tek liste",
+        "Toplam yola çıkmadan görünür",
+        "Sınırdan önce bildirim gelir"
+      ]
+    }
+  },
+  "facts_label": "Kısaca {name}",
+  "facts": [
+    {
+      "value": "1 ekran",
+      "label": "Rota, ülke ve tutarlar"
+    },
+    {
+      "value": "10 gün",
+      "label": "En sık seçilen vinyet süresi"
+    },
+    {
+      "value": "0",
+      "label": "Uygulama içi vinyet satışı"
+    },
+    {
+      "value": "7/24",
+      "label": "Çalışan sınır hatırlatması"
+    }
+  ],
+  "steps_title": "Nasıl çalışır?",
+  "steps": [
+    {
+      "title": "Rotanı gir",
+      "text": "Çıkış ve varış noktasını yaz."
+    },
+    {
+      "title": "Planı gör",
+      "text": "Ülkeler, süreler ve tutarlar listelenir."
+    },
+    {
+      "title": "Haber al",
+      "text": "Sınırdan önce hatırlatma gelir."
+    }
+  ],
+  "pricing": {
+    "title": "Fiyatlar",
+    "subtitle": "Rota planı ücretsiz olacak. Premium sınır hatırlatmalarını, plaka kaydını ve süre takibini açar.",
+    "currency": "₺",
+    "plans": [
+      {
+        "id": "aylik",
+        "name": "Aylık",
+        "price": 49,
+        "period": "ay",
+        "features": [
+          "Sınır hatırlatmaları",
+          "Plaka kaydı",
+          "Süre takibi"
+        ],
+        "cta": "Aylık planı al"
+      },
+      {
+        "id": "yillik",
+        "name": "Yıllık",
+        "price": 299,
+        "period": "yıl",
+        "badge": "En avantajlı",
+        "note": "Ayda yaklaşık ₺25'e denk gelir",
+        "features": [
+          "Aylık plandaki her şey",
+          "Birden fazla araç",
+          "Geçmiş rotalar"
+        ],
+        "cta": "Yıllık planı al"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "{name} ne zaman çıkacak?",
+      "a": "Şu an geliştiriliyor. E-posta bırakırsan çıktığı gün haber veririz."
+    },
+    {
+      "q": "Vinyeti uygulamadan alacak mıyım?",
+      "a": "Hayır. {name} plan çıkarır ve seni ilgili ülkenin resmi satış sitesine yönlendirir. Tasarım hedefi bu."
+    },
+    {
+      "q": "Hangi ülkeleri kapsayacak?",
+      "a": "İlk sürümde vinyet sistemi olan Avrupa ülkeleri hedefleniyor. Tam liste yayın öncesi netleşecek."
+    },
+    {
+      "q": "İptal edebilecek miyim?",
+      "a": "Abonelikler App Store ve Google Play üzerinden yönetilecek; istediğin zaman iptal edilebilecek."
+    }
+  ],
+  "bottom": {
+    "title": "Yola çıkmadan planın hazır olsun",
+    "text": "Çıktığında ilk kullananlardan ol.",
+    "cta": "Premium'u al"
+  },
+  "modal": {
+    "early_offer": null
+  },
+  "legal": {
+    "controller": "Yusuf Kağan Kılıç",
+    "contact_email": "yusufkaankilic.yk@gmail.com",
+    "consent_version": "v1"
+  },
+  "ads": [
+    {
+      "id": "sorun",
+      "angle": "sorun",
+      "headline": "Avusturya sınırına 40 km kaldı, vinyet yok",
+      "sub": "Vinyo, rotandaki vinyetleri sınırdan önce hatırlatır.",
+      "scene": "sinir"
+    },
+    {
+      "id": "sonuc",
+      "angle": "sonuc",
+      "headline": "Münih–Budapeşte: 2 vinyet, toplam €25,80",
+      "sub": "Rotanı gir, ülkeleri ve tutarları tek ekranda gör.",
+      "scene": "rota"
+    },
+    {
+      "id": "fiyat",
+      "angle": "fiyat",
+      "headline": "Tüm rotaların vinyet planı ayda ₺49",
+      "sub": "Sınır hatırlatması, plaka kaydı ve süre takibi.",
+      "scene": "maliyet",
+      "show_price": true
+    }
+  ]
+}

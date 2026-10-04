@@ -1,0 +1,62 @@
+[
+  {
+    "file": "ad-problem-story.html",
+    "id": "problem",
+    "angle": "sorun",
+    "format": "story",
+    "scene": "border",
+    "headline": "25 miles to Austria and no vignette yet",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-problem-square.html",
+    "id": "problem",
+    "angle": "sorun",
+    "format": "square",
+    "scene": "border",
+    "headline": "25 miles to Austria and no vignette yet",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-result-story.html",
+    "id": "result",
+    "angle": "sonuc",
+    "format": "story",
+    "scene": "route",
+    "headline": "Munich to Budapest: 2 vignettes, €25.80 total",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-result-square.html",
+    "id": "result",
+    "angle": "sonuc",
+    "format": "square",
+    "scene": "route",
+    "headline": "Munich to Budapest: 2 vignettes, €25.80 total",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-price-story.html",
+    "id": "price",
+    "angle": "fiyat",
+    "format": "story",
+    "scene": "cost",
+    "headline": "Every route's vignette plan, $2.99 a month",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-price-square.html",
+    "id": "price",
+    "angle": "fiyat",
+    "format": "square",
+    "scene": "cost",
+    "headline": "Every route's vignette plan, $2.99 a month",
+    "w": 540,
+    "h": 540
+  }
+]
