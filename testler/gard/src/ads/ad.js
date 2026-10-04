@@ -59,9 +59,10 @@
     var ft = figT(t);
     figs.forEach(function (f) { f.setT(ft); });
     if (tim) tim.textContent = "00:0" + Math.min(6, Math.floor(Math.min(t, 6.4)));
+    /* headline is fully visible from the first frame (feeds and previews often show frame 0); only a small settle motion */
     lines.forEach(function (l, i) {
-      var p = seg(t, 0.05 + i * 0.09, 0.55 + i * 0.09);
-      l.style.opacity = p; l.style.transform = "translateY(" + ((1 - p) * 26) + "px)";
+      var p = seg(t, 0, 0.5 + i * 0.06);
+      l.style.opacity = 1; l.style.transform = "translateY(" + ((1 - p) * 14) + "px)";
     });
     if (scoreEl) {
       var s = svgs[0].__score || 88;
