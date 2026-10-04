@@ -1,0 +1,125 @@
+{
+  "slug": "lastday",
+  "name": "Lastday",
+  "theme": { "preset": "net" },
+  "seo": {
+    "title": "Lastday: iade ve garanti süresini kaçırma",
+    "description": "Online aldıklarının iade ve garanti son günlerini tek listede sayan, son günden önce hatırlatan uygulama. Yakında, erken erişim listesi açık."
+  },
+  "header_cta": "Erken erişim",
+  "hero": {
+    "eyebrow": "Yakında · iOS ve Android",
+    "title": "İade günü gelmeden Lastday haber verir",
+    "highlight": "Lastday haber verir",
+    "subtitle": "Online aldığın her şeyin iade ve garanti süresini tek listede sayar. Son günden önce hatırlatır, fatura da aynı yerde durur.",
+    "points": ["İade günü geri sayımı", "Garanti ve fatura bir arada", "Son günden önce bildirim"],
+    "cta": "Premium'u al",
+    "secondary": "Nasıl çalışır?",
+    "note": "iOS ve Android için geliştiriliyor."
+  },
+  "demo": {
+    "floats": [ { "icon": "bell", "title": "Yarın son gün", "text": "Ceket · ₺1.899" } ],
+    "scenes": [
+      { "id": "geri-sayim", "caption": "İade geri sayımı", "blocks": [
+        { "type": "header", "eyebrow": "Siparişlerin", "title": "İade süreleri" },
+        { "type": "ring", "label": "Ceket · ₺1.899", "value": "3 gün", "progress": 0.2 },
+        { "type": "list", "items": [
+          { "icon": "footprints", "title": "Ayakkabı", "meta": "Çarşamba", "value": "₺2.349" },
+          { "icon": "headphones", "title": "Kulaklık", "meta": "11 gün kaldı", "value": "₺1.250" }
+        ] }
+      ] },
+      { "id": "siparis-ekle", "caption": "Sipariş ekleme", "blocks": [
+        { "type": "header", "eyebrow": "Yeni sipariş", "title": "Mailden ya da fişten ekle" },
+        { "type": "list", "items": [
+          { "icon": "package", "title": "Kulaklık", "meta": "14 gün iade", "value": "₺1.250", "new": true }
+        ] },
+        { "type": "chips", "items": ["Tümü", "İade", "Garanti"], "active": 1 }
+      ] },
+      { "id": "hatirlat", "caption": "Son gün bildirimi", "blocks": [
+        { "type": "toast", "text": "Yarın son gün: Ceket ₺1.899", "icon": "bell" },
+        { "type": "header", "eyebrow": "Bu hafta", "title": "Süresi dolanlar" },
+        { "type": "bars", "label": "Kalan iade günü", "bars": [
+          { "label": "Ceket", "value": 1 }, { "label": "Ayakkabı", "value": 5 }, { "label": "Kulaklık", "value": 11 }, { "label": "Saat", "value": 14 }
+        ], "highlight": 0 },
+        { "type": "button", "text": "İade adımlarını aç" }
+      ] },
+      { "id": "garanti", "caption": "Garanti ve fatura", "blocks": [
+        { "type": "header", "eyebrow": "Garantiler", "title": "Robot süpürge" },
+        { "type": "stat", "label": "Garanti bitimine", "value": "412 gün", "progress": 0.6 },
+        { "type": "list", "items": [
+          { "icon": "receipt", "title": "Fatura kayıtlı", "meta": "12.08.2026", "value": "₺8.490" },
+          { "icon": "shield-check", "title": "Garanti süresi", "meta": "2 yıl", "value": "Aktif" }
+        ] }
+      ] }
+    ]
+  },
+  "benefits_eyebrow": "Üç temel özellik",
+  "benefits_title": "{name} ne yapar?",
+  "benefits": [
+    { "title": "İade gününü sayar", "text": "Siparişi ekle, iade süresi hemen geri saymaya başlasın. Hangi ürünün kaç günü kaldığını tek listede gör.", "scene": "geri-sayim" },
+    { "title": "Mailden ya da fişten ekler", "text": "Sipariş onay mailini ya da fiş fotoğrafını ekle. Ürün, tutar ve süre senin için doldurulsun.", "scene": "siparis-ekle" },
+    { "title": "Son günden önce haber verir", "text": "İade son gününden önce bildirim gelir. Garanti ve fatura da aynı kartta durur.", "scene": "hatirlat" }
+  ],
+  "moments_label": "İade süresinin kaçtığı anlar",
+  "moments": ["Kolideki ceket", "Beden olmadı ama kutu atıldı", "Çarşamba son gün", "Fatura mail kutusunda kayboldu", "Robot süpürge ses çıkardığında", "Kulaklığın bir tarafı çalışmadığında", "Siparişi unuttuğunda", "Ay sonu hesap özetinde"],
+  "statement": {
+    "eyebrow": "Neden {name}?",
+    "text": "İade süresi çoğu zaman *siparişin geldiği gün başlar* ve kimse takvime yazmaz. {name} her siparişin son gününü sayar, garanti ve faturayı yanına koyar. *Parayı geri almak için son günü bilmen yeter.*"
+  },
+  "features_eyebrow": "İçinde neler var",
+  "features_title": "Süreleri kaçırmamak için küçük araçlar",
+  "features": [
+    { "icon": "calendar-clock", "title": "İade geri sayımı", "text": "Her sipariş için son güne kalan gün, en yakın tarih en üstte.",
+      "blocks": [ { "type": "ring", "label": "Ceket · ₺1.899", "value": "3 gün", "progress": 0.2 } ] },
+    { "icon": "mail", "title": "Mailden ekleme", "text": "Sipariş onay mailini yönlendir, tutar ve ürün listeye girsin. Tasarlanıyor.",
+      "blocks": [ { "type": "list", "items": [ { "icon": "package", "title": "Kulaklık", "meta": "Mailden okundu", "value": "₺1.250", "new": true } ] } ] },
+    { "icon": "bell", "title": "Son gün bildirimi", "text": "Son günden önce bildirim, iade adımları tek dokunuş uzakta.",
+      "blocks": [ { "type": "toast", "text": "Yarın son gün: Ceket ₺1.899", "icon": "bell" }, { "type": "button", "text": "İade adımlarını aç" } ] },
+    { "icon": "shield-check", "title": "Garanti ve fatura", "text": "Fatura fotoğrafı ve garanti bitimi aynı kartta.",
+      "block": { "type": "stat", "label": "Robot süpürge garantisi", "value": "412 gün", "progress": 0.6 } },
+    { "icon": "wallet", "title": "İade edilebilir tutar", "text": "Süresi açık siparişlerin toplamını görürsün." },
+    { "icon": "smartphone", "title": "Reklamsız ve bankasız", "text": "Banka hesabı bağlamak gerekmez. Tasarım hedefi bu." }
+  ],
+  "compare": {
+    "eyebrow": "Fark",
+    "title": "Aynı koli, iki farklı sonuç",
+    "without": { "label": "Lastday olmadan", "items": ["İade günü kimse hatırlatmaz", "Fatura mail kutusunda aranır", "Süre bitince ürün dolapta kalır"] },
+    "with": { "label": "Lastday ile", "items": ["Çarşamba son gün diye bildirim gelir", "Fatura ve garanti aynı kartta", "Karar süre bitmeden verilir"] }
+  },
+  "facts_label": "Kısaca {name}",
+  "facts": [
+    { "value": "14 gün", "label": "Online siparişlerde yasal cayma süresi (Tüketici Kanunu)" },
+    { "value": "0", "label": "Bağlaman gereken banka hesabı" },
+    { "value": "7/24", "label": "Çalışan son gün bildirimi" },
+    { "value": "1 liste", "label": "İade ve garanti için" }
+  ],
+  "steps_title": "Nasıl çalışır?",
+  "steps": [
+    { "title": "Siparişi ekle", "text": "Mailden ya da fiş fotoğrafından ekle." },
+    { "title": "Süre sayılsın", "text": "İade ve garanti günleri listeye girer." },
+    { "title": "Haber al", "text": "Son günden önce bildirim gelir." }
+  ],
+  "pricing": {
+    "title": "Fiyatlar",
+    "subtitle": "Sipariş listesi ve geri sayım ücretsiz olacak. Premium bildirimleri, mailden eklemeyi ve garanti kartlarını açar.",
+    "currency": "₺",
+    "plans": [
+      { "id": "aylik", "name": "Aylık", "price": 79, "period": "ay", "features": ["Son gün bildirimleri", "Mailden ve fişten ekleme", "Garanti ve fatura kartları"], "cta": "Aylık planı al" },
+      { "id": "yillik", "name": "Yıllık", "price": 549, "period": "yıl", "badge": "En avantajlı", "note": "Ayda yaklaşık ₺46'ya denk gelir", "features": ["Aylık plandaki her şey", "PDF dışa aktarma", "Aile paylaşımı"], "cta": "Yıllık planı al" }
+    ]
+  },
+  "faq": [
+    { "q": "{name} ne zaman çıkacak?", "a": "Şu an geliştiriliyor. E-posta bırakırsan çıktığı gün haber veririz." },
+    { "q": "İade süresini nasıl bilecek?", "a": "Sen siparişi eklersin; süre mağazanın iade koşuluna ya da senin girdiğin güne göre sayılır. Tasarım hedefi, en sık kullanılan 14 günlük süreyi otomatik önermek." },
+    { "q": "Banka hesabımı bağlamam gerekiyor mu?", "a": "Hayır. {name} banka bağlantısı olmadan çalışacak şekilde tasarlanıyor." },
+    { "q": "İptal edebilecek miyim?", "a": "Abonelikler App Store ve Google Play üzerinden yönetilecek; istediğin zaman iptal edilebilecek." }
+  ],
+  "bottom": { "title": "Süre dolmadan haberin olsun", "text": "Çıktığında ilk kullananlardan ol.", "cta": "Premium'u al" },
+  "modal": { "early_offer": null },
+  "legal": { "controller": "Yusuf Kağan Kılıç", "contact_email": "yusufkaankilic.yk@gmail.com", "consent_version": "v1" },
+  "ads": [
+    { "id": "sorun", "angle": "sorun", "headline": "₺1.899'lık ceketin iadesine 3 gün kaldı", "sub": "Lastday, her siparişin iade gününü sayar ve hatırlatır.", "scene": "geri-sayim" },
+    { "id": "sonuc", "angle": "sonuc", "headline": "Tüm iade günlerin tek listede", "sub": "Mailden ya da fişten ekle, son günden önce bildirim al.", "scene": "siparis-ekle" },
+    { "id": "fiyat", "angle": "fiyat", "headline": "İade ve garanti takibi ayda ₺79", "sub": "Son gün bildirimi, fatura ve garanti aynı yerde.", "scene": "garanti", "show_price": true }
+  ]
+}

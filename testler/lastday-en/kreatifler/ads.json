@@ -1,0 +1,62 @@
+[
+  {
+    "file": "ad-problem-story.html",
+    "id": "problem",
+    "angle": "sorun",
+    "format": "story",
+    "scene": "countdown",
+    "headline": "3 days left to return the $64.99 jacket",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-problem-square.html",
+    "id": "problem",
+    "angle": "sorun",
+    "format": "square",
+    "scene": "countdown",
+    "headline": "3 days left to return the $64.99 jacket",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-result-story.html",
+    "id": "result",
+    "angle": "sonuc",
+    "format": "story",
+    "scene": "add-order",
+    "headline": "Every return deadline in one list",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-result-square.html",
+    "id": "result",
+    "angle": "sonuc",
+    "format": "square",
+    "scene": "add-order",
+    "headline": "Every return deadline in one list",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-price-story.html",
+    "id": "price",
+    "angle": "fiyat",
+    "format": "story",
+    "scene": "warranty",
+    "headline": "Track returns and warranties for $3.99 a month",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-price-square.html",
+    "id": "price",
+    "angle": "fiyat",
+    "format": "square",
+    "scene": "warranty",
+    "headline": "Track returns and warranties for $3.99 a month",
+    "w": 540,
+    "h": 540
+  }
+]
