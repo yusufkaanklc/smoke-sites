@@ -1,0 +1,62 @@
+[
+  {
+    "file": "ad-problem-story.html",
+    "id": "problem",
+    "angle": "sorun",
+    "format": "story",
+    "scene": "coach",
+    "headline": "Training alone, nobody corrects your technique",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-problem-square.html",
+    "id": "problem",
+    "angle": "sorun",
+    "format": "square",
+    "scene": "coach",
+    "headline": "Training alone, nobody corrects your technique",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-result-story.html",
+    "id": "result",
+    "angle": "sonuc",
+    "format": "story",
+    "scene": "analysis",
+    "headline": "Film your round, see your guard and footwork score",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-result-square.html",
+    "id": "result",
+    "angle": "sonuc",
+    "format": "square",
+    "scene": "analysis",
+    "headline": "Film your round, see your guard and footwork score",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-price-story.html",
+    "id": "price",
+    "angle": "fiyat",
+    "format": "story",
+    "scene": "plan",
+    "headline": "Boxing technique feedback for $7.99 a month",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-price-square.html",
+    "id": "price",
+    "angle": "fiyat",
+    "format": "square",
+    "scene": "plan",
+    "headline": "Boxing technique feedback for $7.99 a month",
+    "w": 540,
+    "h": 540
+  }
+]

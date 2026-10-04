@@ -1,0 +1,402 @@
+{
+  "slug": "gard",
+  "name": "Gard",
+  "theme": {
+    "preset": "gece"
+  },
+  "seo": {
+    "title": "Gard: telefon kamerasıyla boks tekniği analizi",
+    "description": "Antrenmanını telefonla çek; Gard duruşunu, gardını ve ayak oyununu puanlasın, düzeltmeni söylesin. Yakında, erken erişim listesi açık."
+  },
+  "header_cta": "Erken erişim",
+  "hero": {
+    "eyebrow": "Yakında · iOS ve Android",
+    "title": "Tek başına çalışırken tekniğini Gard düzeltir",
+    "highlight": "tekniğini Gard düzeltir",
+    "subtitle": "Antrenmanını telefonla çek. Gard duruşu, gardı ve ayak oyununu puanlar, neyi düzeltmen gerektiğini söyler.",
+    "points": [
+      "Video analizi: gard, ayak, kombinasyon",
+      "4 haftalık boks programı",
+      "Boks soruları için AI koç"
+    ],
+    "cta": "Premium'u al",
+    "secondary": "Nasıl çalışır?",
+    "note": "iOS ve Android için geliştiriliyor."
+  },
+  "demo": {
+    "floats": [
+      {
+        "icon": "target",
+        "title": "Gard puanı",
+        "text": "72 / 100"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "analiz",
+        "caption": "Video analizi",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Son raund",
+            "title": "Teknik puanın"
+          },
+          {
+            "type": "ring",
+            "label": "Jab · çapraz",
+            "value": "72",
+            "progress": 0.72
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "shield",
+                "title": "Gard yüksekliği",
+                "meta": "İniyor",
+                "value": "Düzelt"
+              },
+              {
+                "icon": "footprints",
+                "title": "Ayak genişliği",
+                "meta": "Omuz hizasında",
+                "value": "İyi"
+              },
+              {
+                "icon": "user",
+                "title": "Çene",
+                "meta": "Hafif yukarıda",
+                "value": "Düzelt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "koc",
+        "caption": "AI koç",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Koç",
+            "title": "Boks sorusu sor"
+          },
+          {
+            "type": "chat",
+            "messages": [
+              {
+                "from": "user",
+                "text": "Çaprazdan sonra sol elim neden iniyor?"
+              },
+              {
+                "from": "app",
+                "text": "Vuruş sırasında sol dirseğin açılıyor. Yumruktan hemen sonra eli çeneye geri çek."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "program",
+        "caption": "4 haftalık program",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Programın",
+            "title": "4 hafta, 3 gün"
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "calendar-check",
+                "title": "Hafta 1",
+                "meta": "Duruş ve jab",
+                "value": "3 gün"
+              },
+              {
+                "icon": "calendar-check",
+                "title": "Hafta 2",
+                "meta": "Çapraz ve gard",
+                "value": "3 gün"
+              },
+              {
+                "icon": "calendar-check",
+                "title": "Hafta 3",
+                "meta": "Ayak oyunu",
+                "value": "3 gün"
+              },
+              {
+                "icon": "calendar-check",
+                "title": "Hafta 4",
+                "meta": "Kombinasyonlar",
+                "value": "3 gün"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "raund",
+        "caption": "Raund zamanlayıcı",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Raund 2 / 6",
+            "title": "Çalışma süresi"
+          },
+          {
+            "type": "ring",
+            "label": "3 dk raund",
+            "value": "2:14",
+            "progress": 0.74
+          },
+          {
+            "type": "chips",
+            "items": [
+              "3 dk",
+              "1 dk dinlenme",
+              "6 raund"
+            ],
+            "active": 0
+          }
+        ]
+      }
+    ]
+  },
+  "benefits_eyebrow": "Üç temel özellik",
+  "benefits_title": "{name} ne yapar?",
+  "benefits": [
+    {
+      "title": "Videondan tekniği puanlar",
+      "text": "Antrenmanını çek. Gard, ayak ve çene gibi noktaları puanlar, düzeltmen gerekenleri işaretler.",
+      "scene": "analiz"
+    },
+    {
+      "title": "Boks sorularını yanıtlar",
+      "text": "Çaprazdan sonra gardın neden indiğini sor, koç hangi harekete bakacağını söylesin.",
+      "scene": "koc"
+    },
+    {
+      "title": "4 haftalık program verir",
+      "text": "Duruş, jab, çapraz ve ayak oyununu sıraya koyan program; her gün ne çalışacağını bilirsin.",
+      "scene": "program"
+    }
+  ],
+  "moments_label": "Tek başına çalışılan anlar",
+  "moments": [
+    "Torba başında tek başına",
+    "Evde ayna karşısında",
+    "Salon boşken, akşam geç saatte",
+    "Antrenör başka öğrenciyle ilgilenirken",
+    "Sparring öncesi son hafta",
+    "Yeni kombinasyon öğrenirken",
+    "Videoda kendini izlerken",
+    "Hafta sonu parkta gölge boksta"
+  ],
+  "statement": {
+    "eyebrow": "Neden {name}?",
+    "text": "Antrenör her an yanında olamaz. *Tek başına çalışırken yanlış alışkanlık fark edilmeden yerleşir.* {name} telefonla çektiğin videoyu izler, gardın ve ayağın için somut düzeltme verir. *Bir sonraki antrenmana neyi düzelterek gireceğini bilirsin.*"
+  },
+  "features_eyebrow": "İçinde neler var",
+  "features_title": "Teknik için küçük araçlar",
+  "features": [
+    {
+      "icon": "video",
+      "title": "Video analizi",
+      "text": "Gard, ayak ve çene için puan ve düzeltme.",
+      "blocks": [
+        {
+          "type": "ring",
+          "label": "Jab · çapraz",
+          "value": "72",
+          "progress": 0.72
+        }
+      ]
+    },
+    {
+      "icon": "message-circle",
+      "title": "AI koç",
+      "text": "Yalnız boks konuşan sohbet koçu.",
+      "blocks": [
+        {
+          "type": "chat",
+          "messages": [
+            {
+              "from": "app",
+              "text": "Yumruktan sonra eli çeneye geri çek."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "timer",
+      "title": "Raund zamanlayıcı",
+      "text": "3 dakikalık raund, 1 dakikalık dinlenme.",
+      "block": {
+        "type": "ring",
+        "label": "3 dk raund",
+        "value": "2:14",
+        "progress": 0.74
+      }
+    },
+    {
+      "icon": "list-checks",
+      "title": "Haftalık program",
+      "text": "4 haftalık plan, haftada 3 gün."
+    },
+    {
+      "icon": "volume-2",
+      "title": "Sesli komut",
+      "text": "Yumruk kombinasyonlarını sesle söyleyen mod tasarlanıyor."
+    },
+    {
+      "icon": "shield-check",
+      "title": "Boks odaklı",
+      "text": "Genel fitness değil; yalnız boks tekniği. Tıbbi ya da yaralanma tavsiyesi vermez."
+    }
+  ],
+  "compare": {
+    "eyebrow": "Fark",
+    "title": "Aynı antrenman, iki farklı sonuç",
+    "without": {
+      "label": "Gard olmadan",
+      "items": [
+        "Hata fark edilmez",
+        "Gard her yumrukta iner",
+        "Neyi düzelteceğini tahmin edersin"
+      ]
+    },
+    "with": {
+      "label": "Gard ile",
+      "items": [
+        "Video analizle hata işaretlenir",
+        "Gard puanı takip edilir",
+        "Sıradaki düzeltme net"
+      ]
+    }
+  },
+  "facts_label": "Kısaca {name}",
+  "facts": [
+    {
+      "value": "3",
+      "label": "Analiz edilen nokta: gard, ayak, çene"
+    },
+    {
+      "value": "4 hafta",
+      "label": "Program süresi"
+    },
+    {
+      "value": "3 dk",
+      "label": "Varsayılan raund süresi"
+    },
+    {
+      "value": "7/24",
+      "label": "Açık AI koç sohbeti"
+    }
+  ],
+  "steps_title": "Nasıl çalışır?",
+  "steps": [
+    {
+      "title": "Videoyu çek",
+      "text": "Telefonu karşına koy, bir raund çalış."
+    },
+    {
+      "title": "Puanı gör",
+      "text": "Gard, ayak ve çene puanlanır."
+    },
+    {
+      "title": "Düzelt",
+      "text": "Koçun önerisiyle tekrar dene."
+    }
+  ],
+  "pricing": {
+    "title": "Fiyatlar",
+    "subtitle": "Raund zamanlayıcı ve temel program ücretsiz olacak. Premium video analizi ve AI koçu açar.",
+    "currency": "₺",
+    "plans": [
+      {
+        "id": "aylik",
+        "name": "Aylık",
+        "price": 199,
+        "period": "ay",
+        "features": [
+          "Video analizi",
+          "AI koç sohbeti",
+          "4 haftalık programlar"
+        ],
+        "cta": "Aylık planı al"
+      },
+      {
+        "id": "yillik",
+        "name": "Yıllık",
+        "price": 1199,
+        "period": "yıl",
+        "badge": "En avantajlı",
+        "note": "Ayda yaklaşık ₺100'e denk gelir",
+        "features": [
+          "Aylık plandaki her şey",
+          "Gelişim grafiği",
+          "Sınırsız video"
+        ],
+        "cta": "Yıllık planı al"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "{name} ne zaman çıkacak?",
+      "a": "Şu an geliştiriliyor. E-posta bırakırsan çıktığı gün haber veririz."
+    },
+    {
+      "q": "Boks bilmeyen biri kullanabilir mi?",
+      "a": "Başlangıç seviyesi için duruş ve jab ile başlayan program tasarlanıyor. Yine de gerçek bir antrenörün yerini tutmayı hedeflemiyoruz."
+    },
+    {
+      "q": "Videolarım saklanacak mı?",
+      "a": "Tasarım hedefi, videoyu yalnızca analiz için kullanmak. Ayrıntılar yayın öncesi gizlilik metninde yazılacak."
+    },
+    {
+      "q": "İptal edebilecek miyim?",
+      "a": "Abonelikler App Store ve Google Play üzerinden yönetilecek; istediğin zaman iptal edilebilecek."
+    }
+  ],
+  "bottom": {
+    "title": "Bir sonraki antrenmana düzeltilmiş gelmek için",
+    "text": "Çıktığında ilk kullananlardan ol.",
+    "cta": "Premium'u al"
+  },
+  "modal": {
+    "early_offer": null
+  },
+  "legal": {
+    "controller": "Yusuf Kağan Kılıç",
+    "contact_email": "yusufkaankilic.yk@gmail.com",
+    "consent_version": "v1"
+  },
+  "ads": [
+    {
+      "id": "sorun",
+      "angle": "sorun",
+      "headline": "Tek başına çalışırken tekniğini kimse düzeltmiyor",
+      "sub": "Gard, çapraz sonrası inen gardı ve yanlış hareketi gösterir.",
+      "scene": "koc"
+    },
+    {
+      "id": "sonuc",
+      "angle": "sonuc",
+      "headline": "Videonu çek, gard ve ayak puanını gör",
+      "sub": "Telefon kamerasıyla boks tekniği analizi.",
+      "scene": "analiz"
+    },
+    {
+      "id": "fiyat",
+      "angle": "fiyat",
+      "headline": "Boks tekniği analizi ayda ₺199",
+      "sub": "Video analizi, AI koç ve 4 haftalık program.",
+      "scene": "program",
+      "show_price": true
+    }
+  ]
+}
