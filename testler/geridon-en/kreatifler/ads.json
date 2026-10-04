@@ -1,0 +1,62 @@
+[
+  {
+    "file": "ad-problem-story.html",
+    "id": "problem",
+    "angle": "sorun",
+    "format": "story",
+    "scene": "text",
+    "headline": "A shopper left $64.99 in the cart. Text them.",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-problem-square.html",
+    "id": "problem",
+    "angle": "sorun",
+    "format": "square",
+    "scene": "text",
+    "headline": "A shopper left $64.99 in the cart. Text them.",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-result-story.html",
+    "id": "result",
+    "angle": "sonuc",
+    "format": "story",
+    "scene": "carts",
+    "headline": "Every abandoned cart, in one list",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-result-square.html",
+    "id": "result",
+    "angle": "sonuc",
+    "format": "square",
+    "scene": "carts",
+    "headline": "Every abandoned cart, in one list",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-price-story.html",
+    "id": "price",
+    "angle": "fiyat",
+    "format": "story",
+    "scene": "pack",
+    "headline": "Cart texts: 500 for $12, no subscription",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-price-square.html",
+    "id": "price",
+    "angle": "fiyat",
+    "format": "square",
+    "scene": "pack",
+    "headline": "Cart texts: 500 for $12, no subscription",
+    "w": 540,
+    "h": 540
+  }
+]

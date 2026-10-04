@@ -1,0 +1,412 @@
+{
+  "lang": "en",
+  "slug": "geridon-en",
+  "name": "Cartback",
+  "theme": {
+    "preset": "net"
+  },
+  "seo": {
+    "title": "Cartback: automatic texts for abandoned carts",
+    "description": "When a shopper leaves their cart, Cartback sends a short text on its own, and you pay only for the texts you send. Coming soon: join the early access list."
+  },
+  "header_cta": "Early access",
+  "hero": {
+    "eyebrow": "Coming soon · Shopify, WooCommerce",
+    "title": "A text for every abandoned cart",
+    "highlight": "every abandoned cart",
+    "subtitle": "When a shopper leaves without paying, Cartback sends them a short text. No subscription; you buy a pack of texts and use them as you go.",
+    "points": [
+      "Text goes out when a cart is abandoned",
+      "No fixed monthly fee",
+      "Connects to your store admin"
+    ],
+    "cta": "Get early access",
+    "secondary": "How it works",
+    "note": "In development for online stores."
+  },
+  "demo": {
+    "floats": [
+      {
+        "icon": "message-square",
+        "title": "Text sent",
+        "text": "Running shoes"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "text",
+        "caption": "Automatic text",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Abandoned cart",
+            "title": "The text your shopper gets"
+          },
+          {
+            "type": "chat",
+            "messages": [
+              {
+                "from": "app",
+                "text": "Your Running Shoes ($64.99) are still in your cart. Finish your order: shop.co/c/k7"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "clock",
+                "title": "Sent",
+                "meta": "After 1 hour",
+                "value": "Auto"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "carts",
+        "caption": "Waiting carts",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Today",
+            "title": "Abandoned carts"
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "shopping-cart",
+                "title": "Running shoes",
+                "meta": "2 hours ago",
+                "value": "$64.99"
+              },
+              {
+                "icon": "shopping-cart",
+                "title": "Backpack",
+                "meta": "5 hours ago",
+                "value": "$48.00"
+              },
+              {
+                "icon": "shopping-cart",
+                "title": "Thermos",
+                "meta": "Yesterday",
+                "value": "$22.50"
+              }
+            ]
+          },
+          {
+            "type": "stat",
+            "label": "Total waiting in carts",
+            "value": "$135.49",
+            "progress": 0.5
+          }
+        ]
+      },
+      {
+        "id": "timing",
+        "caption": "Reminder timing",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Setting",
+            "title": "When should the text go out?"
+          },
+          {
+            "type": "chips",
+            "items": [
+              "1 hour",
+              "24 hours",
+              "48 hours"
+            ],
+            "active": 0
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "message-square",
+                "title": "Text 1",
+                "meta": "After the cart is left",
+                "value": "1 hour"
+              },
+              {
+                "icon": "message-square",
+                "title": "Text 2",
+                "meta": "Optional",
+                "value": "24 hours"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pack",
+        "caption": "Text pack",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Your pack",
+            "title": "Texts left"
+          },
+          {
+            "type": "ring",
+            "label": "500-text pack",
+            "value": "340",
+            "progress": 0.68
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "send",
+                "title": "Sent this week",
+                "meta": "Automatic",
+                "value": "160 texts"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "benefits_eyebrow": "Three things it does",
+  "benefits_title": "What {name} does",
+  "benefits": [
+    {
+      "title": "Texts when a cart is abandoned",
+      "text": "If a shopper leaves before paying, a short text goes out after the delay you choose, with a link back to their cart.",
+      "scene": "text"
+    },
+    {
+      "title": "Shows the carts waiting",
+      "text": "See which products were left behind and what they add up to, in one list.",
+      "scene": "carts"
+    },
+    {
+      "title": "Pay only for texts you send",
+      "text": "No fixed monthly fee. Buy a pack and watch what's left in the dashboard.",
+      "scene": "pack"
+    }
+  ],
+  "moments_label": "When carts get abandoned",
+  "moments": [
+    "Shipping cost shown at checkout",
+    "Cart filled at 11:40 p.m.",
+    "Card still in another room",
+    "Waiting for payday",
+    "Comparing prices in another tab",
+    "A call interrupts checkout",
+    "The create-account screen",
+    "Hunting for a coupon code"
+  ],
+  "statement": {
+    "eyebrow": "Why {name}?",
+    "text": "A shopper puts the product in the cart and then *drops off at checkout*. Most stores never notice. {name} sends the person who left a short reminder. *You pay only for the texts that go out.*"
+  },
+  "features_eyebrow": "What's inside",
+  "features_title": "Small tools for abandoned carts",
+  "features": [
+    {
+      "icon": "message-square",
+      "title": "Automatic texts",
+      "text": "A message goes out after the delay you set.",
+      "blocks": [
+        {
+          "type": "chat",
+          "messages": [
+            {
+              "from": "app",
+              "text": "Your Thermos ($22.50) is still in your cart: shop.co/c/k7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "clock",
+      "title": "Timing",
+      "text": "First text after an hour, an optional second the next day.",
+      "blocks": [
+        {
+          "type": "chips",
+          "items": [
+            "1 hour",
+            "24 hours",
+            "48 hours"
+          ],
+          "active": 0
+        }
+      ]
+    },
+    {
+      "icon": "shopping-cart",
+      "title": "Cart list",
+      "text": "Waiting carts and their total in one place.",
+      "block": {
+        "type": "stat",
+        "label": "Total waiting in carts",
+        "value": "$135.49",
+        "progress": 0.5
+      }
+    },
+    {
+      "icon": "plug",
+      "title": "Connects to your store",
+      "text": "Plugins for Shopify and WooCommerce are being designed."
+    },
+    {
+      "icon": "shield-check",
+      "title": "Consent check",
+      "text": "Not texting numbers without marketing consent is a design goal."
+    },
+    {
+      "icon": "wallet",
+      "title": "No fixed fee",
+      "text": "You pay for text packs only; no charge for months you don't use it."
+    }
+  ],
+  "compare": {
+    "eyebrow": "The difference",
+    "title": "Same cart, two different endings",
+    "without": {
+      "label": "Without Cartback",
+      "items": [
+        "The cart just disappears",
+        "Nobody reaches the shopper",
+        "Lost orders go unnoticed"
+      ]
+    },
+    "with": {
+      "label": "With Cartback",
+      "items": [
+        "A text goes out after an hour",
+        "Waiting carts sit in a list",
+        "The shopper returns in one tap"
+      ]
+    }
+  },
+  "facts_label": "Cartback at a glance",
+  "facts": [
+    {
+      "value": "1 hour",
+      "label": "Default delay before the first text"
+    },
+    {
+      "value": "$0",
+      "label": "Fixed monthly fee"
+    },
+    {
+      "value": "500",
+      "label": "Texts in the starter pack"
+    },
+    {
+      "value": "24/7",
+      "label": "Automatic sending"
+    }
+  ],
+  "steps_title": "How it works",
+  "steps": [
+    {
+      "title": "Connect your store",
+      "text": "Shopify or WooCommerce."
+    },
+    {
+      "title": "Pick the delay",
+      "text": "How long after the cart is left?"
+    },
+    {
+      "title": "It sends itself",
+      "text": "The shopper gets a text."
+    }
+  ],
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "No subscription. You buy a pack of texts, and months you don't use it cost nothing.",
+    "currency": "$",
+    "plans": [
+      {
+        "id": "pack500",
+        "name": "500 texts",
+        "price": 12,
+        "period": "pack",
+        "features": [
+          "Automatic cart texts",
+          "Waiting-cart list",
+          "Timing settings"
+        ],
+        "cta": "Get the 500-text pack"
+      },
+      {
+        "id": "pack2000",
+        "name": "2,000 texts",
+        "price": 39,
+        "period": "pack",
+        "badge": "Lower cost per text",
+        "note": "About $0.02 per text",
+        "features": [
+          "Everything in the 500 pack",
+          "Second reminder text",
+          "Multiple stores"
+        ],
+        "cta": "Get the 2,000-text pack"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "When will {name} launch?",
+      "a": "It's in development. Leave your email and we'll tell you the day it's out."
+    },
+    {
+      "q": "Which store platforms will it work with?",
+      "a": "First targets are Shopify and WooCommerce. Other platforms will be assessed before launch."
+    },
+    {
+      "q": "Is it allowed to text shoppers?",
+      "a": "Marketing texts need the shopper's consent, and rules differ by country. {name} is designed not to text numbers without consent; the store owner's responsibilities will be spelled out before launch."
+    },
+    {
+      "q": "Can I cancel?",
+      "a": "There is no subscription. When you buy a pack, the texts left show in the dashboard, and you can stop any time."
+    }
+  ],
+  "bottom": {
+    "title": "Bring the shopper back to the cart",
+    "text": "Be among the first to use it.",
+    "cta": "Get early access"
+  },
+  "modal": {
+    "early_offer": null
+  },
+  "legal": {
+    "controller": "Yusuf Kağan Kılıç",
+    "contact_email": "yusufkaankilic.yk@gmail.com",
+    "consent_version": "v1-en"
+  },
+  "ads": [
+    {
+      "id": "problem",
+      "angle": "sorun",
+      "headline": "A shopper left $64.99 in the cart. Text them.",
+      "sub": "Cartback reminds the person who left their cart behind.",
+      "scene": "text"
+    },
+    {
+      "id": "result",
+      "angle": "sonuc",
+      "headline": "Every abandoned cart, in one list",
+      "sub": "Which product was left, how much it adds up to, one screen.",
+      "scene": "carts"
+    },
+    {
+      "id": "price",
+      "angle": "fiyat",
+      "headline": "Cart texts: 500 for $12, no subscription",
+      "sub": "Pay only for the texts you send.",
+      "scene": "pack",
+      "show_price": true
+    }
+  ]
+}

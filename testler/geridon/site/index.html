@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Geridön: terk edilen sepetlere otomatik SMS</title>
+<meta name="description" content="Sepeti terk eden müşteriye kendiliğinden SMS gider, mağazan yalnız gönderdiği SMS kadar öder. Yakında, erken erişim listesi açık.">
+<meta name="theme-color" content="#EDF1F7">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/schibsted-grotesk-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=3b44c657bd">
+<script>
+  // Motion starts hidden only when scripts can run; a watchdog reveals everything if they fail.
+  (function(d){ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) { d.classList.add("motion");
+    setTimeout(function(){ if (!window.__smkMotion) d.classList.remove("motion"); }, 2500); } })(document.documentElement);
+</script>
+</head>
+<body class="home">
+
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="./"><span class="logo-mark" aria-hidden="true">G</span>Geridön</a>
+    <button type="button" class="btn btn--small" data-cta="header">Erken erişim</button>
+  </div>
+</header>
+<main>
+  <div class="stage">
+    <div class="stage-bg" aria-hidden="true"><i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i></div>
+    <div class="wrap stage-grid">
+      <section class="hero-copy">
+        <p class="hero-pill"><span class="pill-dot" aria-hidden="true"></span>Yakında · ikas, Shopify, WooCommerce</p>
+        <h1 class="hero-title">Terk edilen sepet için <em class="hl">otomatik SMS</em></h1>
+        <p class="lead">Müşteri sepeti bırakınca Geridön ona kısa bir SMS gönderir. Abonelik yok, yalnız gönderdiğin SMS paketi için ödersin.</p>
+        <div class="hero-actions">
+          <button type="button" class="btn btn--primary btn--big" data-cta="hero" data-magnetic>Premium&#39;u al<span class="btn-arrow" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M5 12h14" /> <path pathLength="1" d="m12 5 7 7-7 7" /></svg></span></button>
+          <a class="link" href="#nasil">Nasıl çalışır?</a>
+        </div>
+        <ul class="hero-points"><li><span class="hp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Sepet terk edilince otomatik SMS</li><li><span class="hp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Aylık sabit ücret yok</li><li><span class="hp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Mağaza paneline bağlanır</li></ul>
+        <p class="hero-note">E-ticaret mağazaları için geliştiriliyor.</p>
+      </section>
+
+      <div class="stage-phone">
+        <div class="stage-sticky">
+          <div class="stage-shape" aria-hidden="true"></div>
+          <div class="stage-orbit" aria-hidden="true"><i></i></div>
+          <figure class="phone-wrap">
+  <div class="phone" role="img" aria-label="Geridön uygulama ekranı taslağı: Otomatik SMS, Bekleyen sepetler, Hatırlatma zamanı, SMS paketi">
+    <div class="ph-screen">
+      <div class="ph-bar" aria-hidden="true"><span>9:41</span><span class="ph-island"></span><span class="ph-sys"><i></i><i></i><i></i></span></div>
+      <p class="ph-app" aria-hidden="true">Geridön</p>
+      <div class="ph-scenes" aria-hidden="true">
+        <div class="scene is-active" data-scene="sms" data-caption="Otomatik SMS"><div class="b b-header"><span class="b-eyebrow">Terk edilen sepet</span><strong class="b-title">Müşteriye giden SMS</strong></div><div class="b b-chat"><p class="m m-app">Sepetinde Koşu Ayakkabısı (₺1.250) kaldı. Siparişi tamamlamak için: magaza.com/s/k7</p></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle pathLength="1" cx="12" cy="12" r="10" /> <path pathLength="1" d="M12 6v6l4 2" /></svg></b><span>Gönderim<small>1 saat sonra</small></span><em>Otomatik</em></li></ul></div>
+        <div class="scene" data-scene="sepetler" data-caption="Bekleyen sepetler"><div class="b b-header"><span class="b-eyebrow">Bugün</span><strong class="b-title">Terk edilen sepetler</strong></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Koşu ayakkabısı<small>2 saat önce</small></span><em>₺1.250</em></li><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Sırt çantası<small>5 saat önce</small></span><em>₺890</em></li><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Termos<small>Dün</small></span><em>₺420</em></li></ul><div class="b b-stat"><span class="b-label">Bekleyen sepet toplamı</span><strong class="b-value" data-count="₺2.560">₺2.560</strong><span class="b-meter"><i style="--p:0.5"></i></span></div></div>
+        <div class="scene" data-scene="zaman" data-caption="Hatırlatma zamanı"><div class="b b-header"><span class="b-eyebrow">Ayar</span><strong class="b-title">SMS ne zaman gitsin?</strong></div><div class="b b-chips"><span class="chip is-active">1 saat</span><span class="chip">24 saat</span><span class="chip">48 saat</span></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg></b><span>1. SMS<small>Sepet bırakıldıktan sonra</small></span><em>1 saat</em></li><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg></b><span>2. SMS<small>İsteğe bağlı</small></span><em>24 saat</em></li></ul></div>
+        <div class="scene" data-scene="paket" data-caption="SMS paketi"><div class="b b-header"><span class="b-eyebrow">Paketin</span><strong class="b-title">Kalan SMS</strong></div><div class="b b-ring"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="ring-bg" cx="32" cy="32" r="27"/><circle class="ring-fg" cx="32" cy="32" r="27" pathLength="100" style="--p:0.68"/></svg><span><strong class="b-value" data-count="340">340</strong><span class="b-label">500 SMS paketi</span></span></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path pathLength="1" d="m21.854 2.147-10.94 10.939" /></svg></b><span>Bu hafta gönderilen<small>Otomatik</small></span><em>160 SMS</em></li></ul></div>
+      </div>
+    </div>
+  </div>
+  <figcaption class="ph-caption" aria-hidden="true"><span class="ph-caption-in">Otomatik SMS</span></figcaption>
+</figure>
+          <div class="float float--1" aria-hidden="true"><span class="float-ic"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg></span><span class="float-tx"><strong>SMS gitti</strong><small>Koşu ayakkabısı</small></span></div>
+        </div>
+      </div>
+
+      <section class="tour" aria-label="Geridön ne yapar?">
+        <div class="tour-head">
+          <p class="eyebrow">Üç temel özellik</p>
+          <h2 class="tour-title h-reveal">Geridön ne yapar?</h2>
+        </div>
+        <article class="tour-step" data-scene="sms">
+          <div class="tour-text">
+            <span class="tour-num" aria-hidden="true">01</span>
+            <h3>Sepet terk edilince SMS gönderir</h3>
+            <p>Müşteri ödemeyi tamamlamadan çıkarsa, belirlediğin süre sonra siparişine dönmesi için kısa bir SMS gider.</p>
+          </div>
+          <div class="screen-card" data-scene="sms" data-caption="Otomatik SMS"><div class="b b-header"><span class="b-eyebrow">Terk edilen sepet</span><strong class="b-title">Müşteriye giden SMS</strong></div><div class="b b-chat"><p class="m m-app">Sepetinde Koşu Ayakkabısı (₺1.250) kaldı. Siparişi tamamlamak için: magaza.com/s/k7</p></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle pathLength="1" cx="12" cy="12" r="10" /> <path pathLength="1" d="M12 6v6l4 2" /></svg></b><span>Gönderim<small>1 saat sonra</small></span><em>Otomatik</em></li></ul></div>
+        </article>
+        <article class="tour-step" data-scene="sepetler">
+          <div class="tour-text">
+            <span class="tour-num" aria-hidden="true">02</span>
+            <h3>Bekleyen sepetleri gösterir</h3>
+            <p>Hangi ürünler sepette kaldı ve toplam ne kadar, tek listede görürsün.</p>
+          </div>
+          <div class="screen-card" data-scene="sepetler" data-caption="Bekleyen sepetler"><div class="b b-header"><span class="b-eyebrow">Bugün</span><strong class="b-title">Terk edilen sepetler</strong></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Koşu ayakkabısı<small>2 saat önce</small></span><em>₺1.250</em></li><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Sırt çantası<small>5 saat önce</small></span><em>₺890</em></li><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Termos<small>Dün</small></span><em>₺420</em></li></ul><div class="b b-stat"><span class="b-label">Bekleyen sepet toplamı</span><strong class="b-value" data-count="₺2.560">₺2.560</strong><span class="b-meter"><i style="--p:0.5"></i></span></div></div>
+        </article>
+        <article class="tour-step" data-scene="paket">
+          <div class="tour-text">
+            <span class="tour-num" aria-hidden="true">03</span>
+            <h3>Kullandığın SMS kadar öder</h3>
+            <p>Aylık sabit ücret yok. SMS paketi alırsın, kalanını panelden izlersin.</p>
+          </div>
+          <div class="screen-card" data-scene="paket" data-caption="SMS paketi"><div class="b b-header"><span class="b-eyebrow">Paketin</span><strong class="b-title">Kalan SMS</strong></div><div class="b b-ring"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="ring-bg" cx="32" cy="32" r="27"/><circle class="ring-fg" cx="32" cy="32" r="27" pathLength="100" style="--p:0.68"/></svg><span><strong class="b-value" data-count="340">340</strong><span class="b-label">500 SMS paketi</span></span></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path pathLength="1" d="m21.854 2.147-10.94 10.939" /></svg></b><span>Bu hafta gönderilen<small>Otomatik</small></span><em>160 SMS</em></li></ul></div>
+        </article>
+      </section>
+    </div>
+  </div>
+
+  <section class="moments" aria-label="Sepetin terk edildiği anlar">
+    <div class="mq mq--a"><div class="mq-track"><div class="mq-set"><span class="mq-item">Ödeme sayfasında kargo ücretini görünce</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Gece 23.40&#39;ta sepete ekleyip uyuyunca</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Kart bilgisi telefonda yanında yokken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Maaş gününü beklerken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Fiyatı başka sitede karşılaştırırken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Telefon çalınca sayfa kapanınca</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Hesap oluşturma ekranında</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Kupon kodunu ararken</span><span class="mq-sep" aria-hidden="true"></span></div><div class="mq-set" aria-hidden="true"><span class="mq-item">Ödeme sayfasında kargo ücretini görünce</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Gece 23.40&#39;ta sepete ekleyip uyuyunca</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Kart bilgisi telefonda yanında yokken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Maaş gününü beklerken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Fiyatı başka sitede karşılaştırırken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Telefon çalınca sayfa kapanınca</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Hesap oluşturma ekranında</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Kupon kodunu ararken</span><span class="mq-sep" aria-hidden="true"></span></div></div></div>
+    <div class="mq mq--b"><div class="mq-track"><div class="mq-set"><span class="mq-item">Fiyatı başka sitede karşılaştırırken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Telefon çalınca sayfa kapanınca</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Hesap oluşturma ekranında</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Kupon kodunu ararken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Ödeme sayfasında kargo ücretini görünce</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Gece 23.40&#39;ta sepete ekleyip uyuyunca</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Kart bilgisi telefonda yanında yokken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Maaş gününü beklerken</span><span class="mq-sep" aria-hidden="true"></span></div><div class="mq-set" aria-hidden="true"><span class="mq-item">Fiyatı başka sitede karşılaştırırken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Telefon çalınca sayfa kapanınca</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Hesap oluşturma ekranında</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Kupon kodunu ararken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Ödeme sayfasında kargo ücretini görünce</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Gece 23.40&#39;ta sepete ekleyip uyuyunca</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Kart bilgisi telefonda yanında yokken</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Maaş gününü beklerken</span><span class="mq-sep" aria-hidden="true"></span></div></div></div>
+  </section>
+
+  <section class="statement">
+    <div class="wrap">
+      <p class="eyebrow">Neden Geridön?</p>
+      <p class="statement-text">Müşteri sepete ürünü koyar ama <em>ödeme sayfasında vazgeçer</em>. Çoğu mağaza bunu fark etmez bile. Geridön sepeti bırakana, kısa bir hatırlatma gönderir. <em>Sen yalnız gönderilen SMS için ödersin.</em></p>
+    </div>
+  </section>
+
+  <section class="bento-sec" id="ozellikler">
+    <div class="wrap">
+      <p class="eyebrow">İçinde neler var</p>
+      <h2 class="h-reveal">Terk edilen sepetler için küçük araçlar</h2>
+      <div class="bento">
+        <article class="bento-card is-wide has-vis">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg></span>
+            <h3>Otomatik SMS</h3>
+            <p>Sepet terk edilince belirlediğin sürede mesaj gider.</p>
+          </div>
+          <div class="bento-vis"><div class="bento-screen"><div class="b b-chat"><p class="m m-app">Sepetinde Termos (₺420) kaldı: magaza.com/s/k7</p></div></div></div>
+        </article>
+        <article class="bento-card has-vis">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle pathLength="1" cx="12" cy="12" r="10" /> <path pathLength="1" d="M12 6v6l4 2" /></svg></span>
+            <h3>Zamanlama</h3>
+            <p>İlk SMS 1 saat sonra, istersen ikincisi ertesi gün.</p>
+          </div>
+          <div class="bento-vis"><div class="bento-screen"><div class="b b-chips"><span class="chip is-active">1 saat</span><span class="chip">24 saat</span><span class="chip">48 saat</span></div></div></div>
+        </article>
+        <article class="bento-card has-vis">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></span>
+            <h3>Sepet listesi</h3>
+            <p>Bekleyen sepetler ve toplam tutar bir arada.</p>
+          </div>
+          <div class="bento-vis"><div class="bento-screen"><div class="b b-stat"><span class="b-label">Bekleyen sepet toplamı</span><strong class="b-value" data-count="₺2.560">₺2.560</strong><span class="b-meter"><i style="--p:0.5"></i></span></div></div></div>
+        </article>
+        <article class="bento-card is-wide">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M12 22v-5" /> <path pathLength="1" d="M15 8V2" /> <path pathLength="1" d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z" /> <path pathLength="1" d="M9 8V2" /></svg></span>
+            <h3>Mağazana bağlanır</h3>
+            <p>ikas, Shopify ve WooCommerce için eklenti tasarlanıyor.</p>
+          </div>
+          
+        </article>
+        <article class="bento-card is-wide">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path pathLength="1" d="m9 12 2 2 4-4" /></svg></span>
+            <h3>İzin kontrolü</h3>
+            <p>Ticari ileti izni olmayan numaralara SMS gitmemesi tasarım hedefi.</p>
+          </div>
+          
+        </article>
+        <article class="bento-card">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path pathLength="1" d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></svg></span>
+            <h3>Sabit ücret yok</h3>
+            <p>Yalnız SMS paketi için ödersin; kullanmadığın aya ücret yok.</p>
+          </div>
+          
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="compare">
+    <div class="wrap">
+      <p class="eyebrow">Fark</p>
+      <h2 class="h-reveal">Aynı sepet, iki farklı sonuç</h2>
+      <div class="cmp">
+        <div class="cmp-card cmp-card--without">
+          <p class="cmp-label">Geridön olmadan</p>
+          <ul><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M18 6 6 18" /> <path pathLength="1" d="m6 6 12 12" /></svg></span><span>Sepet sessizce kaybolur</span></li><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M18 6 6 18" /> <path pathLength="1" d="m6 6 12 12" /></svg></span><span>Müşteriye ulaşan olmaz</span></li><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M18 6 6 18" /> <path pathLength="1" d="m6 6 12 12" /></svg></span><span>Kaçan sipariş fark edilmez</span></li></ul>
+        </div>
+        <div class="cmp-card cmp-card--with">
+          <p class="cmp-label">Geridön ile</p>
+          <ul><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span><span>1 saat sonra SMS gider</span></li><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span><span>Bekleyen sepetler listede</span></li><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span><span>Müşteri tek tıkla sepete döner</span></li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="Kısaca Geridön">
+    <div class="wrap">
+      <dl class="facts-grid facts-grid--4">
+        <div class="fact"><dt>Varsayılan ilk SMS süresi</dt><dd data-count="1 saat">1 saat</dd></div>
+        <div class="fact"><dt>Aylık sabit ücret</dt><dd data-count="0 ₺">0 ₺</dd></div>
+        <div class="fact"><dt>SMS&#39;lik başlangıç paketi</dt><dd data-count="500">500</dd></div>
+        <div class="fact"><dt>Çalışan otomatik gönderim</dt><dd>7/24</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="steps" id="nasil">
+    <div class="wrap">
+      <p class="eyebrow">Adım adım</p>
+      <h2 class="h-reveal">Nasıl çalışır?</h2>
+      <ol class="steps-list" style="--n:3">
+        <span class="steps-line" aria-hidden="true"><i></i></span>
+        <li><span class="steps-dot" aria-hidden="true"></span><h3>Mağazanı bağla</h3><p>ikas, Shopify veya WooCommerce.</p></li>
+        <li><span class="steps-dot" aria-hidden="true"></span><h3>Süreyi seç</h3><p>SMS kaç saat sonra gitsin?</p></li>
+        <li><span class="steps-dot" aria-hidden="true"></span><h3>Otomatik gitsin</h3><p>Sepeti bırakana SMS gider.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="pricing" id="fiyat">
+    <div class="pricing-glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Planlanan fiyatlar</p>
+      <h2 class="h-reveal">Fiyatlar</h2>
+      <p class="section-lead">Abonelik yok; SMS paketi alırsın. Kullanmadığın aya ücret yazılmaz.</p>
+      <div class="plans plans--2">
+      <article class="plan" data-reveal>
+        
+        <h3>500 SMS</h3>
+        <p class="plan-price"><strong data-count="₺199">₺199</strong><span>/ paket</span></p>
+        
+        <ul class="plan-feats"><li>Otomatik sepet SMS&#39;i</li><li>Bekleyen sepet listesi</li><li>Zamanlama ayarı</li></ul>
+        <button type="button" class="btn btn--ghost btn--full" data-cta="plan-paket500" data-plan="paket500">500 SMS paketini al</button>
+      </article>
+      <article class="plan plan--featured" data-reveal>
+        <p class="plan-badge">SMS başına daha uygun</p>
+        <h3>2.000 SMS</h3>
+        <p class="plan-price"><strong data-count="₺599">₺599</strong><span>/ paket</span></p>
+        <p class="plan-note">SMS başına yaklaşık ₺0,30</p>
+        <ul class="plan-feats"><li>500 SMS paketindeki her şey</li><li>İkinci hatırlatma SMS&#39;i</li><li>Birden fazla mağaza</li></ul>
+        <button type="button" class="btn btn--primary btn--full" data-cta="plan-paket2000" data-plan="paket2000">2.000 SMS paketini al</button>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">Sorular</p>
+      <h2 class="h-reveal">Sık sorulanlar</h2>
+      <details><summary>Geridön ne zaman çıkacak?</summary><div class="faq-a"><p>Şu an geliştiriliyor. E-posta bırakırsan çıktığı gün haber veririz.</p></div></details>
+      <details><summary>Hangi mağaza altyapılarıyla çalışacak?</summary><div class="faq-a"><p>İlk hedef ikas, Shopify ve WooCommerce. Ticimax ve IdeaSoft için değerlendirme yayın öncesi yapılacak.</p></div></details>
+      <details><summary>Müşteriye ticari SMS atmak serbest mi?</summary><div class="faq-a"><p>Ticari elektronik ileti için müşterinin izni gerekir. Geridön izni olmayan numaralara SMS göndermeyecek şekilde tasarlanıyor; mağaza sahibinin sorumlulukları yayın öncesi netleşecek.</p></div></details>
+      <details><summary>İptal edebilecek miyim?</summary><div class="faq-a"><p>Abonelik yok. Paket aldığında kalan SMS&#39;lerin panelde görünür, istediğin zaman durdurabilirsin.</p></div></details>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="closing-bg" aria-hidden="true"><i class="aur aur--1"></i><i class="aur aur--2"></i><span class="closing-ring"></span><span class="closing-ring closing-ring--2"></span></div>
+    <div class="wrap wrap--narrow">
+      <p class="hero-pill"><span class="pill-dot" aria-hidden="true"></span>Yakında · ikas, Shopify, WooCommerce</p>
+      <h2 class="closing-title">Sepeti bırakan müşteri geri dönsün</h2>
+      <p>Çıktığında ilk kullananlardan ol.</p>
+      <button type="button" class="btn btn--primary btn--big" data-cta="bottom" data-magnetic>Premium&#39;u al<span class="btn-arrow" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M5 12h14" /> <path pathLength="1" d="m12 5 7 7-7 7" /></svg></span></button>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>Geridön geliştirme aşamasında bir uygulamadır.</p>
+    <p><a href="kvkk.html">KVKK aydınlatma metni</a><span aria-hidden="true"> / </span><a href="mailto:yusufkaankilic.yk@gmail.com">yusufkaankilic.yk@gmail.com</a></p>
+  </div>
+</footer>
+
+<div class="mbar" aria-hidden="true">
+  <button type="button" class="btn btn--primary btn--full" data-cta="sticky" tabindex="-1">Premium&#39;u al</button>
+</div>
+
+<dialog class="modal" id="early" aria-labelledby="early-title">
+  <div class="modal-in">
+    <form method="dialog" class="modal-close-row"><button class="modal-x" aria-label="Kapat" value="close">×</button></form>
+    <div class="modal-body" data-state="form">
+      <h2 id="early-title">Geridön henüz hazır değil</h2>
+      <p>Uygulamayı şu an geliştiriyoruz. Satın alma henüz açık değil ve senden ödeme bilgisi istemiyoruz.</p>
+      <p>Çıktığında ilk sen haberdar olmak istersen e-posta adresini bırak.</p>
+      
+      <form class="lead-form" novalidate>
+        <label for="lead-email">E-posta adresin</label>
+        <input id="lead-email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="ornek@eposta.com">
+        <label class="consent"><input type="checkbox" name="consent" required>
+          <span><a href="kvkk.html" target="_blank" rel="noopener">Aydınlatma metnini</a> okudum; Geridön çıktığında haber verilmesi için e-posta adresimin işlenmesine onay veriyorum.</span></label>
+        <p class="form-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn--primary btn--full">Çıkınca haber ver</button>
+      </form>
+    </div>
+    <div class="modal-body modal-done" data-state="done" hidden>
+      <svg class="done-mark" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23" pathLength="100"/><path d="M15 27l7.5 7.5L37.5 19" pathLength="100"/></svg>
+      <h2>Kaydın alındı</h2>
+      <p>Geridön yayına çıktığında <strong class="done-email"></strong> adresine haber vereceğiz. Başka bir amaçla e-posta göndermeyeceğiz.</p>
+      <form method="dialog"><button class="btn btn--ghost btn--full" value="close">Tamam</button></form>
+    </div>
+  </div>
+</dialog>
+<script src="motion.js?v=e51b25547b" defer></script>
+<script src="app.js?v=b0899a2f6e" defer></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Cartback: automatic texts for abandoned carts</title>
+<meta name="description" content="When a shopper leaves their cart, Cartback sends a short text on its own, and you pay only for the texts you send. Coming soon: join the early access list.">
+<meta name="theme-color" content="#EDF1F7">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/schibsted-grotesk-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=3b44c657bd">
+<script>
+  // Motion starts hidden only when scripts can run; a watchdog reveals everything if they fail.
+  (function(d){ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) { d.classList.add("motion");
+    setTimeout(function(){ if (!window.__smkMotion) d.classList.remove("motion"); }, 2500); } })(document.documentElement);
+</script>
+</head>
+<body class="home">
+
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="./"><span class="logo-mark" aria-hidden="true">C</span>Cartback</a>
+    <button type="button" class="btn btn--small" data-cta="header">Early access</button>
+  </div>
+</header>
+<main>
+  <div class="stage">
+    <div class="stage-bg" aria-hidden="true"><i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i></div>
+    <div class="wrap stage-grid">
+      <section class="hero-copy">
+        <p class="hero-pill"><span class="pill-dot" aria-hidden="true"></span>Coming soon · Shopify, WooCommerce</p>
+        <h1 class="hero-title">A text for <em class="hl">every abandoned cart</em></h1>
+        <p class="lead">When a shopper leaves without paying, Cartback sends them a short text. No subscription; you buy a pack of texts and use them as you go.</p>
+        <div class="hero-actions">
+          <button type="button" class="btn btn--primary btn--big" data-cta="hero" data-magnetic>Get early access<span class="btn-arrow" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M5 12h14" /> <path pathLength="1" d="m12 5 7 7-7 7" /></svg></span></button>
+          <a class="link" href="#nasil">How it works</a>
+        </div>
+        <ul class="hero-points"><li><span class="hp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Text goes out when a cart is abandoned</li><li><span class="hp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>No fixed monthly fee</li><li><span class="hp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Connects to your store admin</li></ul>
+        <p class="hero-note">In development for online stores.</p>
+      </section>
+
+      <div class="stage-phone">
+        <div class="stage-sticky">
+          <div class="stage-shape" aria-hidden="true"></div>
+          <div class="stage-orbit" aria-hidden="true"><i></i></div>
+          <figure class="phone-wrap">
+  <div class="phone" role="img" aria-label="Cartback app screen preview: Automatic text, Waiting carts, Reminder timing, Text pack">
+    <div class="ph-screen">
+      <div class="ph-bar" aria-hidden="true"><span>9:41</span><span class="ph-island"></span><span class="ph-sys"><i></i><i></i><i></i></span></div>
+      <p class="ph-app" aria-hidden="true">Cartback</p>
+      <div class="ph-scenes" aria-hidden="true">
+        <div class="scene is-active" data-scene="text" data-caption="Automatic text"><div class="b b-header"><span class="b-eyebrow">Abandoned cart</span><strong class="b-title">The text your shopper gets</strong></div><div class="b b-chat"><p class="m m-app">Your Running Shoes ($64.99) are still in your cart. Finish your order: shop.co/c/k7</p></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle pathLength="1" cx="12" cy="12" r="10" /> <path pathLength="1" d="M12 6v6l4 2" /></svg></b><span>Sent<small>After 1 hour</small></span><em>Auto</em></li></ul></div>
+        <div class="scene" data-scene="carts" data-caption="Waiting carts"><div class="b b-header"><span class="b-eyebrow">Today</span><strong class="b-title">Abandoned carts</strong></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Running shoes<small>2 hours ago</small></span><em>$64.99</em></li><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Backpack<small>5 hours ago</small></span><em>$48.00</em></li><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Thermos<small>Yesterday</small></span><em>$22.50</em></li></ul><div class="b b-stat"><span class="b-label">Total waiting in carts</span><strong class="b-value" data-count="$135.49">$135.49</strong><span class="b-meter"><i style="--p:0.5"></i></span></div></div>
+        <div class="scene" data-scene="timing" data-caption="Reminder timing"><div class="b b-header"><span class="b-eyebrow">Setting</span><strong class="b-title">When should the text go out?</strong></div><div class="b b-chips"><span class="chip is-active">1 hour</span><span class="chip">24 hours</span><span class="chip">48 hours</span></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg></b><span>Text 1<small>After the cart is left</small></span><em>1 hour</em></li><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg></b><span>Text 2<small>Optional</small></span><em>24 hours</em></li></ul></div>
+        <div class="scene" data-scene="pack" data-caption="Text pack"><div class="b b-header"><span class="b-eyebrow">Your pack</span><strong class="b-title">Texts left</strong></div><div class="b b-ring"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="ring-bg" cx="32" cy="32" r="27"/><circle class="ring-fg" cx="32" cy="32" r="27" pathLength="100" style="--p:0.68"/></svg><span><strong class="b-value" data-count="340">340</strong><span class="b-label">500-text pack</span></span></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path pathLength="1" d="m21.854 2.147-10.94 10.939" /></svg></b><span>Sent this week<small>Automatic</small></span><em>160 texts</em></li></ul></div>
+      </div>
+    </div>
+  </div>
+  <figcaption class="ph-caption" aria-hidden="true"><span class="ph-caption-in">Automatic text</span></figcaption>
+</figure>
+          <div class="float float--1" aria-hidden="true"><span class="float-ic"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg></span><span class="float-tx"><strong>Text sent</strong><small>Running shoes</small></span></div>
+        </div>
+      </div>
+
+      <section class="tour" aria-label="What Cartback does">
+        <div class="tour-head">
+          <p class="eyebrow">Three things it does</p>
+          <h2 class="tour-title h-reveal">What Cartback does</h2>
+        </div>
+        <article class="tour-step" data-scene="text">
+          <div class="tour-text">
+            <span class="tour-num" aria-hidden="true">01</span>
+            <h3>Texts when a cart is abandoned</h3>
+            <p>If a shopper leaves before paying, a short text goes out after the delay you choose, with a link back to their cart.</p>
+          </div>
+          <div class="screen-card" data-scene="text" data-caption="Automatic text"><div class="b b-header"><span class="b-eyebrow">Abandoned cart</span><strong class="b-title">The text your shopper gets</strong></div><div class="b b-chat"><p class="m m-app">Your Running Shoes ($64.99) are still in your cart. Finish your order: shop.co/c/k7</p></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle pathLength="1" cx="12" cy="12" r="10" /> <path pathLength="1" d="M12 6v6l4 2" /></svg></b><span>Sent<small>After 1 hour</small></span><em>Auto</em></li></ul></div>
+        </article>
+        <article class="tour-step" data-scene="carts">
+          <div class="tour-text">
+            <span class="tour-num" aria-hidden="true">02</span>
+            <h3>Shows the carts waiting</h3>
+            <p>See which products were left behind and what they add up to, in one list.</p>
+          </div>
+          <div class="screen-card" data-scene="carts" data-caption="Waiting carts"><div class="b b-header"><span class="b-eyebrow">Today</span><strong class="b-title">Abandoned carts</strong></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Running shoes<small>2 hours ago</small></span><em>$64.99</em></li><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Backpack<small>5 hours ago</small></span><em>$48.00</em></li><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></b><span>Thermos<small>Yesterday</small></span><em>$22.50</em></li></ul><div class="b b-stat"><span class="b-label">Total waiting in carts</span><strong class="b-value" data-count="$135.49">$135.49</strong><span class="b-meter"><i style="--p:0.5"></i></span></div></div>
+        </article>
+        <article class="tour-step" data-scene="pack">
+          <div class="tour-text">
+            <span class="tour-num" aria-hidden="true">03</span>
+            <h3>Pay only for texts you send</h3>
+            <p>No fixed monthly fee. Buy a pack and watch what&#39;s left in the dashboard.</p>
+          </div>
+          <div class="screen-card" data-scene="pack" data-caption="Text pack"><div class="b b-header"><span class="b-eyebrow">Your pack</span><strong class="b-title">Texts left</strong></div><div class="b b-ring"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="ring-bg" cx="32" cy="32" r="27"/><circle class="ring-fg" cx="32" cy="32" r="27" pathLength="100" style="--p:0.68"/></svg><span><strong class="b-value" data-count="340">340</strong><span class="b-label">500-text pack</span></span></div><ul class="b b-list"><li><b aria-hidden="true" class="is-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path pathLength="1" d="m21.854 2.147-10.94 10.939" /></svg></b><span>Sent this week<small>Automatic</small></span><em>160 texts</em></li></ul></div>
+        </article>
+      </section>
+    </div>
+  </div>
+
+  <section class="moments" aria-label="When carts get abandoned">
+    <div class="mq mq--a"><div class="mq-track"><div class="mq-set"><span class="mq-item">Shipping cost shown at checkout</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Cart filled at 11:40 p.m.</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Card still in another room</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Waiting for payday</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Comparing prices in another tab</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">A call interrupts checkout</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">The create-account screen</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Hunting for a coupon code</span><span class="mq-sep" aria-hidden="true"></span></div><div class="mq-set" aria-hidden="true"><span class="mq-item">Shipping cost shown at checkout</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Cart filled at 11:40 p.m.</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Card still in another room</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Waiting for payday</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Comparing prices in another tab</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">A call interrupts checkout</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">The create-account screen</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Hunting for a coupon code</span><span class="mq-sep" aria-hidden="true"></span></div></div></div>
+    <div class="mq mq--b"><div class="mq-track"><div class="mq-set"><span class="mq-item">Comparing prices in another tab</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">A call interrupts checkout</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">The create-account screen</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Hunting for a coupon code</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Shipping cost shown at checkout</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Cart filled at 11:40 p.m.</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Card still in another room</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Waiting for payday</span><span class="mq-sep" aria-hidden="true"></span></div><div class="mq-set" aria-hidden="true"><span class="mq-item">Comparing prices in another tab</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">A call interrupts checkout</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">The create-account screen</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Hunting for a coupon code</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Shipping cost shown at checkout</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Cart filled at 11:40 p.m.</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Card still in another room</span><span class="mq-sep" aria-hidden="true"></span><span class="mq-item">Waiting for payday</span><span class="mq-sep" aria-hidden="true"></span></div></div></div>
+  </section>
+
+  <section class="statement">
+    <div class="wrap">
+      <p class="eyebrow">Why Cartback?</p>
+      <p class="statement-text">A shopper puts the product in the cart and then <em>drops off at checkout</em>. Most stores never notice. Cartback sends the person who left a short reminder. <em>You pay only for the texts that go out.</em></p>
+    </div>
+  </section>
+
+  <section class="bento-sec" id="ozellikler">
+    <div class="wrap">
+      <p class="eyebrow">What&#39;s inside</p>
+      <h2 class="h-reveal">Small tools for abandoned carts</h2>
+      <div class="bento">
+        <article class="bento-card is-wide has-vis">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg></span>
+            <h3>Automatic texts</h3>
+            <p>A message goes out after the delay you set.</p>
+          </div>
+          <div class="bento-vis"><div class="bento-screen"><div class="b b-chat"><p class="m m-app">Your Thermos ($22.50) is still in your cart: shop.co/c/k7</p></div></div></div>
+        </article>
+        <article class="bento-card has-vis">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle pathLength="1" cx="12" cy="12" r="10" /> <path pathLength="1" d="M12 6v6l4 2" /></svg></span>
+            <h3>Timing</h3>
+            <p>First text after an hour, an optional second the next day.</p>
+          </div>
+          <div class="bento-vis"><div class="bento-screen"><div class="b b-chips"><span class="chip is-active">1 hour</span><span class="chip">24 hours</span><span class="chip">48 hours</span></div></div></div>
+        </article>
+        <article class="bento-card has-vis">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path pathLength="1" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle pathLength="1" cx="18" cy="20" r="2" /> <circle pathLength="1" cx="8" cy="20" r="2" /></svg></span>
+            <h3>Cart list</h3>
+            <p>Waiting carts and their total in one place.</p>
+          </div>
+          <div class="bento-vis"><div class="bento-screen"><div class="b b-stat"><span class="b-label">Total waiting in carts</span><strong class="b-value" data-count="$135.49">$135.49</strong><span class="b-meter"><i style="--p:0.5"></i></span></div></div></div>
+        </article>
+        <article class="bento-card is-wide">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M12 22v-5" /> <path pathLength="1" d="M15 8V2" /> <path pathLength="1" d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z" /> <path pathLength="1" d="M9 8V2" /></svg></span>
+            <h3>Connects to your store</h3>
+            <p>Plugins for Shopify and WooCommerce are being designed.</p>
+          </div>
+          
+        </article>
+        <article class="bento-card is-wide">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path pathLength="1" d="m9 12 2 2 4-4" /></svg></span>
+            <h3>Consent check</h3>
+            <p>Not texting numbers without marketing consent is a design goal.</p>
+          </div>
+          
+        </article>
+        <article class="bento-card">
+          <div class="bento-copy">
+            <span class="bento-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path pathLength="1" d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></svg></span>
+            <h3>No fixed fee</h3>
+            <p>You pay for text packs only; no charge for months you don&#39;t use it.</p>
+          </div>
+          
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="compare">
+    <div class="wrap">
+      <p class="eyebrow">The difference</p>
+      <h2 class="h-reveal">Same cart, two different endings</h2>
+      <div class="cmp">
+        <div class="cmp-card cmp-card--without">
+          <p class="cmp-label">Without Cartback</p>
+          <ul><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M18 6 6 18" /> <path pathLength="1" d="m6 6 12 12" /></svg></span><span>The cart just disappears</span></li><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M18 6 6 18" /> <path pathLength="1" d="m6 6 12 12" /></svg></span><span>Nobody reaches the shopper</span></li><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M18 6 6 18" /> <path pathLength="1" d="m6 6 12 12" /></svg></span><span>Lost orders go unnoticed</span></li></ul>
+        </div>
+        <div class="cmp-card cmp-card--with">
+          <p class="cmp-label">With Cartback</p>
+          <ul><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span><span>A text goes out after an hour</span></li><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span><span>Waiting carts sit in a list</span></li><li><span class="cmp-ic" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6 9 17l-5-5" /></svg></span><span>The shopper returns in one tap</span></li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="Cartback at a glance">
+    <div class="wrap">
+      <dl class="facts-grid facts-grid--4">
+        <div class="fact"><dt>Default delay before the first text</dt><dd data-count="1 hour">1 hour</dd></div>
+        <div class="fact"><dt>Fixed monthly fee</dt><dd data-count="$0">$0</dd></div>
+        <div class="fact"><dt>Texts in the starter pack</dt><dd data-count="500">500</dd></div>
+        <div class="fact"><dt>Automatic sending</dt><dd>24/7</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="steps" id="nasil">
+    <div class="wrap">
+      <p class="eyebrow">Step by step</p>
+      <h2 class="h-reveal">How it works</h2>
+      <ol class="steps-list" style="--n:3">
+        <span class="steps-line" aria-hidden="true"><i></i></span>
+        <li><span class="steps-dot" aria-hidden="true"></span><h3>Connect your store</h3><p>Shopify or WooCommerce.</p></li>
+        <li><span class="steps-dot" aria-hidden="true"></span><h3>Pick the delay</h3><p>How long after the cart is left?</p></li>
+        <li><span class="steps-dot" aria-hidden="true"></span><h3>It sends itself</h3><p>The shopper gets a text.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="pricing" id="fiyat">
+    <div class="pricing-glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Planned pricing</p>
+      <h2 class="h-reveal">Pricing</h2>
+      <p class="section-lead">No subscription. You buy a pack of texts, and months you don&#39;t use it cost nothing.</p>
+      <div class="plans plans--2">
+      <article class="plan" data-reveal>
+        
+        <h3>500 texts</h3>
+        <p class="plan-price"><strong data-count="$12">$12</strong><span>/ pack</span></p>
+        
+        <ul class="plan-feats"><li>Automatic cart texts</li><li>Waiting-cart list</li><li>Timing settings</li></ul>
+        <button type="button" class="btn btn--ghost btn--full" data-cta="plan-pack500" data-plan="pack500">Get the 500-text pack</button>
+      </article>
+      <article class="plan plan--featured" data-reveal>
+        <p class="plan-badge">Lower cost per text</p>
+        <h3>2,000 texts</h3>
+        <p class="plan-price"><strong data-count="$39">$39</strong><span>/ pack</span></p>
+        <p class="plan-note">About $0.02 per text</p>
+        <ul class="plan-feats"><li>Everything in the 500 pack</li><li>Second reminder text</li><li>Multiple stores</li></ul>
+        <button type="button" class="btn btn--primary btn--full" data-cta="plan-pack2000" data-plan="pack2000">Get the 2,000-text pack</button>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">Questions</p>
+      <h2 class="h-reveal">Frequently asked questions</h2>
+      <details><summary>When will Cartback launch?</summary><div class="faq-a"><p>It&#39;s in development. Leave your email and we&#39;ll tell you the day it&#39;s out.</p></div></details>
+      <details><summary>Which store platforms will it work with?</summary><div class="faq-a"><p>First targets are Shopify and WooCommerce. Other platforms will be assessed before launch.</p></div></details>
+      <details><summary>Is it allowed to text shoppers?</summary><div class="faq-a"><p>Marketing texts need the shopper&#39;s consent, and rules differ by country. Cartback is designed not to text numbers without consent; the store owner&#39;s responsibilities will be spelled out before launch.</p></div></details>
+      <details><summary>Can I cancel?</summary><div class="faq-a"><p>There is no subscription. When you buy a pack, the texts left show in the dashboard, and you can stop any time.</p></div></details>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="closing-bg" aria-hidden="true"><i class="aur aur--1"></i><i class="aur aur--2"></i><span class="closing-ring"></span><span class="closing-ring closing-ring--2"></span></div>
+    <div class="wrap wrap--narrow">
+      <p class="hero-pill"><span class="pill-dot" aria-hidden="true"></span>Coming soon · Shopify, WooCommerce</p>
+      <h2 class="closing-title">Bring the shopper back to the cart</h2>
+      <p>Be among the first to use it.</p>
+      <button type="button" class="btn btn--primary btn--big" data-cta="bottom" data-magnetic>Get early access<span class="btn-arrow" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M5 12h14" /> <path pathLength="1" d="m12 5 7 7-7 7" /></svg></span></button>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>Cartback is an app in development.</p>
+    <p><a href="kvkk.html">Privacy notice</a><span aria-hidden="true"> / </span><a href="mailto:yusufkaankilic.yk@gmail.com">yusufkaankilic.yk@gmail.com</a></p>
+  </div>
+</footer>
+
+<div class="mbar" aria-hidden="true">
+  <button type="button" class="btn btn--primary btn--full" data-cta="sticky" tabindex="-1">Get early access</button>
+</div>
+
+<dialog class="modal" id="early" aria-labelledby="early-title" data-msg-email="Enter a valid email address." data-msg-consent="Tick the checkbox to continue." data-msg-rate="Too many attempts. Please try again in a bit." data-msg-bad="Check your email address and try again." data-msg-fail="We couldn&#39;t save your signup right now. Please try again shortly." data-msg-net="Couldn&#39;t connect. Check your internet connection and try again.">
+  <div class="modal-in">
+    <form method="dialog" class="modal-close-row"><button class="modal-x" aria-label="Close" value="close">×</button></form>
+    <div class="modal-body" data-state="form">
+      <h2 id="early-title">Cartback isn&#39;t ready yet</h2>
+      <p>We&#39;re still building the app. Purchasing isn&#39;t open yet and we won&#39;t ask you for payment details.</p>
+      <p>Leave your email if you&#39;d like to be the first to know when it launches.</p>
+      
+      <form class="lead-form" novalidate>
+        <label for="lead-email">Your email address</label>
+        <input id="lead-email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="you@example.com">
+        <label class="consent"><input type="checkbox" name="consent" required>
+          <span>I have read the <a href="kvkk.html" target="_blank" rel="noopener">privacy notice</a> and consent to my email address being processed so I can be notified when Cartback launches.</span></label>
+        <p class="form-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn--primary btn--full">Notify me at launch</button>
+      </form>
+    </div>
+    <div class="modal-body modal-done" data-state="done" hidden>
+      <svg class="done-mark" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23" pathLength="100"/><path d="M15 27l7.5 7.5L37.5 19" pathLength="100"/></svg>
+      <h2>You&#39;re on the list</h2>
+      <p>We'll email <strong class="done-email"></strong> when Cartback launches. We won't use it for anything else.</p>
+      <form method="dialog"><button class="btn btn--ghost btn--full" value="close">Done</button></form>
+    </div>
+  </div>
+</dialog>
+<script src="motion.js?v=e51b25547b" defer></script>
+<script src="app.js?v=b0899a2f6e" defer></script>
+</body>
+</html>

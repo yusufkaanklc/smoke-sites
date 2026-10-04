@@ -1,0 +1,411 @@
+{
+  "slug": "geridon",
+  "name": "Geridön",
+  "theme": {
+    "preset": "net"
+  },
+  "seo": {
+    "title": "Geridön: terk edilen sepetlere otomatik SMS",
+    "description": "Sepeti terk eden müşteriye kendiliğinden SMS gider, mağazan yalnız gönderdiği SMS kadar öder. Yakında, erken erişim listesi açık."
+  },
+  "header_cta": "Erken erişim",
+  "hero": {
+    "eyebrow": "Yakında · ikas, Shopify, WooCommerce",
+    "title": "Terk edilen sepet için otomatik SMS",
+    "highlight": "otomatik SMS",
+    "subtitle": "Müşteri sepeti bırakınca Geridön ona kısa bir SMS gönderir. Abonelik yok, yalnız gönderdiğin SMS paketi için ödersin.",
+    "points": [
+      "Sepet terk edilince otomatik SMS",
+      "Aylık sabit ücret yok",
+      "Mağaza paneline bağlanır"
+    ],
+    "cta": "Premium'u al",
+    "secondary": "Nasıl çalışır?",
+    "note": "E-ticaret mağazaları için geliştiriliyor."
+  },
+  "demo": {
+    "floats": [
+      {
+        "icon": "message-square",
+        "title": "SMS gitti",
+        "text": "Koşu ayakkabısı"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "sms",
+        "caption": "Otomatik SMS",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Terk edilen sepet",
+            "title": "Müşteriye giden SMS"
+          },
+          {
+            "type": "chat",
+            "messages": [
+              {
+                "from": "app",
+                "text": "Sepetinde Koşu Ayakkabısı (₺1.250) kaldı. Siparişi tamamlamak için: magaza.com/s/k7"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "clock",
+                "title": "Gönderim",
+                "meta": "1 saat sonra",
+                "value": "Otomatik"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sepetler",
+        "caption": "Bekleyen sepetler",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Bugün",
+            "title": "Terk edilen sepetler"
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "shopping-cart",
+                "title": "Koşu ayakkabısı",
+                "meta": "2 saat önce",
+                "value": "₺1.250"
+              },
+              {
+                "icon": "shopping-cart",
+                "title": "Sırt çantası",
+                "meta": "5 saat önce",
+                "value": "₺890"
+              },
+              {
+                "icon": "shopping-cart",
+                "title": "Termos",
+                "meta": "Dün",
+                "value": "₺420"
+              }
+            ]
+          },
+          {
+            "type": "stat",
+            "label": "Bekleyen sepet toplamı",
+            "value": "₺2.560",
+            "progress": 0.5
+          }
+        ]
+      },
+      {
+        "id": "zaman",
+        "caption": "Hatırlatma zamanı",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Ayar",
+            "title": "SMS ne zaman gitsin?"
+          },
+          {
+            "type": "chips",
+            "items": [
+              "1 saat",
+              "24 saat",
+              "48 saat"
+            ],
+            "active": 0
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "message-square",
+                "title": "1. SMS",
+                "meta": "Sepet bırakıldıktan sonra",
+                "value": "1 saat"
+              },
+              {
+                "icon": "message-square",
+                "title": "2. SMS",
+                "meta": "İsteğe bağlı",
+                "value": "24 saat"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "paket",
+        "caption": "SMS paketi",
+        "blocks": [
+          {
+            "type": "header",
+            "eyebrow": "Paketin",
+            "title": "Kalan SMS"
+          },
+          {
+            "type": "ring",
+            "label": "500 SMS paketi",
+            "value": "340",
+            "progress": 0.68
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "icon": "send",
+                "title": "Bu hafta gönderilen",
+                "meta": "Otomatik",
+                "value": "160 SMS"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "benefits_eyebrow": "Üç temel özellik",
+  "benefits_title": "{name} ne yapar?",
+  "benefits": [
+    {
+      "title": "Sepet terk edilince SMS gönderir",
+      "text": "Müşteri ödemeyi tamamlamadan çıkarsa, belirlediğin süre sonra siparişine dönmesi için kısa bir SMS gider.",
+      "scene": "sms"
+    },
+    {
+      "title": "Bekleyen sepetleri gösterir",
+      "text": "Hangi ürünler sepette kaldı ve toplam ne kadar, tek listede görürsün.",
+      "scene": "sepetler"
+    },
+    {
+      "title": "Kullandığın SMS kadar öder",
+      "text": "Aylık sabit ücret yok. SMS paketi alırsın, kalanını panelden izlersin.",
+      "scene": "paket"
+    }
+  ],
+  "moments_label": "Sepetin terk edildiği anlar",
+  "moments": [
+    "Ödeme sayfasında kargo ücretini görünce",
+    "Gece 23.40'ta sepete ekleyip uyuyunca",
+    "Kart bilgisi telefonda yanında yokken",
+    "Maaş gününü beklerken",
+    "Fiyatı başka sitede karşılaştırırken",
+    "Telefon çalınca sayfa kapanınca",
+    "Hesap oluşturma ekranında",
+    "Kupon kodunu ararken"
+  ],
+  "statement": {
+    "eyebrow": "Neden {name}?",
+    "text": "Müşteri sepete ürünü koyar ama *ödeme sayfasında vazgeçer*. Çoğu mağaza bunu fark etmez bile. {name} sepeti bırakana, kısa bir hatırlatma gönderir. *Sen yalnız gönderilen SMS için ödersin.*"
+  },
+  "features_eyebrow": "İçinde neler var",
+  "features_title": "Terk edilen sepetler için küçük araçlar",
+  "features": [
+    {
+      "icon": "message-square",
+      "title": "Otomatik SMS",
+      "text": "Sepet terk edilince belirlediğin sürede mesaj gider.",
+      "blocks": [
+        {
+          "type": "chat",
+          "messages": [
+            {
+              "from": "app",
+              "text": "Sepetinde Termos (₺420) kaldı: magaza.com/s/k7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "clock",
+      "title": "Zamanlama",
+      "text": "İlk SMS 1 saat sonra, istersen ikincisi ertesi gün.",
+      "blocks": [
+        {
+          "type": "chips",
+          "items": [
+            "1 saat",
+            "24 saat",
+            "48 saat"
+          ],
+          "active": 0
+        }
+      ]
+    },
+    {
+      "icon": "shopping-cart",
+      "title": "Sepet listesi",
+      "text": "Bekleyen sepetler ve toplam tutar bir arada.",
+      "block": {
+        "type": "stat",
+        "label": "Bekleyen sepet toplamı",
+        "value": "₺2.560",
+        "progress": 0.5
+      }
+    },
+    {
+      "icon": "plug",
+      "title": "Mağazana bağlanır",
+      "text": "ikas, Shopify ve WooCommerce için eklenti tasarlanıyor."
+    },
+    {
+      "icon": "shield-check",
+      "title": "İzin kontrolü",
+      "text": "Ticari ileti izni olmayan numaralara SMS gitmemesi tasarım hedefi."
+    },
+    {
+      "icon": "wallet",
+      "title": "Sabit ücret yok",
+      "text": "Yalnız SMS paketi için ödersin; kullanmadığın aya ücret yok."
+    }
+  ],
+  "compare": {
+    "eyebrow": "Fark",
+    "title": "Aynı sepet, iki farklı sonuç",
+    "without": {
+      "label": "Geridön olmadan",
+      "items": [
+        "Sepet sessizce kaybolur",
+        "Müşteriye ulaşan olmaz",
+        "Kaçan sipariş fark edilmez"
+      ]
+    },
+    "with": {
+      "label": "Geridön ile",
+      "items": [
+        "1 saat sonra SMS gider",
+        "Bekleyen sepetler listede",
+        "Müşteri tek tıkla sepete döner"
+      ]
+    }
+  },
+  "facts_label": "Kısaca {name}",
+  "facts": [
+    {
+      "value": "1 saat",
+      "label": "Varsayılan ilk SMS süresi"
+    },
+    {
+      "value": "0 ₺",
+      "label": "Aylık sabit ücret"
+    },
+    {
+      "value": "500",
+      "label": "SMS'lik başlangıç paketi"
+    },
+    {
+      "value": "7/24",
+      "label": "Çalışan otomatik gönderim"
+    }
+  ],
+  "steps_title": "Nasıl çalışır?",
+  "steps": [
+    {
+      "title": "Mağazanı bağla",
+      "text": "ikas, Shopify veya WooCommerce."
+    },
+    {
+      "title": "Süreyi seç",
+      "text": "SMS kaç saat sonra gitsin?"
+    },
+    {
+      "title": "Otomatik gitsin",
+      "text": "Sepeti bırakana SMS gider."
+    }
+  ],
+  "pricing": {
+    "title": "Fiyatlar",
+    "subtitle": "Abonelik yok; SMS paketi alırsın. Kullanmadığın aya ücret yazılmaz.",
+    "currency": "₺",
+    "plans": [
+      {
+        "id": "paket500",
+        "name": "500 SMS",
+        "price": 199,
+        "period": "paket",
+        "features": [
+          "Otomatik sepet SMS'i",
+          "Bekleyen sepet listesi",
+          "Zamanlama ayarı"
+        ],
+        "cta": "500 SMS paketini al"
+      },
+      {
+        "id": "paket2000",
+        "name": "2.000 SMS",
+        "price": 599,
+        "period": "paket",
+        "badge": "SMS başına daha uygun",
+        "note": "SMS başına yaklaşık ₺0,30",
+        "features": [
+          "500 SMS paketindeki her şey",
+          "İkinci hatırlatma SMS'i",
+          "Birden fazla mağaza"
+        ],
+        "cta": "2.000 SMS paketini al"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "{name} ne zaman çıkacak?",
+      "a": "Şu an geliştiriliyor. E-posta bırakırsan çıktığı gün haber veririz."
+    },
+    {
+      "q": "Hangi mağaza altyapılarıyla çalışacak?",
+      "a": "İlk hedef ikas, Shopify ve WooCommerce. Ticimax ve IdeaSoft için değerlendirme yayın öncesi yapılacak."
+    },
+    {
+      "q": "Müşteriye ticari SMS atmak serbest mi?",
+      "a": "Ticari elektronik ileti için müşterinin izni gerekir. {name} izni olmayan numaralara SMS göndermeyecek şekilde tasarlanıyor; mağaza sahibinin sorumlulukları yayın öncesi netleşecek."
+    },
+    {
+      "q": "İptal edebilecek miyim?",
+      "a": "Abonelik yok. Paket aldığında kalan SMS'lerin panelde görünür, istediğin zaman durdurabilirsin."
+    }
+  ],
+  "bottom": {
+    "title": "Sepeti bırakan müşteri geri dönsün",
+    "text": "Çıktığında ilk kullananlardan ol.",
+    "cta": "Premium'u al"
+  },
+  "modal": {
+    "early_offer": null
+  },
+  "legal": {
+    "controller": "Yusuf Kağan Kılıç",
+    "contact_email": "yusufkaankilic.yk@gmail.com",
+    "consent_version": "v1"
+  },
+  "ads": [
+    {
+      "id": "sorun",
+      "angle": "sorun",
+      "headline": "Sepette ₺1.250 bırakan müşteriye otomatik SMS",
+      "sub": "Geridön, terk edilen sepeti müşteriye hatırlatır.",
+      "scene": "sms"
+    },
+    {
+      "id": "sonuc",
+      "angle": "sonuc",
+      "headline": "Terk edilen sepetlerin tamamı tek listede",
+      "sub": "Hangi ürün sepette kaldı, toplam kaç ₺, hepsi bir ekranda.",
+      "scene": "sepetler"
+    },
+    {
+      "id": "fiyat",
+      "angle": "fiyat",
+      "headline": "Sepet SMS'i: 500 SMS ₺199, abonelik yok",
+      "sub": "Yalnız gönderdiğin SMS için öde.",
+      "scene": "paket",
+      "show_price": true
+    }
+  ]
+}

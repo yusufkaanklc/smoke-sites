@@ -1,0 +1,62 @@
+[
+  {
+    "file": "ad-sorun-story.html",
+    "id": "sorun",
+    "angle": "sorun",
+    "format": "story",
+    "scene": "sms",
+    "headline": "Sepette ₺1.250 bırakan müşteriye otomatik SMS",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-sorun-square.html",
+    "id": "sorun",
+    "angle": "sorun",
+    "format": "square",
+    "scene": "sms",
+    "headline": "Sepette ₺1.250 bırakan müşteriye otomatik SMS",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-sonuc-story.html",
+    "id": "sonuc",
+    "angle": "sonuc",
+    "format": "story",
+    "scene": "sepetler",
+    "headline": "Terk edilen sepetlerin tamamı tek listede",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-sonuc-square.html",
+    "id": "sonuc",
+    "angle": "sonuc",
+    "format": "square",
+    "scene": "sepetler",
+    "headline": "Terk edilen sepetlerin tamamı tek listede",
+    "w": 540,
+    "h": 540
+  },
+  {
+    "file": "ad-fiyat-story.html",
+    "id": "fiyat",
+    "angle": "fiyat",
+    "format": "story",
+    "scene": "paket",
+    "headline": "Sepet SMS'i: 500 SMS ₺199, abonelik yok",
+    "w": 540,
+    "h": 960
+  },
+  {
+    "file": "ad-fiyat-square.html",
+    "id": "fiyat",
+    "angle": "fiyat",
+    "format": "square",
+    "scene": "paket",
+    "headline": "Sepet SMS'i: 500 SMS ₺199, abonelik yok",
+    "w": 540,
+    "h": 540
+  }
+]
