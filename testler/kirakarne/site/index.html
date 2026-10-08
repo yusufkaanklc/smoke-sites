@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#F2EDE0">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/fraunces-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=fad96f359f">
+<link rel="stylesheet" href="styles.css?v=d0870120be">
 <script>document.documentElement.classList.add("js")</script>
 </head>
 <body class="pad-sticky">
@@ -26,11 +26,19 @@
       <p class="kick">Yakında · iOS ve Android</p>
       <h1>Kirayı düzenli ödediğini <em>ev sahibi onayıyla</em> göster</h1>
       <p class="lede">Her ay ödemeni kaydet, dekontunu ekle. Ev sahibi WhatsApp&#39;taki linkten, uygulama indirmeden onaylasın. Biriken onaylar, yeni ev ararken gösterebileceğin bir karne olur.</p>
-      <div class="cta-row">
-        <button class="btn btn--g" data-cta="hero">Erken erişime katıl</button>
-        <a class="textlink" href="#nasil">Nasıl çalışır?</a>
-      </div>
-      <p class="hero-note">Henüz yayında değil. Kira karnesi ücretsiz olacak.</p>
+      <form class="lead-form lead-inline" data-origin="inline" novalidate>
+        <label class="sr" for="lead-email-inline">E-posta adresin</label>
+        <div class="inline-row">
+          <input id="lead-email-inline" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="E-posta adresin">
+          <button type="submit" class="btn btn--g">Çıkınca haber ver</button>
+        </div>
+        <label class="consent"><input type="checkbox" name="consent" required>
+          <span><a href="kvkk.html" target="_blank" rel="noopener">Aydınlatma metnini</a> okudum; e-postamın çıkış haberi için işlenmesini kabul ediyorum.</span></label>
+        <p class="form-error" role="alert" hidden></p>
+        <p class="inline-done" role="status" hidden>Kaydın alındı. Kirakarne yayına çıktığında <strong class="done-email"></strong> adresine haber vereceğiz. Başka bir amaçla e-posta göndermeyeceğiz.</p>
+      </form>
+      <p class="cta-row"><a class="textlink" href="#nasil">Nasıl çalışır?</a></p>
+      <p class="hero-note">Henüz yayında değil. Kira karnesi ücretsiz olacak; ödeme bilgisi istemiyoruz.</p>
       <ul class="points"><li>Ev sahibi uygulama indirmez</li><li>Karne yalnızca senindir</li><li>Ücretsiz kira artış hesaplayıcı</li></ul>
     </div>
     <div class="kc" role="img" aria-label="Kira karnesi taslağı: on iki aylık kira ödemesi tek tek ev sahibi onay mührüyle işaretleniyor, sonda süreli bir paylaşım linki beliriyor.">
@@ -126,17 +134,17 @@
   <div class="modal-in">
     <form method="dialog" class="modal-close-row"><button class="modal-x" aria-label="Kapat" value="close">×</button></form>
     <div class="modal-body" data-state="form">
-      <h2 id="early-title">Kirakarne henüz hazır değil</h2>
-      <p>Uygulamayı şu an geliştiriyoruz. Satın alma yok ve senden ödeme bilgisi istemiyoruz.</p>
-      <p>Çıktığında ilk sen haberdar olmak istersen e-posta adresini bırak.</p>
+      <h2 id="early-title">Ücretsiz kira karnesi çıkınca sana haber verelim</h2>
+      <p>Her ay ödediğin kirayı ev sahibi onayıyla kaydet, yeni ev sahibine 12 aylık onaylı karneni göster. Kirakarne geliştiriliyor; e-postanı bırakırsan çıktığı gün tek bir e-postayla haber veririz.</p>
+      <p>Satın alma yok, senden ödeme bilgisi istemiyoruz.</p>
 
-      <form class="lead-form" novalidate>
+      <form class="lead-form" data-origin="modal" novalidate>
         <label for="lead-email">E-posta adresin</label>
         <input id="lead-email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="ornek@eposta.com">
         <label class="consent"><input type="checkbox" name="consent" required>
-          <span><a href="kvkk.html" target="_blank" rel="noopener">Aydınlatma metnini</a> okudum; Kirakarne çıktığında haber verilmesi için e-posta adresimin işlenmesine onay veriyorum.</span></label>
+          <span><a href="kvkk.html" target="_blank" rel="noopener">Aydınlatma metnini</a> okudum; e-postamın çıkış haberi için işlenmesini kabul ediyorum.</span></label>
         <p class="form-error" role="alert" hidden></p>
-        <button type="submit" class="btn btn--g btn--full">Çıkınca haber ver</button>
+        <button type="submit" class="btn btn--g btn--full">Haber ver</button>
       </form>
     </div>
     <div class="modal-body modal-done" data-state="done" hidden>
@@ -148,7 +156,7 @@
   </div>
 </dialog>
 <script src="karne.js?v=1781c03059" defer></script>
-<script src="core.js?v=5ddaa5c2a4" defer></script>
-<script src="page.js?v=01b41b0daa" defer></script>
+<script src="core.js?v=9bc30df791" defer></script>
+<script src="page.js?v=0b351eba8d" defer></script>
 </body>
 </html>

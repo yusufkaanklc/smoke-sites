@@ -76,10 +76,18 @@ function page(c) {
       <p class="kick">${esc(h.eyebrow)}</p>
       <h1>${esc(h.before)}<em>${esc(h.hot)}</em>${esc(h.after)}</h1>
       <p class="lede">${esc(h.subtitle)}</p>
-      <div class="cta-row">
-        <button class="btn btn--g" data-cta="hero">${esc(h.cta)}</button>
-        <a class="textlink" href="#nasil">${esc(h.secondary)}</a>
-      </div>
+      <form class="lead-form lead-inline" data-origin="inline" novalidate>
+        <label class="sr" for="lead-email-inline">${esc(h.formLabel)}</label>
+        <div class="inline-row">
+          <input id="lead-email-inline" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="${esc(h.formPlaceholder)}">
+          <button type="submit" class="btn btn--g">${esc(h.cta)}</button>
+        </div>
+        <label class="consent"><input type="checkbox" name="consent" required>
+          <span>${consent}</span></label>
+        <p class="form-error" role="alert" hidden></p>
+        <p class="inline-done" role="status" hidden>${esc(d.doneTitle)}. ${esc(d.donePre)}<strong class="done-email"></strong>${esc(d.donePost)}</p>
+      </form>
+      <p class="cta-row"><a class="textlink" href="#nasil">${esc(h.secondary)}</a></p>
       <p class="hero-note">${esc(h.note)}</p>
       <ul class="points">${h.points.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>
     </div>
@@ -165,7 +173,7 @@ function page(c) {
       <p>${esc(d.p1)}</p>
       <p>${esc(d.p2)}</p>
 
-      <form class="lead-form" novalidate>
+      <form class="lead-form" data-origin="modal" novalidate>
         <label for="lead-email">${esc(d.label)}</label>
         <input id="lead-email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="${esc(d.placeholder)}">
         <label class="consent"><input type="checkbox" name="consent" required>

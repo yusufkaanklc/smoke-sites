@@ -226,3 +226,14 @@ body.doc{background:var(--paper)}
   .kc-n{white-space:normal;font-size:13px}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+
+/* inline hero form */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.lead-inline{margin:4px 0 14px;max-width:520px}
+.inline-row{display:flex;flex-direction:column;gap:10px}
+.lead-inline input[type=email]{min-height:54px}
+.lead-inline .btn{min-height:54px;justify-content:center}
+.inline-done{padding:14px 16px;border:1.5px solid var(--green);border-radius:4px;background:color-mix(in srgb,var(--green) 9%,var(--card));font-weight:700;color:var(--ink)}
+.cta-row{margin:0 0 12px}
+@media(min-width:560px){.inline-row{flex-direction:row}.inline-row input{flex:1;min-width:0}.inline-row .btn{flex:none}}
+.lead-inline [hidden]{display:none!important}

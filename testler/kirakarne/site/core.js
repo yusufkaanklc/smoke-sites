@@ -67,12 +67,12 @@
   }
   ["pointerdown", "touchstart", "keydown", "wheel"].forEach(function (t) { addEventListener(t, onHuman, { capture: true, passive: true }); });
 
-  /* ================================================================ early-access dialog */
+  /* ================================================================ early-access forms: hero (inline) + dialog */
   var dialog = qs("#early");
-  var form = dialog && qs(".lead-form", dialog);
+  var forms = qsa(".lead-form");
   var formState = dialog && qs('[data-state="form"]', dialog), doneState = dialog && qs('[data-state="done"]', dialog);
-  var errorBox = form && qs(".form-error", form);
   var chosenPlan = null, submitted = false;
+  var M = (dialog && dialog.dataset) || {}; // English pages set data-msg-*; Turkish defaults live below
 
   function openDialog() {
     if (!dialog || dialog.open) return;
@@ -102,14 +102,19 @@
     openDialog();
   });
 
-  function showError(msg) { if (errorBox) { errorBox.textContent = msg; errorBox.hidden = false; } }
-  function showDone(email) {
-    submitted = true;
-    qs(".done-email", doneState).textContent = email;
-    formState.hidden = true; doneState.hidden = false;
-  }
-  var M = (dialog && dialog.dataset) || {}; // English pages set data-msg-*; Turkish defaults live below
-  if (form) {
+  var inlineIntent = false;
+  forms.forEach(function (form) {
+    var origin = form.getAttribute("data-origin") || "modal";
+    var errorBox = qs(".form-error", form), focused = false;
+    // E-posta alanına ilk odaklanma: form açılıp kaç kişinin gerçekten yazmaya başladığını ölçer.
+    form.addEventListener("focusin", function (e) {
+      if (focused || !e.target.matches || !e.target.matches("input")) return;
+      focused = true;
+      send("form_focus", { btn: origin });
+      // Hero formuna odaklanmak, eski hero butonuna basmak gibi sayılır (CTA oranı önceki testlerle kıyaslanabilir kalsın).
+      if (origin === "inline" && !inlineIntent) { inlineIntent = true; send("cta_click", { btn: "hero-form" }); }
+    });
+    function showError(msg) { if (errorBox) { errorBox.textContent = msg; errorBox.hidden = false; } }
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (errorBox) errorBox.hidden = true;
@@ -119,7 +124,7 @@
       var button = qs('button[type="submit"]', form);
       button.disabled = true;
       fetch(API + "lead", { method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sid: sid, email: email, consent: true, plan: chosenPlan, utm: utm, dev: dev }) })
+        body: JSON.stringify({ sid: sid, email: email, consent: true, plan: chosenPlan || origin, utm: utm, dev: dev }) })
         .then(function (r) {
           if (r.ok) return showDone(email);
           if (r.status === 429) showError(M.msgRate || "Çok fazla deneme yapıldı. Biraz sonra tekrar dene.");
@@ -129,7 +134,16 @@
         .catch(function () { showError(M.msgNet || "Bağlantı kurulamadı. İnternet bağlantını kontrol edip tekrar dene."); })
         .then(function () { button.disabled = false; });
     });
+  });
+
+  // Kayıt başarılı: hem sayfadaki hem penceredeki formu "alındı" durumuna al.
+  function showDone(email) {
+    submitted = true;
+    qsa(".done-email").forEach(function (n) { n.textContent = email; });
+    if (formState && doneState) { formState.hidden = true; doneState.hidden = false; }
+    qsa(".lead-inline").forEach(function (f) {
+      qsa(".inline-row, .consent, .form-error", f).forEach(function (n) { n.hidden = true; });
+      var d = qs(".inline-done", f); if (d) d.hidden = false;
+    });
   }
-
-
 })();

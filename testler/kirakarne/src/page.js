@@ -35,7 +35,7 @@
   }
 
   /* sticky CTA (phones): appears once the hero button has scrolled away */
-  var sticky = qs(".sticky"), heroCta = qs('.hero [data-cta="hero"]'), closing = qs(".close");
+  var sticky = qs(".sticky"), heroCta = qs(".hero .lead-inline"), closing = qs(".close");
   if (sticky && heroCta && "IntersectionObserver" in window) {
     var past = false, atEnd = false;
     var sync = function () { sticky.classList.toggle("on", past && !atEnd); };
