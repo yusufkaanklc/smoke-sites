@@ -34,7 +34,11 @@ function karne(c, id) {
 }
 
 function page(c) {
-  const h = c.hero, s = c.steps, d = c.dialog, cl = c.calc;
+  const h = c.hero, s = c.steps, d = c.dialog, cl = c.calc, w = c.wa;
+  const waUrl = `https://wa.me/${w.number}?text=${encodeURIComponent(w.text)}`;
+  const waBtn = (origin) => `<p class="wa-or">${esc(w.or)}</p>
+        <a class="btn btn--wa" href="${waUrl}" target="_blank" rel="noopener" data-wa="${origin}"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.100-.2.200-.6.800-.8 1-.1.200-.3.200-.5.100-.2-.100-1-.4-1.900-1.200-.7-.6-1.200-1.400-1.300-1.600-.1-.2 0-.4.100-.5l.4-.4c.1-.1.100-.2.200-.4.100-.1 0-.3 0-.4-.1-.1-.6-1.400-.8-1.900-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.100-.6.300-.2.200-.8.800-.8 1.900s.8 2.200.9 2.300c.1.200 1.600 2.500 3.900 3.400 2.300.9 2.300.6 2.700.6.400 0 1.400-.6 1.600-1.100.2-.6.200-1 .1-1.100-.1-.1-.2-.2-.4-.3z"/></svg>${esc(w.label)}</a>
+        <p class="wa-note">${esc(w.note)}</p>`;
   const consent = `${esc(d.consentPre)}<a href="kvkk.html" target="_blank" rel="noopener">${esc(d.consentLink)}</a>${esc(d.consentPost)}`;
   const msgAttrs = d.msgs ? ` data-msg-email="${esc(d.msgs.email)}" data-msg-consent="${esc(d.msgs.consent)}" data-msg-rate="${esc(d.msgs.rate)}" data-msg-bad="${esc(d.msgs.bad)}" data-msg-fail="${esc(d.msgs.fail)}" data-msg-net="${esc(d.msgs.net)}"` : "";
   const rc = s.receipt, wa = s.wa, mi = s.mini;
@@ -85,6 +89,7 @@ function page(c) {
         <label class="consent"><input type="checkbox" name="consent" required>
           <span>${consent}</span></label>
         <p class="form-error" role="alert" hidden></p>
+        ${waBtn("hero")}
         <p class="inline-done" role="status" hidden>${esc(d.doneTitle)}. ${esc(d.donePre)}<strong class="done-email"></strong>${esc(d.donePost)}</p>
       </form>
       <p class="cta-row"><a class="textlink" href="#nasil">${esc(h.secondary)}</a></p>
@@ -180,6 +185,7 @@ function page(c) {
           <span>${consent}</span></label>
         <p class="form-error" role="alert" hidden></p>
         <button type="submit" class="btn btn--g btn--full">${esc(d.submit)}</button>
+        ${waBtn("modal")}
       </form>
     </div>
     <div class="modal-body modal-done" data-state="done" hidden>

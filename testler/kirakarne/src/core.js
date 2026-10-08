@@ -102,6 +102,12 @@
     openDialog();
   });
 
+  // WhatsApp bağlantısı: yeni sekmede açılır; tıklama niyet sinyali olarak cta_click (btn: whatsapp-<yer>) sayılır.
+  doc.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("[data-wa]") : null;
+    if (a) send("cta_click", { btn: "whatsapp-" + a.getAttribute("data-wa") });
+  });
+
   var inlineIntent = false;
   forms.forEach(function (form) {
     var origin = form.getAttribute("data-origin") || "modal";
@@ -142,7 +148,7 @@
     qsa(".done-email").forEach(function (n) { n.textContent = email; });
     if (formState && doneState) { formState.hidden = true; doneState.hidden = false; }
     qsa(".lead-inline").forEach(function (f) {
-      qsa(".inline-row, .consent, .form-error", f).forEach(function (n) { n.hidden = true; });
+      qsa(".inline-row, .consent, .form-error, .wa-or, .btn--wa, .wa-note", f).forEach(function (n) { n.hidden = true; });
       var d = qs(".inline-done", f); if (d) d.hidden = false;
     });
   }

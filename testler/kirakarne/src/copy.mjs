@@ -2,6 +2,13 @@
 import { TR as GT } from "../../gard/src/copy.mjs";
 
 const swap = (html, from, to) => html.replaceAll(from, to);
+// Kirakarne also offers a WhatsApp opt-in: the legal text names the extra data and its purpose.
+const legal = (html) => html
+  .replace("<li><strong>E-posta adresin ve seçtiğin plan:</strong> yalnızca formu doldurup onay verirsen.</li>",
+    "<li><strong>E-posta adresin:</strong> yalnızca formu doldurup onay verirsen.</li>\n    <li><strong>Telefon numaran ve WhatsApp'ta paylaştığın ad:</strong> yalnızca \"WhatsApp'tan haber ver\" bağlantısıyla bize mesaj yazarsan. Mesajı yazman, çıkış haberi için numaranın kullanılmasına izin verdiğin anlamına gelir.</li>")
+  .replace("E-posta adresin, açık rızana dayanarak yalnızca Kirakarne yayına çıktığında seni bilgilendirmek için işlenir.",
+    "E-posta adresin ve (WhatsApp'tan yazdıysan) telefon numaran, açık rızana dayanarak yalnızca Kirakarne yayına çıktığında seni bilgilendirmek için işlenir. WhatsApp mesajların WhatsApp'ın (Meta) altyapısı üzerinden iletilir; bu aktarım WhatsApp'ın kendi koşullarına tabidir.")
+  .replace("E-posta adresin ürün", "E-posta adresin ve telefon numaran ürün");
 
 export const TR = {
   lang: "tr", slug: "kirakarne", name: "Kirakarne", home: "https://kirakarne.yusufkaanklc.dev",
@@ -76,5 +83,10 @@ export const TR = {
     donePre: "Kirakarne yayına çıktığında ", donePost: " adresine haber vereceğiz. Başka bir amaçla e-posta göndermeyeceğiz.",
     doneBtn: "Tamam", msgs: null,
   },
-  legal: { ...GT.legal, title: "KVKK aydınlatma metni: Kirakarne", desc: "Kirakarne KVKK aydınlatma metni", html: swap(GT.legal.html, "Gard", "Kirakarne") },
+  wa: {
+    number: "905306329579", label: "WhatsApp'tan haber ver", or: "ya da",
+    text: "Merhaba, Kirakarne çıkınca bana haber verin.",
+    note: "WhatsApp'tan yazarsan telefon numaran bana ulaşır; yalnızca çıkış haberi için kullanılır.",
+  },
+  legal: { ...GT.legal, title: "KVKK aydınlatma metni: Kirakarne", desc: "Kirakarne KVKK aydınlatma metni", html: legal(swap(GT.legal.html, "Gard", "Kirakarne")) },
 };
