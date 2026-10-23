@@ -42,3 +42,22 @@ kutuya bağlı etiket ("Öndeki araç · 0,9 sn") güncellenir, uyarı şeridi y
 
 ## Üretim
 `node src/build.mjs` → `site/`. Görseller `src/img` (hazir/ ekranlarından küçültülmüş WebP).
+
+## v2: ön kayıt sayfası (23.10.2026, SMK-1)
+Smoke test "geçerli" kapandı; sahte kapı yerine gerçek ön kayıt kampanyası. Veri: trafiğin %98'i mobil, oturumların %4'ü sayfanın yarısına iniyor, CTA'nın çoğu hero formundan. Karar: **her şey ilk ekranda**, gerisi kısa.
+
+- **İlk ekran (390×844):** başlık → yol sahnesi + gerçek uygulama ekranı → "Ön kayıt olana" sözü → tek satır e-posta + "Ön kayıt ol" → onay → WhatsApp. Ölçüm: buton altı ≈ 603 px, onay kutusu ≈ 650 px (v1'de ürün görseli ilk ekranda yoktu).
+- **Başlık = reklam kancası:** `copy.mjs` → `HOOKS`. `<head>`teki küçük betik `utm_content` önekine (yoksa oturumdaki `smk_utm`) bakıp ilk boyamadan önce `data-hook` koyar; başlık ve sahne o kancanınki olur (kayma yok). Varsayılan `usta`. Yeni kanca eklemek = `HOOKS`'a bir satır.
+- **Söz:** "Play Store'a çıktığında ilk sen haber alırsın" + "Yayından önce kapalı teste davet edilirsin". Fiyat/indirim sözü yok; planlanan fiyat bölümü kaldırıldı (plan tıklaması 0'dı). Ücret yalnızca SSS'de bilinen gerçekle: ilk 3 sürüş ücretsiz, ücretli planların fiyatı belli değil.
+- **Kapalı test = Gmail:** Play kapalı testi Google hesabına davetle çalışır; yer tutucu "E-posta (tercihen Gmail)", pencerede ve "Ön kayıttan sonra" bölümünde nedeni yazılı.
+- **KVKK:** onay metni ve aydınlatma metni "çıkış haberi **ve kapalı test daveti**" amacını ve Play Console test listesine aktarımı söyler (`copy.mjs` → `legal`, "Sürüm: v2"). Kirakarne metnine dokunulmadı.
+- **Sayfa akışı:** hero → Ön kayıttan sonra (davet, çıkış haberi, başka e-posta yok) → Nasıl çalışır (2 ekran + 5 gerçek cümle + karne) → Bilmen gerekenler (sınırlar + gizlilik, aynen) → SSS (5) → sarı kapanış → yapışkan CTA. Mobil boy 10.250 px → ≈ 5.250 px. "Kimin için" ve fiyat bölümleri çıktı.
+- **Hafiflik:** sahne artık tarayıcıda çalışmıyor (v1'de her karede `innerHTML` yazan 8 sn döngü vardı; GSAP zaten yoktu). İki statik kare build'de SVG olarak gömülü; `scene.js` yalnızca build ve kreatif üretiminde kullanılır. CSS satır içi; reveal animasyonu kaldırıldı; Inter 600 düşürüldü (2 font dosyası daha az). Lighthouse mobil (yerel, sıkıştırmasız sunucu): Performance 95 (v1: 90), Accessibility 100, CLS 0, LCP 2,6 sn.
+- **Ses şeridi rengi:** kırmızı yalnızca kritik uyarıda ("Dikkat, öndeki araç!"); "Dikkat, yaya" levha mavisinde (reklamlarla aynı).
+- **Ölçüm sözleşmesi değişmedi:** `core.js` aynı. `data-cta` = header | bottom | sticky; hero formu `form_focus` + `cta_click(hero-form)`, WhatsApp `cta_click(whatsapp-hero|whatsapp-modal)`. Plan butonları (ve `plan_click`) artık yok.
+
+### v2 kreatifler
+`node src/kreatif.mjs` → `kreatifler/usta-v2-*.png`, `yeni-ehliyet-v2-*.png` (4:5 1080×1350, 9:16 1080×1920; 9:16'da üst 280 / alt 350 px boş). Sayfayla aynı başlık, aynı sahne + gerçek ekran (`hazir/`), alt sarı bant: "Ön kayıt açık · Play Store'a çıkınca ilk sen haber al · Kapalı teste davet edil", düğme "Erken erişim →", sağ üstte "YAKINDA · ANDROID". Reklam bağlantısı `utm_content=usta-v2` / `yeni-ehliyet-v2` olmalı (sayfa önekle eşleştirir).
+
+### Üretim notu
+`src/package.json` (`"type": "commonjs"`) şart: üst klasördeki `type: module`, `scene.js`'i ESM yapıp build'i bozuyordu.

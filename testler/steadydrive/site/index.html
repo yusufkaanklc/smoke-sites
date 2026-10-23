@@ -4,165 +4,317 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Steady Drive: telefonun, sakin bir sürüş koçu</title>
-<meta name="description" content="Telefonu ön cama tak; Steady Drive yolu izler, riskli anda tek cümleyle uyarır, sürüşten sonra puanlı karne verir. Yakında Android&#39;de, erken erişim listesi açık.">
+<title>Steady Drive: ön kayıt açık · telefonun, sakin bir sürüş koçu</title>
+<meta name="description" content="Telefonu ön cama tak; Steady Drive yolu izler, riskli anda tek cümleyle uyarır, sürüşten sonra puanlı karne verir. Ön kayıt ol: Play Store&#39;a çıktığında ilk sen haber al, kapalı teste davet edil.">
 <meta name="theme-color" content="#262B30">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/barlow-semi-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=b202a9d6eb">
-<script>document.documentElement.classList.add("js")</script>
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){var d=document.documentElement,h="usta",ids=["usta","yeni-ehliyet"];d.classList.add("js");try{var c=new URLSearchParams(location.search).get("utm_content")||JSON.parse(sessionStorage.getItem("smk_utm")||"{}").content||"";ids.forEach(function(i){if(c.indexOf(i)===0)h=i})}catch(e){}d.setAttribute("data-hook",h)})()</script>
+<style>@font-face{font-family:"Barlow Semi Condensed";font-weight:700;font-style:normal;font-display:swap;src:url(fonts/barlow-semi-condensed-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow Semi Condensed";font-weight:700;font-style:normal;font-display:swap;src:url(fonts/barlow-semi-condensed-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Barlow Semi Condensed";font-weight:800;font-style:normal;font-display:swap;src:url(fonts/barlow-semi-condensed-latin-800-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow Semi Condensed";font-weight:800;font-style:normal;font-display:swap;src:url(fonts/barlow-semi-condensed-latin-ext-800-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Inter";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/inter-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Inter";font-weight:700;font-style:normal;font-display:swap;src:url(fonts/inter-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter";font-weight:700;font-style:normal;font-display:swap;src:url(fonts/inter-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+/* Steady Drive v2: "Yol levhası" design, pre-registration page. Asphalt, sign blue, reflective yellow, concrete.
+   Mobile first: on a 390px phone the headline, road scene, e-mail field and button sit above the fold. */
+:root{--asf:#262B30;--asf2:#2F353B;--asf3:#3A4149;--mavi:#0B5AA8;--sari:#F2B300;--bet:#E8EBEE;--kir:#C8102E;
+  --yazi:#F0F2F4;--sol:#A9B2BA;--mute:#55606A;--rule:#C9CFD5;
+  --head:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;--body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;--gut:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bet);color:var(--asf);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;cursor:pointer;color:inherit}
+:focus-visible{outline:3px solid var(--sari);outline-offset:3px}
+.wrap{width:100%;max-width:1140px;margin:0 auto;padding-inline:max(var(--gut),env(safe-area-inset-left))}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* header */
+.top{background:var(--asf);color:var(--yazi)}
+.top-in{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:800 22px/1 var(--head);letter-spacing:.005em}
+.logo svg{width:30px;height:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:0;border-radius:999px;font:700 16px/1.1 var(--body);text-align:center;transition:background .15s,transform .15s}
+.btn:active{transform:translateY(1px)}
+.btn--y{background:var(--sari);color:var(--asf)}
+.btn--y:hover{background:#FFC61F}
+.btn--dark{background:var(--asf);color:var(--yazi)}
+.btn--dark:hover{background:var(--asf3)}
+.btn--full{width:100%}
+.top .btn{min-height:44px;padding:0 18px;font-size:15px}
+.kick{display:inline-block;font:700 14px/1.3 var(--body);letter-spacing:.02em;color:var(--sari)}
+.kick--dk{color:var(--mavi)}
+.textlink{font-weight:700;text-underline-offset:5px}
+
+/* hero: text, scene, promise + form on phones; two columns on desktop */
+.hero{background:var(--asf);color:var(--yazi);padding:14px 0 30px}
+.hero-in{display:grid;gap:14px;grid-template-areas:"tx" "scene" "act"}
+.hero-tx{grid-area:tx}
+.hero h1{font:800 clamp(2.15rem,1.5rem + 3.2vw,4rem)/1.04 var(--head);letter-spacing:-.005em;margin:6px 0 8px;padding-block:.04em;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--sari)}
+.lede{font-size:15px;line-height:1.45;max-width:34em;color:var(--sol)}
+.scene{grid-area:scene;border-radius:14px;overflow:hidden;border:5px solid #15181B;background:#15181B;box-shadow:0 14px 34px rgba(0,0,0,.35);width:100%}
+.scene svg{width:100%;height:auto;border-radius:8px;aspect-ratio:800/470}
+.hero-act{grid-area:act;min-width:0}
+.promise{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin-bottom:10px}
+.promise p{font:800 17px/1.2 var(--head);letter-spacing:.02em;text-transform:uppercase;color:var(--sari)}
+.promise ul{list-style:none;display:grid;gap:3px;width:100%}
+.promise li{display:flex;gap:8px;align-items:flex-start;font-weight:700;font-size:15px;line-height:1.35}
+.promise svg{width:17px;height:17px;flex:none;margin-top:1px;color:var(--sari)}
+.hero-note{font-size:13px;line-height:1.45;color:var(--sol);margin-top:12px;max-width:34em}
+
+/* hero form */
+.lead-inline{max-width:520px}
+.inline-row{display:flex;gap:8px}
+.inline-row input{flex:1;min-width:0}
+.inline-row .btn{flex:none;padding:0 18px}
+.lead-form input[type=email]{width:100%;min-height:52px;padding:0 14px;border:2px solid transparent;border-radius:12px;background:#fff;color:var(--asf);font:400 16px/1 var(--body)}
+.lead-form input[type=email]::placeholder{color:#6B747D}
+.lead-form input[type=email]:focus{outline:3px solid var(--sari);outline-offset:1px}
+.lead-inline .btn{min-height:52px}
+.consent{display:flex;gap:10px;align-items:flex-start;margin-top:10px;font-size:13px;line-height:1.4;color:var(--sol)}
+.consent input{margin-top:1px;width:20px;height:20px;accent-color:var(--sari);flex:none}
+.consent a{color:var(--sari)}
+.form-error{color:#FF9B9B;font-weight:700;font-size:14.5px;margin-top:10px}
+.inline-done{margin-top:4px;padding:14px 16px;border-radius:12px;border:2px solid var(--sari);background:var(--asf2);font-weight:700;color:var(--yazi)}
+.lead-inline [hidden]{display:none!important}
+.wa-or{margin:12px 0 8px;font-size:13px;color:var(--sol);text-align:center}
+.btn--wa{width:100%;background:transparent;color:var(--yazi);border:2px solid var(--asf3);min-height:46px;text-decoration:none;font-size:15px}
+.btn--wa svg{width:22px;height:22px;color:#4AD27B;flex:none}
+.btn--wa:hover{background:var(--asf2)}
+.wa-note{margin-top:8px;font-size:12.5px;color:var(--sol);line-height:1.4}
+
+/* lane divider: road dashes */
+.lane{height:14px;background:var(--asf);background-image:repeating-linear-gradient(90deg,var(--sari) 0 56px,transparent 56px 112px);background-size:auto 4px;background-repeat:repeat-x;background-position:0 5px}
+
+/* sections */
+.sec{padding:52px 0;background:var(--bet)}
+.sec--white{background:#fff}
+.sec--road{background:var(--asf);color:var(--yazi)}
+.sec-head{display:grid;gap:8px;max-width:760px;margin-bottom:26px}
+.h2{font:800 clamp(1.9rem,1.4rem + 2.4vw,3rem)/1.06 var(--head);padding-block:.04em;text-wrap:balance}
+.num{display:grid;place-items:center;width:38px;height:38px;flex:none;border-radius:9px;background:var(--sari);color:var(--asf);font:800 22px/1 var(--head)}
+h3{font:800 clamp(1.4rem,1.2rem + .9vw,1.8rem)/1.1 var(--head)}
+
+/* after pre-registration */
+.after{list-style:none;display:grid;gap:22px}
+.after li{display:flex;gap:14px;align-items:flex-start}
+.after h3{margin:4px 0 6px}
+.after p{color:var(--mute);max-width:34em}
+@media(min-width:820px){.after{grid-template-columns:repeat(3,1fr);gap:30px}}
+
+/* how it works */
+.steps{list-style:none;display:grid;gap:16px}
+.step{display:grid;gap:14px;align-items:center;background:#fff;border-radius:16px;padding:14px}
+.step-vis img{width:100%;height:auto;border-radius:10px;background:#000}
+.step-tx{display:grid;gap:6px;justify-items:start;padding:0 4px 4px}
+.step p,.karne-tx span{color:var(--mute)}
+@media(min-width:820px){.steps{grid-template-columns:1fr 1fr;gap:20px}.step{align-content:start}}
+.says-wrap{margin:22px 0 34px}
+.says-l{font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.says{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.levha{background:var(--mavi);color:#fff;border-radius:10px;box-shadow:inset 0 0 0 3px var(--mavi),inset 0 0 0 5px #fff}
+.levha--say{display:inline-flex;align-items:center;gap:8px;font:800 19px/1.1 var(--head);padding:10px 14px}
+.levha--say svg{width:18px;height:18px;flex:none}
+.karne{display:grid;gap:22px;align-items:center;background:#fff;border-radius:16px;padding:14px}
+.karne-img{width:min(100%,250px);justify-self:center}
+.karne-img img{width:100%;height:auto;border-radius:12px;background:var(--asf)}
+.karne-tx{display:grid;gap:10px;align-content:center;justify-items:start;padding:0 4px 8px}
+.ticks{list-style:none;display:grid;gap:12px;margin-top:4px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks svg{width:24px;height:24px;flex:none;padding:5px;border-radius:50%;background:var(--sari);color:var(--asf);margin-top:1px}
+.ticks b{display:block;font:700 16.5px/1.3 var(--body)}
+.ticks span{font-size:15px}
+@media(min-width:820px){.karne{grid-template-columns:280px 1fr;gap:48px;padding:22px 34px 22px 22px}.karne-img{width:100%}}
+
+/* know */
+.know{display:grid;gap:16px}
+.know-c{border-radius:16px;padding:24px}
+.know-c h3{margin-bottom:12px}
+.know-c ul{list-style:none;display:grid;gap:10px}
+.know-c li{padding-left:20px;position:relative}
+.know-c li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:2px;background:currentColor}
+.know-c--lim{background:var(--asf2);border:2px solid var(--asf3)}
+.know-c--lim li::before{background:var(--sari)}
+.know-c--pri{background:var(--mavi);color:#fff;box-shadow:inset 0 0 0 4px var(--mavi),inset 0 0 0 7px #fff;padding:30px}
+@media(min-width:820px){.know{grid-template-columns:1.2fr 1fr}}
+
+/* faq */
+.faq{border-top:2px solid var(--asf);max-width:860px}
+.faq details{border-bottom:2px solid var(--asf)}
+.faq summary{display:flex;justify-content:space-between;gap:20px;align-items:center;min-height:56px;padding:14px 0;cursor:pointer;list-style:none;font:700 clamp(1.2rem,1.1rem + .5vw,1.5rem)/1.2 var(--head)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:16px;height:16px;background:linear-gradient(var(--mavi),var(--mavi)) center/100% 3px no-repeat,linear-gradient(var(--mavi),var(--mavi)) center/3px 100% no-repeat;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 0 18px;color:var(--mute);max-width:42em}
+
+/* closing band + footer */
+.close{background:var(--sari);color:var(--asf);padding:48px 0}
+.close-in{display:grid;gap:10px;justify-items:start}
+.close h2{font:800 clamp(2rem,1.4rem + 3vw,3.4rem)/1.04 var(--head);padding-block:.04em;text-wrap:balance}
+.close p{font-size:1.05rem;font-weight:700}
+.close .btn{margin-top:8px}
+.foot{background:var(--asf);color:var(--sol);padding:30px 0 96px;font-size:14px}
+.foot-in{display:grid;gap:10px}
+.foot .logo{color:var(--yazi)}
+.foot a{color:var(--yazi)}
+
+/* sticky mobile CTA */
+.sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:20;align-items:center;justify-content:space-between;gap:12px;padding:10px max(var(--gut),env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(var(--gut),env(safe-area-inset-left));background:var(--asf);color:var(--yazi);border-top:3px solid var(--sari);transform:translateY(110%);transition:transform .25s}
+.js .sticky{display:flex}
+.sticky.on{transform:none}
+.sticky span{font-weight:700;font-size:15px;line-height:1.2}
+.sticky .btn{min-height:44px;padding:0 18px;font-size:15px;flex:none}
+@media(min-width:900px){.js .sticky{display:none}.foot{padding-bottom:30px}}
+
+/* modal */
+.modal{margin:auto;width:min(480px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;padding:0;border:0;border-radius:18px;background:var(--bet);color:var(--asf)}
+.modal::backdrop{background:rgba(15,18,21,.78)}
+.modal-in{padding:22px}
+.modal-close-row{display:flex;justify-content:flex-end;margin:-10px -8px 0 0}
+.modal-x{width:44px;height:44px;border:0;background:none;font-size:30px;line-height:1}
+.modal h2{font:800 clamp(1.7rem,1.3rem + 1.4vw,2.2rem)/1.08 var(--head);margin-bottom:12px;padding-block:.04em}
+.modal p{margin-bottom:12px;color:var(--mute);font-size:16px}
+.modal label{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+.modal .lead-form{display:grid;gap:4px}
+.modal input[type=email]{border:2px solid var(--rule)}
+.modal .consent{color:var(--mute);font-weight:400}
+.modal .consent a{color:var(--mavi)}
+.modal .form-error{color:#B3261E}
+.modal .wa-or{color:var(--mute)}
+.modal .btn--wa{color:var(--asf);border-color:var(--rule)}
+.modal .btn--wa:hover{background:#fff}
+.modal .wa-note{color:var(--mute)}
+.modal-done .done-mark{width:52px;height:52px;margin-bottom:16px;fill:none;stroke:var(--mavi);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+
+/* legal pages */
+body.doc{background:var(--bet)}
+.legal{max-width:720px;padding-top:40px;padding-bottom:70px}
+.legal h1{font:800 clamp(2.2rem,1.6rem + 3vw,3.2rem)/1.05 var(--head);margin-bottom:18px;padding-block:.04em}
+.legal h2{font:800 1.5rem/1.2 var(--head);margin:28px 0 8px}
+.legal p,.legal li{margin-bottom:10px}
+.legal ul{padding-left:20px}
+.legal a{color:var(--mavi);text-underline-offset:4px}
+.legal-meta{color:var(--mute);font-size:14px}
+
+@media(min-width:900px){
+  :root{--gut:32px}
+  .top-in{height:68px}
+  .hero{padding:48px 0 64px}
+  .hero-in{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-areas:"tx scene" "act scene";column-gap:56px;row-gap:22px;align-items:start}
+  .scene{align-self:center;border-width:8px}
+  .lede{font-size:18px}
+  .sec{padding:84px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.sticky,.faq summary::after{transition:none}}
+.hk--yeni-ehliyet{display:none}[data-hook="yeni-ehliyet"] .hk--usta{display:none}[data-hook="yeni-ehliyet"] h1 .hk--yeni-ehliyet{display:inline}[data-hook="yeni-ehliyet"] svg.hk--yeni-ehliyet{display:block}</style>
 </head>
-<body class="pad-sticky">
+<body>
 
 <header class="top"><div class="wrap top-in">
   <a class="logo" href="./" aria-label="Steady Drive"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B5AA8"/><path d="M12.5 8h7l6 18h-4l-1-3.4h-9l-1 3.4h-4z" fill="#fff"/><path d="M16 12v3M16 18.5v3" stroke="#F2B300" stroke-width="2.4" stroke-linecap="round"/></svg><span>Steady Drive</span></a>
-  <button class="btn btn--y" data-cta="header">Erken erişim</button>
+  <button class="btn btn--y" data-cta="header">Ön kayıt</button>
 </div></header>
 
 <main>
 <section class="hero">
   <div class="wrap hero-in">
     <div class="hero-tx">
-      <p class="kick">Yakında · Android · Erken erişim</p>
-      <h1>Telefonun, yanındaki <em>sakin sürüş koçu</em> olsun.</h1>
-      <p class="lede">Steady Drive&#39;ı ön cama takarsın. Yolu izler, öndeki araca ya da yayaya fazla yaklaşınca tek cümleyle uyarır. Sürüş bitince puanlı karnen hazır.</p>
+      <p class="kick">Yakında Android&#39;de · Erken erişim</p>
+      <h1><span class="hk hk--usta">Yanında hep sakin bir <em>usta sürücü</em> olsa?</span><span class="hk hk--yeni-ehliyet">Ehliyet yeni mi? <em>Yalnız sürme.</em></span></h1>
+      <p class="lede">Telefonun ön camda yolu izler, riskli anda tek cümleyle uyarır, sürüşten sonra karne verir.</p>
+    </div>
+    <figure class="scene"><svg class="hk hk--usta" viewBox="0 40 800 470" role="img" aria-label="Steady Drive&#39;ın yolda gördükleri: öndeki araç ve hız sınırı sarı kutularla işaretli; mesafe kısalınca &quot;Dikkat, öndeki araç!&quot; diye uyarıyor. Sağ altta uygulamanın gerçek uyarı ekranı." xmlns="http://www.w3.org/2000/svg"><rect width="800" height="215" fill="#AFD2EE"/><ellipse cx="170" cy="70" rx="90" ry="17" fill="#fff" opacity=".7"/><ellipse cx="610" cy="48" rx="110" ry="18" fill="#fff" opacity=".7"/><rect x="0" y="105" width="70" height="110" fill="#EADFCF"/><rect x="120" y="135" width="100" height="80" fill="#CDB8A0"/><rect x="250" y="155" width="60" height="60" fill="#EADFCF"/><rect x="492" y="145" width="70" height="70" fill="#CDB8A0"/><rect x="575" y="115" width="110" height="100" fill="#EADFCF"/><rect x="690" y="85" width="80" height="130" fill="#CDB8A0"/><rect y="215" width="800" height="285" fill="#C3C8CD"/><polygon points="388,215 412,215 900,500 -100,500" fill="#3B424A"/><polygon points="388,215 392,215 -100,500 -112,500" fill="#fff" opacity=".85"/><polygon points="412,215 408,215 900,500 912,500" fill="#fff" opacity=".85"/><polygon points="399.4,215.5 400.6,215.5 400.7,218.8 399.3,218.8" fill="#F2B300"/><polygon points="399.2,227.2 400.8,227.2 401.0,237.6 399.0,237.6" fill="#F2B300"/><polygon points="398.6,254.7 401.4,254.7 401.7,272.3 398.3,272.3" fill="#F2B300"/><polygon points="397.8,298.1 402.2,298.1 402.7,322.8 397.3,322.8" fill="#F2B300"/><polygon points="396.7,357.3 403.3,357.3 404.0,389.1 396.0,389.1" fill="#F2B300"/><polygon points="395.2,432.4 404.8,432.4 405.5,471.3 394.5,471.3" fill="#F2B300"/><rect x="708" y="190" width="5" height="100" fill="#8A929A"/><circle cx="710" cy="178" r="22" fill="#C8102E"/><circle cx="710" cy="178" r="15" fill="#fff"/><text x="710" y="184" text-anchor="middle" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="19" fill="#262B30">50</text><rect x="676.0" y="148.0" width="68.0" height="68.0" rx="6" fill="none" stroke="#F2B300" stroke-width="4"/><g transform="translate(710.0 148.0)"><rect x="-46.0" y="-30" width="92.0" height="30" rx="6" fill="#F2B300"/><text x="0" y="-9" text-anchor="middle" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="20" fill="#262B30">Sınır 50</text></g><ellipse cx="400" cy="364.1" rx="194.1" ry="17.6" fill="#000" opacity=".28"/><rect x="258.8" y="199.7" width="282.4" height="100.7" rx="35.3" fill="#35506E"/><rect x="283.5" y="209.4" width="232.9" height="52.0" rx="17.6" fill="#8FA6BC"/><rect x="223.5" y="258.2" width="352.9" height="81.2" rx="21.2" fill="#35506E"/><rect x="237.6" y="274.4" width="70.6" height="21.1" rx="3" fill="#E24B4B"/><rect x="491.8" y="274.4" width="70.6" height="21.1" rx="3" fill="#E24B4B"/><rect x="357.6" y="289.0" width="84.7" height="16.2" rx="2" fill="#F3F4F6"/><rect x="244.7" y="336.1" width="63.5" height="26.0" rx="3" fill="#15181B"/><rect x="491.8" y="336.1" width="63.5" height="26.0" rx="3" fill="#15181B"/><rect x="215.5" y="191.7" width="368.9" height="178.4" rx="6" fill="none" stroke="#F2B300" stroke-width="4"/><g transform="translate(400.0 191.7)"><rect x="-115.0" y="-30" width="230.0" height="30" rx="6" fill="#F2B300"/><text x="0" y="-9" text-anchor="middle" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="20" fill="#262B30">Öndeki araç · 0,8 sn</text></g><path d="M0 470q400-26 800 0v30H0z" fill="#171B1F"/><rect x="620" y="418" width="150" height="66" rx="10" fill="#050608" stroke="#3A4149" stroke-width="2"/><text x="640" y="462" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="40" fill="#F0F2F4">47</text><text x="684" y="462" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="16" fill="#A9B2BA">km/sa</text><g opacity="1.00"><rect x="30" y="398" width="328" height="56" rx="12" fill="#C8102E" stroke="#fff" stroke-width="3"/><path d="M54 426v-6h8l9-8v22l-9-8z" fill="#fff"/><path d="M78 417q6 9 0 18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><text x="94" y="434" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="27" fill="#fff">Dikkat, öndeki araç!</text></g><g><rect x="529" y="377" width="262" height="129" rx="14" fill="#0E1114" stroke="#3A4149" stroke-width="2"/><image href="img/ekran-uyari-k.webp" x="536" y="384" width="248" height="115" preserveAspectRatio="xMidYMid slice"/></g></svg><svg class="hk hk--yeni-ehliyet" viewBox="0 40 800 470" role="img" aria-label="Steady Drive&#39;ın yolda gördükleri: öndeki araç, yaya ve hız sınırı sarı kutularla işaretli; önde yaya varken &quot;Dikkat, yaya&quot; diyor. Sağ altta uygulamanın gerçek sürüş ekranı." xmlns="http://www.w3.org/2000/svg"><rect width="800" height="215" fill="#AFD2EE"/><ellipse cx="170" cy="70" rx="90" ry="17" fill="#fff" opacity=".7"/><ellipse cx="610" cy="48" rx="110" ry="18" fill="#fff" opacity=".7"/><rect x="0" y="105" width="70" height="110" fill="#EADFCF"/><rect x="120" y="135" width="100" height="80" fill="#CDB8A0"/><rect x="250" y="155" width="60" height="60" fill="#EADFCF"/><rect x="492" y="145" width="70" height="70" fill="#CDB8A0"/><rect x="575" y="115" width="110" height="100" fill="#EADFCF"/><rect x="690" y="85" width="80" height="130" fill="#CDB8A0"/><rect y="215" width="800" height="285" fill="#C3C8CD"/><polygon points="388,215 412,215 900,500 -100,500" fill="#3B424A"/><polygon points="388,215 392,215 -100,500 -112,500" fill="#fff" opacity=".85"/><polygon points="412,215 408,215 900,500 912,500" fill="#fff" opacity=".85"/><polygon points="399.4,215.0 400.6,215.0 400.6,216.8 399.4,216.8" fill="#F2B300"/><polygon points="399.2,223.4 400.8,223.4 400.9,232.3 399.1,232.3" fill="#F2B300"/><polygon points="398.8,247.6 401.2,247.6 401.5,263.7 398.5,263.7" fill="#F2B300"/><polygon points="398.0,287.7 402.0,287.7 402.5,310.9 397.5,310.9" fill="#F2B300"/><polygon points="396.9,343.6 403.1,343.6 403.7,373.9 396.3,373.9" fill="#F2B300"/><polygon points="395.5,415.3 404.5,415.3 405.2,452.7 394.8,452.7" fill="#F2B300"/><rect x="708" y="190" width="5" height="100" fill="#8A929A"/><circle cx="710" cy="178" r="22" fill="#C8102E"/><circle cx="710" cy="178" r="15" fill="#fff"/><text x="710" y="184" text-anchor="middle" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="19" fill="#262B30">50</text><rect x="676.0" y="148.0" width="68.0" height="68.0" rx="6" fill="none" stroke="#F2B300" stroke-width="4"/><g transform="translate(710.0 148.0)"><rect x="-46.0" y="-30" width="92.0" height="30" rx="6" fill="#F2B300"/><text x="0" y="-9" text-anchor="middle" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="20" fill="#262B30">Sınır 50</text></g><g opacity="1.00"><rect x="623" y="260" width="10" height="52" rx="4" fill="#2B2F36" transform="rotate(5.2 628 260)"/><rect x="613" y="212" width="30" height="52" rx="12" fill="#E07B2F"/><circle cx="628" cy="200" r="12" fill="#8A5A3C"/></g><g opacity="1.00"><rect x="600.0" y="182.0" width="56.0" height="136.0" rx="6" fill="none" stroke="#F2B300" stroke-width="4"/><g transform="translate(628.0 182.0)"><rect x="-33.0" y="-30" width="66.0" height="30" rx="6" fill="#F2B300"/><text x="0" y="-9" text-anchor="middle" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="20" fill="#262B30">Yaya</text></g></g><ellipse cx="400" cy="273.8" rx="75.0" ry="6.8" fill="#000" opacity=".28"/><rect x="345.5" y="209.1" width="109.1" height="38.9" rx="13.6" fill="#35506E"/><rect x="355.0" y="212.9" width="90.0" height="20.1" rx="6.8" fill="#8FA6BC"/><rect x="331.8" y="231.7" width="136.4" height="31.4" rx="8.2" fill="#35506E"/><rect x="337.3" y="237.9" width="27.3" height="8.2" rx="3" fill="#E24B4B"/><rect x="435.5" y="237.9" width="27.3" height="8.2" rx="3" fill="#E24B4B"/><rect x="383.6" y="243.6" width="32.7" height="6.3" rx="2" fill="#F3F4F6"/><rect x="340.0" y="261.8" width="24.5" height="10.0" rx="3" fill="#15181B"/><rect x="435.5" y="261.8" width="24.5" height="10.0" rx="3" fill="#15181B"/><rect x="323.8" y="201.1" width="152.4" height="78.7" rx="6" fill="none" stroke="#F2B300" stroke-width="4"/><g transform="translate(400.0 201.1)"><rect x="-115.0" y="-30" width="230.0" height="30" rx="6" fill="#F2B300"/><text x="0" y="-9" text-anchor="middle" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="20" fill="#262B30">Öndeki araç · 2,2 sn</text></g><path d="M0 470q400-26 800 0v30H0z" fill="#171B1F"/><rect x="620" y="418" width="150" height="66" rx="10" fill="#050608" stroke="#3A4149" stroke-width="2"/><text x="640" y="462" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="40" fill="#F0F2F4">47</text><text x="684" y="462" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="16" fill="#A9B2BA">km/sa</text><g opacity="1.00"><rect x="30" y="398" width="228" height="56" rx="12" fill="#0B5AA8" stroke="#fff" stroke-width="3"/><path d="M54 426v-6h8l9-8v22l-9-8z" fill="#fff"/><path d="M78 417q6 9 0 18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><text x="94" y="434" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="27" fill="#fff">Dikkat, yaya</text></g><g><rect x="529" y="377" width="262" height="129" rx="14" fill="#0E1114" stroke="#3A4149" stroke-width="2"/><image href="img/ekran-k.webp" x="536" y="384" width="248" height="115" preserveAspectRatio="xMidYMid slice"/></g></svg></figure>
+    <div class="hero-act">
+      <div class="promise"><p>Ön kayıt olana</p><ul><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg>Play Store&#39;a çıktığında ilk sen haber alırsın</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg>Yayından önce kapalı teste davet edilirsin</li></ul></div>
       <form class="lead-form lead-inline" data-origin="inline" novalidate>
         <label class="sr" for="lead-email-inline">E-posta adresin</label>
         <div class="inline-row">
-          <input id="lead-email-inline" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="E-posta adresin">
-          <button type="submit" class="btn btn--y">Çıkınca haber ver</button>
+          <input id="lead-email-inline" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="E-posta (tercihen Gmail)">
+          <button type="submit" class="btn btn--y">Ön kayıt ol</button>
         </div>
         <label class="consent"><input type="checkbox" name="consent" required>
-          <span><a href="kvkk.html" target="_blank" rel="noopener">Aydınlatma metnini</a> okudum; e-postamın çıkış haberi için işlenmesini kabul ediyorum.</span></label>
+          <span><a href="kvkk.html" target="_blank" rel="noopener">Aydınlatma metnini</a> okudum; e-postamın çıkış haberi ve kapalı test daveti için işlenmesini kabul ediyorum.</span></label>
         <p class="form-error" role="alert" hidden></p>
+        <p class="inline-done" role="status" hidden>Ön kaydın alındı. Kapalı test daveti ve çıkış haberi <strong class="done-email"></strong> adresine gelecek. Başka bir amaçla e-posta göndermeyeceğiz.</p>
         <p class="wa-or">ya da</p>
-        <a class="btn btn--wa" href="https://wa.me/905306329579?text=Merhaba%2C%20Steady%20Drive%20%C3%A7%C4%B1k%C4%B1nca%20bana%20haber%20verin." target="_blank" rel="noopener" data-wa="hero"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1-.2.200-.6.800-.8 1-.1.200-.3.200-.5.100-.2-.100-1-.4-1.900-1.200-.7-.6-1.200-1.400-1.300-1.600-.1-.2 0-.4.100-.5l.4-.4c.1-.1.100-.2.200-.4.100-.1 0-.3 0-.4-.1-.1-.6-1.400-.8-1.900-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.100-.6.300-.2.200-.8.800-.8 1.900s.8 2.200.9 2.300c.1.200 1.600 2.500 3.900 3.400 2.300.9 2.300.6 2.700.6.400 0 1.400-.6 1.600-1.100.2-.6.200-1 .1-1.100-.1-.1-.2-.2-.4-.3z"/></svg>WhatsApp&#39;tan haber ver</a>
-        <p class="wa-note">WhatsApp&#39;tan yazarsan telefon numaran bana ulaşır; yalnızca çıkış haberi için kullanılır.</p>
-        <p class="inline-done" role="status" hidden>Kaydın alındı. Steady Drive yayına çıktığında <strong class="done-email"></strong> adresine haber vereceğiz. Başka bir amaçla e-posta göndermeyeceğiz.</p>
+        <a class="btn btn--wa" href="https://wa.me/905306329579?text=Merhaba%2C%20Steady%20Drive%20%C3%A7%C4%B1k%C4%B1nca%20bana%20haber%20verin." target="_blank" rel="noopener" data-wa="hero"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.1-.2.2-.4.1-.1 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.9 3.4 2.3.9 2.3.6 2.7.6.4 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>WhatsApp&#39;tan haber al</a>
+        <p class="wa-note">WhatsApp&#39;tan yazarsan telefon numaran bize ulaşır; yalnızca çıkış haberi için kullanılır.</p>
       </form>
-      <p class="hero-note">Henüz yayında değil. İlk sürüm Android 11 ve üstü için; iPhone sürümü yok.</p>
-      <ul class="points"><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg>Hesap gerekmez</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg>Görüntü telefondan çıkmaz</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg>İlk 3 sürüş ücretsiz</li></ul>
+      <p class="hero-note">Ücretsiz. Ödeme bilgisi istemiyoruz. İlk sürüm Android 11 ve üstü; iPhone sürümü yok.</p>
     </div>
-    <figure class="scene" aria-label="Steady Drive&#39;ın yolda gördükleri: öndeki araç, yaya ve hız sınırı sarı kutularla işaretlenir; mesafe kısalınca sesli uyarı çıkar.">
-      <svg id="scene" viewBox="0 0 800 500" role="img" aria-label="Steady Drive&#39;ın yolda gördükleri: öndeki araç, yaya ve hız sınırı sarı kutularla işaretlenir; mesafe kısalınca sesli uyarı çıkar." xmlns="http://www.w3.org/2000/svg"><rect width="800" height="215" fill="#AFD2EE"/><ellipse cx="170" cy="70" rx="90" ry="17" fill="#fff" opacity=".7"/><ellipse cx="610" cy="48" rx="110" ry="18" fill="#fff" opacity=".7"/><rect x="0" y="105" width="70" height="110" fill="#EADFCF"/><rect x="120" y="135" width="100" height="80" fill="#CDB8A0"/><rect x="250" y="155" width="60" height="60" fill="#EADFCF"/><rect x="492" y="145" width="70" height="70" fill="#CDB8A0"/><rect x="575" y="115" width="110" height="100" fill="#EADFCF"/><rect x="690" y="85" width="80" height="130" fill="#CDB8A0"/><rect y="215" width="800" height="285" fill="#C3C8CD"/><polygon points="388,215 412,215 900,500 -100,500" fill="#3B424A"/><polygon points="388,215 392,215 -100,500 -112,500" fill="#fff" opacity=".85"/><polygon points="412,215 408,215 900,500 912,500" fill="#fff" opacity=".85"/><polygon points="399.4,215.5 400.6,215.5 400.7,218.8 399.3,218.8" fill="#F2B300"/><polygon points="399.2,227.2 400.8,227.2 401.0,237.6 399.0,237.6" fill="#F2B300"/><polygon points="398.6,254.7 401.4,254.7 401.7,272.3 398.3,272.3" fill="#F2B300"/><polygon points="397.8,298.1 402.2,298.1 402.7,322.8 397.3,322.8" fill="#F2B300"/><polygon points="396.7,357.3 403.3,357.3 404.0,389.1 396.0,389.1" fill="#F2B300"/><polygon points="395.2,432.4 404.8,432.4 405.5,471.3 394.5,471.3" fill="#F2B300"/><rect x="708" y="190" width="5" height="100" fill="#8A929A"/><circle cx="710" cy="178" r="22" fill="#C8102E"/><circle cx="710" cy="178" r="15" fill="#fff"/><text x="710" y="184" text-anchor="middle" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="19" fill="#262B30">50</text><rect x="676.0" y="148.0" width="68.0" height="68.0" rx="6" fill="none" stroke="#F2B300" stroke-width="4"/><g transform="translate(710.0 148.0)"><rect x="-46.0" y="-30" width="92.0" height="30" rx="6" fill="#F2B300"/><text x="0" y="-9" text-anchor="middle" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="20" fill="#262B30">Sınır 50</text></g><ellipse cx="400" cy="364.1" rx="194.1" ry="17.6" fill="#000" opacity=".28"/><rect x="258.8" y="199.7" width="282.4" height="100.7" rx="35.3" fill="#35506E"/><rect x="283.5" y="209.4" width="232.9" height="52.0" rx="17.6" fill="#8FA6BC"/><rect x="223.5" y="258.2" width="352.9" height="81.2" rx="21.2" fill="#35506E"/><rect x="237.6" y="274.4" width="70.6" height="21.1" rx="3" fill="#E24B4B"/><rect x="491.8" y="274.4" width="70.6" height="21.1" rx="3" fill="#E24B4B"/><rect x="357.6" y="289.0" width="84.7" height="16.2" rx="2" fill="#F3F4F6"/><rect x="244.7" y="336.1" width="63.5" height="26.0" rx="3" fill="#15181B"/><rect x="491.8" y="336.1" width="63.5" height="26.0" rx="3" fill="#15181B"/><rect x="215.5" y="191.7" width="368.9" height="178.4" rx="6" fill="none" stroke="#F2B300" stroke-width="4"/><g transform="translate(400.0 191.7)"><rect x="-115.0" y="-30" width="230.0" height="30" rx="6" fill="#F2B300"/><text x="0" y="-9" text-anchor="middle" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="20" fill="#262B30">Öndeki araç · 0,8 sn</text></g><path d="M0 470q400-26 800 0v30H0z" fill="#171B1F"/><rect x="620" y="418" width="150" height="66" rx="10" fill="#050608" stroke="#3A4149" stroke-width="2"/><text x="640" y="462" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="40" fill="#F0F2F4">47</text><text x="684" y="462" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="16" fill="#A9B2BA">km/sa</text><g opacity="1.00"><rect x="30" y="398" width="328" height="56" rx="12" fill="#C8102E" stroke="#fff" stroke-width="3"/><path d="M54 426v-6h8l9-8v22l-9-8z" fill="#fff"/><path d="M78 417q6 9 0 18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><text x="94" y="434" font-family="'Barlow Semi Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="27" fill="#fff">Dikkat, öndeki araç!</text></g></svg>
-    </figure>
   </div>
 </section>
 <div class="lane" aria-hidden="true"></div>
 
-<section class="sec" id="nasil">
+<section class="sec sec--white" id="sonra">
   <div class="wrap">
-    <div class="sec-head rv"><p class="kick kick--dk">Nasıl çalışır</p><h2 class="h2">Tak, sür, karnene bak</h2></div>
-    <ol class="steps">
-        <li class="step rv"><div class="step-vis"><img src="img/surus-ekrani.webp" alt="Steady Drive sürüş ekranı: 28 km/sa, takip mesafesi 2,4 sn, hız sınırı 50" width="1200" height="555" loading="lazy" decoding="async"></div><div class="step-tx"><span class="step-n" aria-hidden="true">1</span><h3>Telefonu ön cama tak</h3><p>Telefon tutucusuyla ön cama tak ve &quot;Sürüşe başla&quot;ya bas. Ek cihaz ya da hesap gerekmez.</p></div></li>
-        <li class="step rv"><div class="step-vis"><img src="img/surus-ekrani-uyari.webp" alt="Steady Drive uyarı ekranı: kırmızı çerçeve, DİKKAT, öndeki araç 0,8 sn" width="1200" height="555" loading="lazy" decoding="async"></div><div class="step-tx"><span class="step-n" aria-hidden="true">2</span><h3>Yolu izler, gerekirse konuşur</h3><p>Arka kamera ve GPS yolu izler. Yalnızca riskli anda kısa bir ses ya da tek cümleyle konuşur.</p></div></li>
-        <li class="step rv"><div class="step-vis"><div class="levha levha--score" role="img" aria-label="Puan 77 /100. Son 4 sürüş ortalamasının 6 puan üstünde"><small>Puan</small><b>77<i>/100</i></b><span>Son 4 sürüş ortalamasının 6 puan üstünde</span></div></div><div class="step-tx"><span class="step-n" aria-hidden="true">3</span><h3>Sürüşten sonra karnen hazır</h3><p>100 üzerinden puanın, olayların ve bir sonraki sürüş için tek hedefin seni bekler.</p></div></li>
+    <div class="sec-head"><p class="kick kick--dk">Ön kayıttan sonra</p><h2 class="h2">Seni neler bekliyor</h2></div>
+    <ol class="after">
+        <li><span class="num" aria-hidden="true">1</span><div><h3>Kapalı test daveti</h3><p>Uygulama Play Store&#39;da kapalı testteyken sana bir davet e-postası gelir. Bağlantıyı açıp Play Store&#39;dan yüklersin. Davetin çalışması için Play Store&#39;da kullandığın Gmail adresini yazman en kolayı.</p></div></li>
+        <li><span class="num" aria-hidden="true">2</span><div><h3>Çıkış haberi</h3><p>Steady Drive Play Store&#39;da herkese açıldığı gün tek bir e-postayla haber veririz.</p></div></li>
+        <li><span class="num" aria-hidden="true">3</span><div><h3>Başka e-posta yok</h3><p>Bülten, reklam ya da başka bir amaçla yazmayız. Listeden çıkmak istersen bize yazman yeterli.</p></div></li>
     </ol>
   </div>
 </section>
 
-<section class="sec sec--road">
+<section class="sec" id="nasil">
   <div class="wrap">
-    <div class="sec-head rv"><p class="kick">Ne zaman konuşur</p><h2 class="h2">Yalnızca gerektiğinde konuşur</h2><p class="lede">Uygulamadaki gerçek cümleler bunlar. Gerisinde sessiz kalır.</p></div>
-    <ul class="says">
-        <li class="say rv"><span class="levha levha--say">Dikkat, öndeki araç!</span><div><b>Çarpışma riski</b><p>Öndeki araca çarpma riski oluştuğunda.</p></div></li>
-        <li class="say rv"><span class="levha levha--say">Mesafe kısa</span><div><b>Takip mesafesi</b><p>Öndeki araçla aranı saniye cinsinden ölçer; kısaldığında söyler.</p></div></li>
-        <li class="say rv"><span class="levha levha--say">Dikkat, yaya</span><div><b>Yaya</b><p>Yavaş giderken önünde yakın bir yaya olduğunda.</p></div></li>
-        <li class="say rv"><span class="levha levha--say">Dikkat, bisikletli</span><div><b>Bisikletli</b><p>Yavaş giderken önünde yakın bir bisikletli olduğunda.</p></div></li>
-        <li class="say rv"><span class="levha levha--say">Sınırın üstündesin</span><div><b>Hız sınırı</b><p>Türkiye&#39;de harita verisi olan yollarda hızını sınırla karşılaştırır.</p></div></li>
-    </ul>
-    <p class="sensors rv"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5 18 16.5H2z"/><path d="M10 8v4M10 14.2v.1"/></svg>Sert fren, sert kalkış ve hızlı viraj telefonun sensörlerinden izlenir.</p>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap karne">
-    <div class="karne-img rv"><img src="img/karne.webp" alt="Steady Drive sürüş karnesi: puan 77/100, son 5 sürüşün puanları, sonraki sürüşün hedefi" width="640" height="1385" loading="lazy" decoding="async"></div>
-    <div class="karne-tx rv">
-      <p class="kick kick--dk">Sürüşten sonra</p>
-      <h2 class="h2">Neyi iyi yaptığını, neyi geliştireceğini gösterir</h2>
-      <ul class="ticks">
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><div><b>100 üzerinden puan</b><span>Her sürüş için, son sürüşlerinle birlikte.</span></div></li>
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><div><b>Olaylar harita üzerinde</b><span>Sert fren ya da kısa mesafe nerede oldu, gör.</span></div></li>
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><div><b>Bir sonraki sürüş için tek hedef</b><span>Örneğin: takip mesafeni 2 saniyenin üstünde tut.</span></div></li>
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><div><b>Haftalık ilerleme</b><span>Puanın zamanla nasıl değiştiğini izle.</span></div></li>
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><div><b>2 dakikalık dersler</b><span>2 saniye kuralı, yaya önceliği, hız sınırları.</span></div></li>
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><div><b>Aday sürücülük süresi</b><span>Aday sürücülüğün ne kadar kaldığını gösterir.</span></div></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--white">
-  <div class="wrap">
-    <div class="sec-head rv"><p class="kick kick--dk">Kimin için</p><h2 class="h2">Yeni ve aday sürücüler için</h2></div>
-    <div class="who">
-        <article class="who-c rv"><h3>Ehliyeti yeni olanlar</h3><p>Yalnız sürmek zorunda değilsin. Önünde yaya ya da bisikletli olunca, öndeki araca fazla yaklaşınca kısa bir sesle haber verir.</p></article>
-        <article class="who-c rv"><h3>Ehliyete hazırlananlar</h3><p>Her sürüşten sonra puanını ve gelişecek tek bir alanı görürsün; 2 dakikalık derslerle kuralları pekiştirirsin.</p></article>
-        <article class="who-c rv"><h3>Ebeveynler</h3><p>Çocuğunuz uygulamayı kendi telefonunda kullanır. Veriler onun telefonunda kalır; karnesini yalnızca o isterse sizinle paylaşır.</p></article>
+    <div class="sec-head"><p class="kick kick--dk">Nasıl çalışır</p><h2 class="h2">Tak, sür, karnene bak</h2></div>
+    <ol class="steps">
+        <li class="step"><div class="step-vis"><img src="img/surus-ekrani.webp" alt="Steady Drive sürüş ekranı: 28 km/sa, takip mesafesi 2,4 sn, hız sınırı 50" width="1200" height="555" loading="lazy" decoding="async"></div><div class="step-tx"><span class="num" aria-hidden="true">1</span><h3>Telefonu ön cama tak</h3><p>Bir tutucuyla ön cama tak, &quot;Sürüşe başla&quot;ya bas. Ek cihaz ya da hesap gerekmez.</p></div></li>
+        <li class="step"><div class="step-vis"><img src="img/surus-ekrani-uyari.webp" alt="Steady Drive uyarı ekranı: kırmızı çerçeve, DİKKAT, öndeki araç 0,8 sn" width="1200" height="555" loading="lazy" decoding="async"></div><div class="step-tx"><span class="num" aria-hidden="true">2</span><h3>Yolu izler, gerektiğinde konuşur</h3><p>Arka kamera ve GPS yolu izler. Yalnızca riskli anda kısa bir ses ya da tek cümleyle konuşur; gerisinde sessizdir.</p></div></li>
+    </ol>
+    <div class="says-wrap"><p class="says-l">Uygulamadaki gerçek cümleler</p><ul class="says"><li class="levha levha--say"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h3l5-4v12l-5-4H3z" fill="currentColor"/><path d="M14 7q2 3 0 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Dikkat, öndeki araç!</li><li class="levha levha--say"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h3l5-4v12l-5-4H3z" fill="currentColor"/><path d="M14 7q2 3 0 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Mesafe kısa</li><li class="levha levha--say"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h3l5-4v12l-5-4H3z" fill="currentColor"/><path d="M14 7q2 3 0 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Dikkat, yaya</li><li class="levha levha--say"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h3l5-4v12l-5-4H3z" fill="currentColor"/><path d="M14 7q2 3 0 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Dikkat, bisikletli</li><li class="levha levha--say"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h3l5-4v12l-5-4H3z" fill="currentColor"/><path d="M14 7q2 3 0 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Sınırın üstündesin</li></ul></div>
+    <div class="karne">
+      <div class="karne-img"><img src="img/karne-ust.webp" alt="Steady Drive sürüş karnesi: puan 77/100, son 5 sürüşün puanları ve puanı en çok düşüren alışkanlık" width="560" height="760" loading="lazy" decoding="async"></div>
+      <div class="karne-tx">
+        <span class="num" aria-hidden="true">3</span>
+        <h3>Karnen hazır</h3>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><div><b>100 üzerinden puan</b><span>Olaylar harita üzerinde, son sürüşlerinle birlikte.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><div><b>Bir sonraki sürüş için tek hedef</b><span>Örneğin: takip mesafeni 2 saniyenin üstünde tut.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><div><b>2 dakikalık dersler</b><span>2 saniye kuralı, yaya önceliği, hız sınırları; aday sürücülüğün ne kadar kaldığı.</span></div></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="sec sec--road">
   <div class="wrap">
-    <div class="sec-head rv"><p class="kick">Bilmen gerekenler</p><h2 class="h2">Yardımcıdır, yol ve karar senindir</h2></div>
+    <div class="sec-head"><p class="kick">Bilmen gerekenler</p><h2 class="h2">Yardımcıdır; yol ve karar senindir</h2></div>
     <div class="know">
-      <div class="know-c know-c--lim rv"><h3>Sınırları</h3><ul><li>Uyarılar yardımcıdır; yolu ve kararı sen verirsin. Steady Drive kazayı önleme garantisi vermez.</li><li>Sürerken telefona dokunulmaz.</li><li>Gece ve kötü havada kamera sınırlı çalışır.</li><li>Hız sınırı, Türkiye&#39;de harita verisi olan yollarda gösterilir; her yolda sınır bilinmez.</li></ul></div>
-      <div class="know-c know-c--pri rv"><h3>Gizlilik</h3><ul><li>Hesap gerekmez.</li><li>Veriler telefonda kalır.</li><li>Görüntü telefondan çıkmaz, sunucuya hiçbir şey gitmez.</li><li>Karneyi paylaşmak istersen görsel ya da PDF olarak sen paylaşırsın.</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="fiyat">
-  <div class="wrap">
-    <div class="sec-head rv"><p class="kick kick--dk">Planlanan fiyatlar</p><h2 class="h2">İlk 3 sürüş tam koçluk, ücretsiz</h2><p class="lede lede--dk">Henüz satışta değil. Aşağıdaki tutarlar planlanan fiyattır ve değişebilir; şimdi ödeme istemiyoruz.</p></div>
-    <div class="plans">
-        <article class="plan rv">
-          
-          <h3>Ücretsiz</h3>
-          <p class="plan-price"><b><svg class="lira" viewBox="0 0 10 14" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" aria-label="₺" role="img"><path d="M3.4 1v8.2c0 2.2 1.6 3.6 3.9 3.6"/><path d="M.8 6.6 9.2 4M.8 9.6 9.2 7"/></svg>0</b><span></span></p>
-          <ul><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><span>İlk 3 sürüşte tam koçluk</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><span>Çarpışma riski uyarısı her zaman açık</span></li></ul>
-          <button class="btn btn--dark btn--full" data-cta="plan-ucretsiz" data-plan="ucretsiz">Erken erişim</button>
-        </article>
-        <article class="plan rv">
-          <p class="plan-tag">Planlanan fiyat</p>
-          <h3>Aylık</h3>
-          <p class="plan-price"><b><svg class="lira" viewBox="0 0 10 14" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" aria-label="₺" role="img"><path d="M3.4 1v8.2c0 2.2 1.6 3.6 3.9 3.6"/><path d="M.8 6.6 9.2 4M.8 9.6 9.2 7"/></svg>99</b><span>/ ay</span></p>
-          <ul><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><span>Her sürüşte tam koçluk</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><span>Karne, haftalık ilerleme ve dersler</span></li></ul>
-          <button class="btn btn--dark btn--full" data-cta="plan-aylik" data-plan="aylik">Aylık planı istiyorum</button>
-        </article>
-        <article class="plan rv plan--hi">
-          <p class="plan-tag">Planlanan fiyat</p>
-          <h3>Aday Sürücü Paketi</h3>
-          <p class="plan-price"><b><svg class="lira" viewBox="0 0 10 14" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" aria-label="₺" role="img"><path d="M3.4 1v8.2c0 2.2 1.6 3.6 3.9 3.6"/><path d="M.8 6.6 9.2 4M.8 9.6 9.2 7"/></svg>449</b><span>6 ay, tek ödeme</span></p>
-          <ul><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><span>6 ay boyunca tam koçluk</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg><span>Ayda yaklaşık <svg class="lira" viewBox="0 0 10 14" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" aria-label="₺" role="img"><path d="M3.4 1v8.2c0 2.2 1.6 3.6 3.9 3.6"/><path d="M.8 6.6 9.2 4M.8 9.6 9.2 7"/></svg>75&#39;e denk gelir</span></li></ul>
-          <button class="btn btn--y btn--full" data-cta="plan-aday" data-plan="aday">Paketi istiyorum</button>
-        </article>
+      <div class="know-c know-c--lim"><h3>Sınırları</h3><ul><li>Uyarılar yardımcıdır, kazayı önleme garantisi vermez.</li><li>Sürerken telefona dokunulmaz.</li><li>Gece ve kötü havada kamera sınırlı çalışır.</li><li>Hız sınırı yalnızca Türkiye&#39;de harita verisi olan yollarda bilinir.</li></ul></div>
+      <div class="know-c know-c--pri"><h3>Gizlilik</h3><ul><li>Hesap gerekmez; veriler telefonda kalır.</li><li>Görüntü telefondan çıkmaz, sunucuya hiçbir şey gitmez.</li><li>Karneyi paylaşmak istersen görsel ya da PDF olarak sen paylaşırsın.</li></ul></div>
     </div>
   </div>
 </section>
 
 <section class="sec sec--white">
   <div class="wrap">
-    <div class="sec-head rv"><p class="kick kick--dk">Sorular</p><h2 class="h2">Merak edilenler</h2></div>
-    <div class="faq rv">
-        <details><summary>Ne zaman çıkacak?</summary><p>Uygulama çalışıyor, mağazada yayınlanmayı bekliyor. E-posta bırakırsan çıktığı gün haber veririz.</p></details>
+    <div class="sec-head"><p class="kick kick--dk">Sorular</p><h2 class="h2">Merak edilenler</h2></div>
+    <div class="faq">
+        <details><summary>Ne zaman çıkacak?</summary><p>Uygulama çalışıyor ve Play Store&#39;a hazırlanıyor. Önce ön kayıt olanlarla kapalı test yapacağız, sonra herkese açılacak. Tarih kesinleşince e-postayla haber veririz.</p></details>
+        <details><summary>Kapalı test ne demek?</summary><p>Uygulamanın Play Store&#39;da yalnızca davet edilenlere açık sürümü. Davet bağlantısıyla normal bir uygulama gibi yüklersin; görüşlerini istersen bize yazarsın.</p></details>
         <details><summary>iPhone&#39;da kullanabilir miyim?</summary><p>Hayır. İlk sürüm yalnızca Android 11 ve üstü için.</p></details>
-        <details><summary>Ek cihaz ya da hesap gerekir mi?</summary><p>Hayır. Yalnızca telefonun ve onu ön cama sabitleyecek bir tutucu yeterli. Hesap açmazsın.</p></details>
+        <details><summary>Ücretli mi?</summary><p>Ön kayıt ücretsiz, ödeme bilgisi istemiyoruz. Uygulamada ilk 3 sürüş tam koçluk ücretsiz; çarpışma riski uyarısı ücretsiz planda da her zaman açık. Ücretli planların fiyatı henüz belli değil.</p></details>
         <details><summary>Görüntüm ya da konumum bir yere gidiyor mu?</summary><p>Hayır. Veriler telefonda kalır; görüntü telefondan çıkmaz, sunucuya hiçbir şey gitmez.</p></details>
-        <details><summary>Kazayı önler mi?</summary><p>Hayır, böyle bir söz vermiyoruz. Uyarılar yardımcıdır; yol ve karar sürücünündür. Gece ve kötü havada kamera sınırlıdır.</p></details>
-        <details><summary>Ücretsiz kısmı ne kadar?</summary><p>İlk 3 sürüşte tam koçluk ücretsiz. Çarpışma riski uyarısı ücretsiz planda da her zaman açık.</p></details>
-        <details><summary>Hız sınırını her yolda bilir mi?</summary><p>Hayır. Türkiye&#39;de harita verisi olan yollarda gösterir; her yolda sınır bilinmez.</p></details>
     </div>
   </div>
 </section>
 
 <section class="close">
   <div class="wrap close-in">
-    <h2>İlk sürüşünde yanında koç olsun</h2>
-    <p>Çıktığında ilk haber alanlardan ol.</p>
-    <button class="btn btn--dark" data-cta="bottom">Erken erişime katıl</button>
+    <h2>Play Store&#39;a çıktığında ilk sen haber al</h2>
+    <p>Ön kayıt ol, kapalı teste de davet edelim.</p>
+    <button class="btn btn--dark" data-cta="bottom">Ön kayıt ol</button>
   </div>
 </section>
 </main>
@@ -173,38 +325,37 @@
   <p><a href="kvkk.html">KVKK aydınlatma metni</a></p>
 </div></footer>
 
-<div class="sticky" role="region" aria-label="Sakin bir sürüş koçu, yakında"><span>Sakin bir sürüş koçu, yakında</span><button class="btn btn--y" data-cta="sticky" tabindex="-1">Erken erişim</button></div>
+<div class="sticky" role="region" aria-label="Ön kayıt açık: ilk sen haber al"><span>Ön kayıt açık: ilk sen haber al</span><button class="btn btn--y" data-cta="sticky" tabindex="-1">Ön kayıt ol</button></div>
 
 <dialog class="modal" id="early" aria-labelledby="early-title">
   <div class="modal-in">
     <form method="dialog" class="modal-close-row"><button class="modal-x" aria-label="Kapat" value="close">×</button></form>
     <div class="modal-body" data-state="form">
-      <h2 id="early-title">Steady Drive çıkınca sana haber verelim</h2>
-      <p>Telefonunu ön cama takınca yolu izleyen, riskli anda tek cümleyle uyaran sürüş koçu Android için geliştiriliyor. E-postanı bırakırsan çıktığı gün tek bir e-postayla haber veririz.</p>
-      <p>Satın alma yok, senden ödeme bilgisi istemiyoruz.</p>
+      <h2 id="early-title">Steady Drive için ön kayıt ol</h2>
+      <p>Play Store&#39;a çıktığında ilk sen haber alırsın, yayından önce kapalı teste davet edilirsin. Davet için Play Store&#39;da kullandığın Gmail adresini yazman en kolayı.</p>
+      <p>Ücretsiz; ödeme bilgisi istemiyoruz.</p>
 
       <form class="lead-form" data-origin="modal" novalidate>
         <label for="lead-email">E-posta adresin</label>
-        <input id="lead-email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="ornek@eposta.com">
+        <input id="lead-email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="ornek@gmail.com">
         <label class="consent"><input type="checkbox" name="consent" required>
-          <span><a href="kvkk.html" target="_blank" rel="noopener">Aydınlatma metnini</a> okudum; e-postamın çıkış haberi için işlenmesini kabul ediyorum.</span></label>
+          <span><a href="kvkk.html" target="_blank" rel="noopener">Aydınlatma metnini</a> okudum; e-postamın çıkış haberi ve kapalı test daveti için işlenmesini kabul ediyorum.</span></label>
         <p class="form-error" role="alert" hidden></p>
-        <button type="submit" class="btn btn--y btn--full">Haber ver</button>
+        <button type="submit" class="btn btn--y btn--full">Ön kayıt ol</button>
         <p class="wa-or">ya da</p>
-        <a class="btn btn--wa" href="https://wa.me/905306329579?text=Merhaba%2C%20Steady%20Drive%20%C3%A7%C4%B1k%C4%B1nca%20bana%20haber%20verin." target="_blank" rel="noopener" data-wa="modal"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1-.2.200-.6.800-.8 1-.1.200-.3.200-.5.100-.2-.100-1-.4-1.900-1.200-.7-.6-1.200-1.400-1.300-1.600-.1-.2 0-.4.100-.5l.4-.4c.1-.1.100-.2.200-.4.100-.1 0-.3 0-.4-.1-.1-.6-1.400-.8-1.900-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.100-.6.300-.2.200-.8.800-.8 1.900s.8 2.200.9 2.300c.1.200 1.600 2.500 3.900 3.400 2.300.9 2.300.6 2.700.6.400 0 1.400-.6 1.600-1.100.2-.6.200-1 .1-1.100-.1-.1-.2-.2-.4-.3z"/></svg>WhatsApp&#39;tan haber ver</a>
-        <p class="wa-note">WhatsApp&#39;tan yazarsan telefon numaran bana ulaşır; yalnızca çıkış haberi için kullanılır.</p>
+        <a class="btn btn--wa" href="https://wa.me/905306329579?text=Merhaba%2C%20Steady%20Drive%20%C3%A7%C4%B1k%C4%B1nca%20bana%20haber%20verin." target="_blank" rel="noopener" data-wa="modal"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.1-.2.2-.4.1-.1 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.9 3.4 2.3.9 2.3.6 2.7.6.4 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>WhatsApp&#39;tan haber al</a>
+        <p class="wa-note">WhatsApp&#39;tan yazarsan telefon numaran bize ulaşır; yalnızca çıkış haberi için kullanılır.</p>
       </form>
     </div>
     <div class="modal-body modal-done" data-state="done" hidden>
       <svg class="done-mark" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23" pathLength="100"/><path d="M15 27l7.5 7.5L37.5 19" pathLength="100"/></svg>
-      <h2>Kaydın alındı</h2>
-      <p>Steady Drive yayına çıktığında <strong class="done-email"></strong> adresine haber vereceğiz. Başka bir amaçla e-posta göndermeyeceğiz.</p>
+      <h2>Ön kaydın alındı</h2>
+      <p>Kapalı test daveti ve çıkış haberi <strong class="done-email"></strong> adresine gelecek. Başka bir amaçla e-posta göndermeyeceğiz.</p>
       <form method="dialog"><button class="btn btn--dark btn--full" value="close">Tamam</button></form>
     </div>
   </div>
 </dialog>
-<script src="scene.js?v=665938e021" defer></script>
-<script src="core.js?v=2ceac6a574" defer></script>
-<script src="page.js?v=683a9f4953" defer></script>
+<script src="core.js?v=f08123b588" defer></script>
+<script src="page.js?v=9c58e021d3" defer></script>
 </body>
 </html>

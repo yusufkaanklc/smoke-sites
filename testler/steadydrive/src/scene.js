@@ -1,5 +1,6 @@
 /* Steady Drive signature scene: driver's-eye road. Pure function of time: DriveScene.markup(t) returns SVG inner markup.
-   Browser: DriveScene.mount(svg) plays the 8 s loop. Node (build): require() for the static frame. */
+   v2: the page and the ad creatives use build-time frames only (DriveScene.withScreen: frame + real app screen in the
+   corner, as in the ads); the browser no longer loads this file. mount() is kept for a possible animated variant. */
 (function (root) {
   "use strict";
   var T = 8, STATIC_T = 3.6, HZ = 215;
@@ -27,8 +28,9 @@
   function box(x, y, w, h) {
     return '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + w.toFixed(1) + '" height="' + h.toFixed(1) + '" rx="6" fill="none" stroke="' + C.sari + '" stroke-width="4"/>';
   }
-  function voice(text, op) {
-    return '<g opacity="' + op.toFixed(2) + '"><rect x="30" y="398" width="' + (text.length * 12.5 + 78).toFixed(0) + '" height="56" rx="12" fill="' + C.kir + '" stroke="#fff" stroke-width="3"/>' +
+  // Red only for the critical warning (car ahead); other spoken lines sit on sign blue, as in the ads.
+  function voice(text, op, fill) {
+    return '<g opacity="' + op.toFixed(2) + '"><rect x="30" y="398" width="' + (text.length * 12.5 + 78).toFixed(0) + '" height="56" rx="12" fill="' + (fill || C.kir) + '" stroke="#fff" stroke-width="3"/>' +
       '<path d="M54 426v-6h8l9-8v22l-9-8z" fill="#fff"/><path d="M78 417q6 9 0 18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>' +
       '<text x="94" y="434" font-family="' + FONT + '" font-weight="800" font-size="27" fill="#fff">' + text + '</text></g>';
   }
@@ -86,7 +88,7 @@
     var v1 = g < 1.35 ? Math.min(1, (1.35 - g) / 0.2) : 0;
     var v2 = fade(t, 5.3, 7.0, 0.25);
     if (v1 > 0) o.push(voice("Dikkat, öndeki araç!", v1));
-    else if (v2 > 0) o.push(voice("Dikkat, yaya", v2));
+    else if (v2 > 0) o.push(voice("Dikkat, yaya", v2, C.mavi));
     return o.join("");
   }
 
@@ -103,6 +105,13 @@
     })(performance.now());
   }
 
-  var api = { markup: markup, mount: mount, T: T, STATIC_T: STATIC_T, setT: function (svg, t) { svg.innerHTML = markup(t); } };
+  // Frame t plus a phone in the bottom-right corner showing a real app screen (href: URL or data URI, 2532x1170 ratio).
+  function withScreen(t, href) {
+    var x = 536, y = 384, w = 248, h = Math.round(w * 1170 / 2532);
+    return markup(t) + '<g><rect x="' + (x - 7) + '" y="' + (y - 7) + '" width="' + (w + 14) + '" height="' + (h + 14) + '" rx="14" fill="#0E1114" stroke="#3A4149" stroke-width="2"/>' +
+      '<image href="' + href + '" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" preserveAspectRatio="xMidYMid slice"/></g>';
+  }
+
+  var api = { markup: markup, withScreen: withScreen, mount: mount, T: T, STATIC_T: STATIC_T, setT: function (svg, t) { svg.innerHTML = markup(t); } };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.DriveScene = api;
 })(typeof window !== "undefined" ? window : globalThis);
