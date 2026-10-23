@@ -105,6 +105,12 @@ export const TR = {
     donePre: "Kapalı test daveti ve çıkış haberi ", donePost: " adresine gelecek. Başka bir amaçla e-posta göndermeyeceğiz.",
     doneBtn: "Tamam", msgs: null,
   },
+  // v3 (SMK-2): Meta pikseli yalnızca "Kabul et"ten sonra yüklenir. İki düğme eşit ağırlıkta; metin amaç + Meta + yurt dışı aktarımı söyler.
+  cc: {
+    label: "Çerez tercihi", pixel: "1663309671877482",
+    text: "Meta çereziyle reklamlarımızı ölçelim mi? Kabul edersen ziyaret verin Meta'ya, yurt dışına aktarılır.", // 390 px'te 2 satır
+    link: "Ayrıntılar", reject: "Reddet", accept: "Kabul et", reopen: "Çerez tercihi",
+  },
   wa: {
     number: "905306329579", label: "WhatsApp'tan haber al", or: "ya da",
     text: "Merhaba, Steady Drive çıkınca bana haber verin.",

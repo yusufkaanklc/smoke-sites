@@ -1,6 +1,7 @@
 /* Smoke test landing page runtime.
    1) Anonymous event tracking (no cookies, no third parties; random session id in sessionStorage).
    2) Early-access dialog (native <dialog>).
+   3) Optional Meta pixel behind a consent strip (#cc[data-pixel]); without that element nothing third-party ever loads.
    Bespoke pages use this shared core; page visuals are written per test. */
 (function () {
   "use strict";
@@ -67,6 +68,71 @@
   }
   ["pointerdown", "touchstart", "keydown", "wheel"].forEach(function (t) { addEventListener(t, onHuman, { capture: true, passive: true }); });
 
+  /* ================================================================ consent strip + Meta pixel (only if #cc[data-pixel]) */
+  // KVKK: piksel üçüncü taraf çerezi ve yurt dışı aktarım demek, açık rıza ister. "Kabul" gelmeden fbevents.js hiç indirilmez.
+  // Seçim localStorage'da (smk_consent = accept | reject); <head>'deki betik seçim yoksa ilk boyamadan önce data-cc="ask" koyar.
+  // Piksele yalnızca olay adı gider (PageView, Lead, Contact): e-posta yok, gelişmiş eşleştirme yok, otomatik olaylar kapalı.
+  var cc = qs("#cc[data-pixel]"), CC_KEY = "smk_consent";
+  var consent = null, pending = []; // pending: seçim yapılmadan olan Lead/Contact; "Kabul"de gönderilir, "Reddet"te atılır
+  function pixel(name) {
+    if (!cc) return;
+    if (consent === "accept") { try { window.fbq("track", name); } catch (e) {} }
+    else if (consent === null && pending.indexOf(name) < 0) pending.push(name);
+  }
+  function loadPixel(id) {
+    /* Meta's standard base code, run only after consent */
+    !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v;
+      s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, doc, "script", "https://connect.facebook.net/en_US/fbevents.js");
+    window.fbq("set", "autoConfig", false, id); // buton tıklaması / sayfa meta verisi gibi otomatik olayları kapatır (init'ten önce olmalı)
+    window.fbq("init", id);
+    window.fbq("track", "PageView");
+  }
+  function dropMetaCookies() {
+    var parts = location.hostname.split(".");
+    ["_fbp", "_fbc"].forEach(function (c) {
+      doc.cookie = c + "=; Max-Age=0; path=/";
+      for (var i = 0; i < parts.length - 1; i++) doc.cookie = c + "=; Max-Age=0; path=/; domain=." + parts.slice(i).join(".");
+    });
+  }
+  function ccLayout() { // yapışkan CTA şeridin üstünde dursun, sayfanın sonu şeridin altında kalmasın
+    root.style.setProperty("--cc-h", root.getAttribute("data-cc") === "ask" ? cc.offsetHeight + "px" : "0px");
+  }
+  function setConsent(v) {
+    consent = v;
+    try { localStorage.setItem(CC_KEY, v); } catch (e) {}
+    root.removeAttribute("data-cc");
+    ccLayout();
+    send(v === "accept" ? "consent_accept" : "consent_reject");
+    if (v === "accept") {
+      if (window.fbq) window.fbq("consent", "grant"); else loadPixel(cc.getAttribute("data-pixel"));
+      pending.forEach(pixel);
+    } else if (window.fbq) { // rıza geri alındı: bu sayfada piksel artık veri göndermez, çerezleri silinir
+      window.fbq("consent", "revoke");
+      dropMetaCookies();
+    }
+    pending = [];
+  }
+  if (cc) {
+    try { var saved = localStorage.getItem(CC_KEY); if (saved === "accept" || saved === "reject") consent = saved; } catch (e) {}
+    if (consent === "accept") loadPixel(cc.getAttribute("data-pixel"));
+    else if (consent === null) root.setAttribute("data-cc", "ask");
+    ccLayout();
+    addEventListener("resize", ccLayout, { passive: true });
+    cc.addEventListener("click", function (e) {
+      var b = e.target.closest ? e.target.closest("[data-cc-set]") : null;
+      if (b) setConsent(b.getAttribute("data-cc-set"));
+    });
+    // "Çerez tercihi" bağlantısı (altbilgi): şeridi yeniden açar; rıza buradan geri alınır.
+    doc.addEventListener("click", function (e) {
+      if (!e.target.closest || !e.target.closest("[data-cc-open]")) return;
+      e.preventDefault();
+      root.setAttribute("data-cc", "ask");
+      ccLayout();
+      var first = qs("[data-cc-set]", cc); if (first) first.focus();
+    });
+  }
+
   /* ================================================================ early-access forms: hero (inline) + dialog */
   var dialog = qs("#early");
   var forms = qsa(".lead-form");
@@ -105,7 +171,9 @@
   // WhatsApp bağlantısı: yeni sekmede açılır; tıklama niyet sinyali olarak cta_click (btn: whatsapp-<yer>) sayılır.
   doc.addEventListener("click", function (e) {
     var a = e.target.closest ? e.target.closest("[data-wa]") : null;
-    if (a) send("cta_click", { btn: "whatsapp-" + a.getAttribute("data-wa") });
+    if (!a) return;
+    send("cta_click", { btn: "whatsapp-" + a.getAttribute("data-wa") });
+    pixel("Contact");
   });
 
   var inlineIntent = false;
@@ -132,7 +200,7 @@
       fetch(API + "lead", { method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ sid: sid, email: email, consent: true, plan: chosenPlan || origin, utm: utm, dev: dev }) })
         .then(function (r) {
-          if (r.ok) return showDone(email);
+          if (r.ok) { showDone(email); pixel("Lead"); return; }
           if (r.status === 429) showError(M.msgRate || "Çok fazla deneme yapıldı. Biraz sonra tekrar dene.");
           else if (r.status === 400) showError(M.msgBad || "E-posta adresini kontrol edip tekrar dene.");
           else showError(M.msgFail || "Kaydın şu an alınamadı. Birazdan tekrar dene.");

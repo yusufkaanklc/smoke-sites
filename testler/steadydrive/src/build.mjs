@@ -2,6 +2,7 @@
 // Writes testler/steadydrive/site (Turkish only) from copy.mjs + page.css/page.js/core.js; scene.js runs at build time only.
 // v2: pre-registration page. Mobile first: headline (matches the ad hook), road scene + real app screen, one-field form
 // all on the first screen. CSS is inlined (one request less on slow mobile networks); kvkk.html links styles.css.
+// v3 (SMK-2): consent strip (#cc) at the bottom; the Meta pixel loads only after "Kabul et" (core.js).
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
@@ -26,11 +27,13 @@ const WA_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="current
 
 // Picks the ad hook before first paint (no layout shift): utm_content prefix, else the one saved by core.js this session.
 const hookScript = `<script>(function(){var d=document.documentElement,h=${JSON.stringify(HOOKS[0].id)},ids=${JSON.stringify(HOOKS.map((x) => x.id))};d.classList.add("js");try{var c=new URLSearchParams(location.search).get("utm_content")||JSON.parse(sessionStorage.getItem("smk_utm")||"{}").content||"";ids.forEach(function(i){if(c.indexOf(i)===0)h=i})}catch(e){}d.setAttribute("data-hook",h)})()</script>`;
+// v3: consent strip shows before first paint when no choice is stored (core.js reads the same key and loads the pixel only on "accept").
+const ccScript = `<script>(function(){var d=document.documentElement,s=null;try{s=localStorage.getItem("smk_consent")}catch(e){}if(s!=="accept"&&s!=="reject")d.setAttribute("data-cc","ask")})()</script>`;
 // Default hook visible without JS; each other hook swaps in through its data-hook rule.
 const hookCss = HOOKS.slice(1).map((k) => `.hk--${k.id}{display:none}[data-hook="${k.id}"] .hk--${HOOKS[0].id}{display:none}[data-hook="${k.id}"] h1 .hk--${k.id}{display:inline}[data-hook="${k.id}"] svg.hk--${k.id}{display:block}`).join("");
 
 function page(c) {
-  const h = c.hero, a = c.after, hw = c.how, k = c.karne, kn = c.know, d = c.dialog, wa = c.wa;
+  const h = c.hero, a = c.after, hw = c.how, k = c.karne, kn = c.know, d = c.dialog, wa = c.wa, cc = c.cc;
   const waUrl = `https://wa.me/${wa.number}?text=${encodeURIComponent(wa.text)}`;
   const waBtn = (origin) => `<p class="wa-or">${esc(wa.or)}</p>
         <a class="btn btn--wa" href="${waUrl}" target="_blank" rel="noopener" data-wa="${origin}">${WA_ICON}${esc(wa.label)}</a>
@@ -64,6 +67,7 @@ function page(c) {
 <link rel="preload" href="fonts/barlow-semi-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 ${hookScript}
+${ccScript}
 <style>${assets["styles.css"]}${hookCss}</style>
 </head>
 <body>
@@ -158,10 +162,15 @@ ${hookScript}
 <footer class="foot"><div class="wrap foot-in">
   <a class="logo" href="./">${MARK}<span>${esc(c.name)}</span></a>
   <p>${esc(c.footer.text)}</p>
-  <p><a href="kvkk.html">${esc(c.footer.legal)}</a></p>
+  <p><a href="kvkk.html">${esc(c.footer.legal)}</a> · <button type="button" class="linkbtn" data-cc-open>${esc(cc.reopen)}</button></p>
 </div></footer>
 
 <div class="sticky" role="region" aria-label="${esc(c.sticky.text)}"><span>${esc(c.sticky.text)}</span><button class="btn btn--y" data-cta="sticky" tabindex="-1">${esc(c.sticky.cta)}</button></div>
+
+<div class="cc" id="cc" role="region" aria-label="${esc(cc.label)}" data-pixel="${esc(cc.pixel)}"><div class="cc-in">
+  <p id="cc-text">${esc(cc.text)} <a href="kvkk.html#cerez" target="_blank" rel="noopener">${esc(cc.link)}</a></p>
+  <div class="cc-b"><button type="button" class="btn btn--cc" data-cc-set="reject">${esc(cc.reject)}</button><button type="button" class="btn btn--cc" data-cc-set="accept">${esc(cc.accept)}</button></div>
+</div></div>
 
 <dialog class="modal" id="early" aria-labelledby="early-title"${msgAttrs}>
   <div class="modal-in">
@@ -249,6 +258,6 @@ for (const c of [TR]) {
   fs.writeFileSync(path.join(out, "kvkk.html"), legal(c));
   fs.writeFileSync(path.join(out, "robots.txt"), robots);
   fs.writeFileSync(path.join(out, "favicon.svg"), faviconSvg);
-  fs.writeFileSync(path.join(out, "durum.json"), JSON.stringify({ slug: c.slug, name: c.name, version: 2, built_at: built }, null, 2) + "\n");
+  fs.writeFileSync(path.join(out, "durum.json"), JSON.stringify({ slug: c.slug, name: c.name, version: 3, built_at: built }, null, 2) + "\n");
   console.log("built", c.slug, fs.readdirSync(out).length, "entries");
 }

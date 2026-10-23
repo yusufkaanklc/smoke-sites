@@ -61,3 +61,14 @@ Smoke test "geçerli" kapandı; sahte kapı yerine gerçek ön kayıt kampanyas�
 
 ### Üretim notu
 `src/package.json` (`"type": "commonjs"`) şart: üst klasördeki `type: module`, `scene.js`'i ESM yapıp build'i bozuyordu.
+
+## v3: Meta pikseli + çerez onay şeridi (23.10.2026, SMK-2)
+Ön kayıt kampanyası Meta'da LANDING_PAGE_VIEWS ile optimize ediyordu; kayıt başı maliyeti Meta'da görmek için piksel (1663309671877482) eklendi. Kampanya ayarı bu işin kapsamında değil.
+
+- **Onaydan önce Meta'ya hiçbir istek yok.** `<head>`teki küçük betik `localStorage.smk_consent` boşsa ilk boyamadan önce `data-cc="ask"` koyar, şerit görünür. `fbevents.js` (async) ancak "Kabul et"ten sonra, ya da daha önce kabul etmiş biri geri geldiğinde indirilir. JS yoksa şerit de piksel de yok.
+- **Şerit:** altta, beyaz, mavi üst çizgi; "Reddet" / "Kabul et" aynı stil ve boyutta (sarı kullanılmadı, CTA'yla yarışmasın). 390×844'te şerit 735 px'ten başlıyor (2 satır metin, 109 px); başlık, e-posta alanı, buton (603 px) ve onay kutusu (650 px) açıkta. 360 px'te metin 3 satır (128 px). Yapışkan CTA şeridin üstüne oturur (`--cc-h`).
+- **Piksel olayları:** `PageView` (yüklenince), `Lead` (`/api/lead` 200 döndükten sonra, `showDone` ile aynı yerde), `Contact` (WhatsApp tıklaması). Seçim yapılmadan olan Lead/Contact bellekte bekler; "Kabul"de gönderilir, "Reddet"te atılır.
+- **Kişisel veri yok:** piksele yalnızca olay adı gider. `fbq('set','autoConfig',false,id)` ile otomatik olaylar kapalı, gelişmiş eşleştirme kullanılmıyor. Testte `/tr` isteklerinde e-posta ya da `ud[...]` yoktu. Events Manager'da "otomatik gelişmiş eşleştirme" kapalı tutulmalı.
+- **Rızayı geri alma:** altbilgideki "Çerez tercihi" şeridi yeniden açar. "Reddet" → `fbq('consent','revoke')`, `_fbp` / `_fbc` çerezleri silinir, o andan sonra piksel bir şey göndermez.
+- **Ölçüm sözleşmesine eklenen:** `consent_accept`, `consent_reject` (yalnızca düğmeye basılınca; yenilemede tekrar sayılmaz). Sunucu `api.py` `EVENTS` listesinde bu iki olay olmadan 400 döner (smoke-control tarafında eklenmesi gerekir). Diğer olaylar değişmedi.
+- **Ölçüm (yerel, sıkıştırmasız sunucu, Lighthouse 12 mobil):** Performance 94-95, Accessibility 100, CLS ≈ 0,02 (main'de de aynı, font değişimi). LCP öğesi başlık; şerit değil.
