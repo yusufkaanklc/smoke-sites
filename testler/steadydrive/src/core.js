@@ -74,6 +74,7 @@
   // Piksele yalnızca olay adı gider (PageView, Lead, Contact): e-posta yok, gelişmiş eşleştirme yok, otomatik olaylar kapalı.
   var cc = qs("#cc[data-pixel]"), CC_KEY = "smk_consent";
   var consent = null, pending = []; // pending: seçim yapılmadan olan Lead/Contact; "Kabul"de gönderilir, "Reddet"te atılır
+  var opener = null; // şeridi altbilgiden açan düğme; seçimden sonra odak ona döner
   function pixel(name) {
     if (!cc) return;
     if (consent === "accept") { try { window.fbq("track", name); } catch (e) {} }
@@ -103,6 +104,7 @@
     try { localStorage.setItem(CC_KEY, v); } catch (e) {}
     root.removeAttribute("data-cc");
     ccLayout();
+    if (opener) { opener.focus(); opener = null; }
     send(v === "accept" ? "consent_accept" : "consent_reject");
     if (v === "accept") {
       if (window.fbq) window.fbq("consent", "grant"); else loadPixel(cc.getAttribute("data-pixel"));
@@ -118,7 +120,9 @@
     if (consent === "accept") loadPixel(cc.getAttribute("data-pixel"));
     else if (consent === null) root.setAttribute("data-cc", "ask");
     ccLayout();
-    addEventListener("resize", ccLayout, { passive: true });
+    // Şerit yalnız ekran genişleyince değil, web fontu geç gelince de uzar (360 px'te 2 → 3 satır).
+    if (window.ResizeObserver) new ResizeObserver(ccLayout).observe(cc);
+    else addEventListener("resize", ccLayout, { passive: true });
     cc.addEventListener("click", function (e) {
       var b = e.target.closest ? e.target.closest("[data-cc-set]") : null;
       if (b) setConsent(b.getAttribute("data-cc-set"));
@@ -127,6 +131,7 @@
     doc.addEventListener("click", function (e) {
       if (!e.target.closest || !e.target.closest("[data-cc-open]")) return;
       e.preventDefault();
+      opener = e.target.closest("[data-cc-open]");
       root.setAttribute("data-cc", "ask");
       ccLayout();
       var first = qs("[data-cc-set]", cc); if (first) first.focus();
