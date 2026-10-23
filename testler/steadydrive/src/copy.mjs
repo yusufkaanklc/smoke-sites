@@ -3,13 +3,27 @@
 // Legal page: Kirakarne text (e-mail + optional WhatsApp number + anonymous visit data) plus the closed-test purpose.
 import { TR as KT } from "../../kirakarne/src/copy.mjs";
 
+// v3 (SMK-2): Meta pikseli açık rızaya bağlı; ne toplandığı, amaç, yurt dışı aktarım ve rızanın geri alınması ayrı bölümde (#cerez).
+const cookies = `<h2 id="cerez">Çerezler ve Meta pikseli</h2>
+  <p>Sayfanın altındaki çerez şeridinde "Kabul et"i seçersen sayfaya Meta Platforms'un ölçüm aracı olan Meta pikseli yüklenir. "Reddet"i seçersen ya da hiçbir seçim yapmazsan piksel hiç yüklenmez ve sayfayı aynı şekilde kullanırsın.</p>
+  <ul>
+    <li><strong>Ne toplanır:</strong> ziyaret ettiğin sayfanın adresi (reklam etiketleri ve reklam tıklama kimliği dahil), geldiğin sayfa, tarayıcı ve cihaz bilgileri, IP adresin, ziyaret zamanı ve şu olaylar: sayfanın görüntülenmesi, ön kaydın tamamlanması, WhatsApp bağlantısına tıklanması. Meta tarayıcına "_fbp" adlı bir çerez yerleştirir (90 gün) ve bu tarayıcıda Facebook ya da Instagram'a girişliysen ziyaretini hesabınla eşleştirebilir. E-posta adresin, telefon numaran ya da forma yazdığın başka bir bilgi piksele gönderilmez.</li>
+    <li><strong>Amaç ve hukuki sebep:</strong> Meta'daki reklamlarımızın kaç ön kayıt getirdiğini ölçmek ve reklamların ilgilenebilecek kişilere gösterilmesini sağlamak. Bu işleme ve yurt dışına aktarıma yalnızca açık rızan varsa başvurulur.</li>
+    <li><strong>Yurt dışına aktarım:</strong> Piksel verileri tarayıcından doğrudan Meta Platforms Ireland Limited'e (İrlanda) gider; Meta bu verileri ABD dahil başka ülkelerdeki sunucularında da işleyebilir ve kendi koşulları çerçevesinde reklam sistemlerini geliştirmek için kullanabilir. Bu veriler Meta'nın <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">gizlilik ilkesine</a> tabidir.</li>
+    <li><strong>Rızanı geri almak:</strong> Sayfanın altındaki "Çerez tercihi" bağlantısından istediğin an "Reddet"i seçebilirsin; piksel o andan sonra veri göndermez ve Meta çerezleri tarayıcından silinir. Seçimin yalnızca bu tarayıcıda saklanır; tarayıcı verilerini silersen şerit yeniden çıkar. Daha önce gönderilmiş veriler için Facebook ya da Instagram ayarlarındaki "Meta teknolojileri dışındaki etkinliğin" bölümünü kullanabilir ya da bize yazabilirsin.</li>
+  </ul>
+  `;
+
 // Kapalı test daveti yeni bir amaç ve Google'a aktarım demek: aydınlatma metnine yazılır (yalnızca Steady Drive).
 const legal = (html) => html
   .replace("yalnızca Steady Drive yayına çıktığında seni bilgilendirmek için işlenir.",
     "yalnızca Steady Drive yayına çıktığında seni bilgilendirmek ve yayından önce uygulamanın kapalı testine davet etmek için işlenir.")
   .replace("Veriler veri sorumlusunun kontrolündeki sunucuda saklanır ve üçüncü kişilerle paylaşılmaz, satılmaz.",
-    "Veriler veri sorumlusunun kontrolündeki sunucuda saklanır ve satılmaz. Kapalı teste katılmak için davet bağlantısını kabul edersen e-posta adresin, yalnızca test erişimi tanımlamak amacıyla Google Play Console'daki test kullanıcıları listesine eklenir; bu aktarım Google'ın kendi koşullarına tabidir. Bunun dışında üçüncü kişilerle paylaşılmaz.")
-  .replace("Sürüm: v1", "Sürüm: v2 (kapalı test daveti eklendi)");
+    "Veriler veri sorumlusunun kontrolündeki sunucuda saklanır ve satılmaz. Kapalı teste katılmak için davet bağlantısını kabul edersen e-posta adresin, yalnızca test erişimi tanımlamak amacıyla Google Play Console'daki test kullanıcıları listesine eklenir; bu aktarım Google'ın kendi koşullarına tabidir. Bunun dışında, yalnızca çerezleri kabul edersen aşağıda anlatılan Meta pikseli verileri Meta'ya gider; başka üçüncü kişilerle paylaşılmaz.")
+  .replace("adın, IP adresin veya çerez kaydedilmez.</li>",
+    "bu ölçümde adın, IP adresin veya çerez kaydedilmez.</li>\n    <li><strong>Meta pikseli verileri:</strong> yalnızca çerez şeridinde \"Kabul et\"i seçersen. Ayrıntısı aşağıdaki \"Çerezler ve Meta pikseli\" bölümünde.</li>")
+  .replace("<h2>Hakların</h2>", cookies + "<h2>Hakların</h2>")
+  .replace("Sürüm: v1", "Sürüm: v3 (Meta pikseli ve çerez tercihi eklendi)");
 
 // Reklam kancaları: utm_content bu önekle başlıyorsa başlık ve sahne o kancanınki olur; yoksa ilki (usta).
 export const HOOKS = [
@@ -104,6 +118,12 @@ export const TR = {
     doneTitle: "Ön kaydın alındı",
     donePre: "Kapalı test daveti ve çıkış haberi ", donePost: " adresine gelecek. Başka bir amaçla e-posta göndermeyeceğiz.",
     doneBtn: "Tamam", msgs: null,
+  },
+  // v3 (SMK-2): Meta pikseli yalnızca "Kabul et"ten sonra yüklenir. İki düğme eşit ağırlıkta; metin amaç + Meta + yurt dışı aktarımı söyler.
+  cc: {
+    label: "Çerez tercihi", pixel: "1663309671877482",
+    text: "Meta çereziyle reklamlarımızı ölçelim mi? Kabul edersen ziyaret verin Meta'ya, yurt dışına aktarılır.", // 390 px'te 2 satır
+    link: "Ayrıntılar", reject: "Reddet", accept: "Kabul et", reopen: "Çerez tercihi",
   },
   wa: {
     number: "905306329579", label: "WhatsApp'tan haber al", or: "ya da",
