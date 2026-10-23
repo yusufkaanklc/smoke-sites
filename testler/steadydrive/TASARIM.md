@@ -73,3 +73,9 @@ Smoke test "geçerli" kapandı; sahte kapı yerine gerçek ön kayıt kampanyas�
 - **Ölçüm sözleşmesine eklenen:** `consent_accept`, `consent_reject` (yalnızca düğmeye basılınca; yenilemede tekrar sayılmaz). Sunucu `api.py` `EVENTS` listesinde bu iki olay olmadan 400 döner (smoke-control PR'ıyla eklendi; o PR önce birleşmeli). Diğer olaylar değişmedi.
 - **Ölçüm (yerel, sıkıştırmasız sunucu, Lighthouse 12 mobil):** Performance 94-95, Accessibility 100, CLS ≈ 0,02 (main'de de aynı, font değişimi). LCP öğesi başlık; şerit değil.
 - **KVKK v3:** `copy.mjs` → `cookies` (`kvkk.html#cerez`): ne toplanır, amaç (ölçüm + reklam gösterimi), Meta Platforms Ireland'a ve ABD'ye aktarım, rızanın "Çerez tercihi"nden geri alınması. "Bunun dışında üçüncü kişilerle paylaşılmaz" cümlesi piksel istisnasıyla güncellendi. Onay metni ve şerit metni: Yusuf, 23.10.2026 22:25 (#ai-studio, "İki işe de onay veriyorum").
+
+### v3.1: kısa görünür alan (23.10.2026, SMK-3)
+Instagram/Facebook uygulama içi tarayıcısında 390×844 bir telefonda görünür alan ≈ 390×670-750; şerit açıkken buton ve onay kutusu şeridin altında kalıyordu.
+- **Kural:** `@media (max-width:899px) and (max-height:799px)` (`page.css`, şerit bloğunun altında). 800 px ve daha uzun ekranlar ile masaüstü değişmedi (390×844, 360×800 ölçüleri birebir aynı).
+- **Ne sıkıştı:** sahne yalnızca gökyüzünden kırpılıyor (`.scene svg{margin-top:-7.5%}`, "Sınır 50" ve "Yaya" etiketlerinin üstü; uyarı şeridi ve gerçek ekran yerinde), "Ön kayıt olana" başlığı gizli (iki madde duruyor), başlık 30 px, alt metin ve maddeler 14 px, boşluklar 8 px; şeritte iç boşluk 8 px, düğmeler 40 px (ikisi hâlâ aynı stil ve boyutta). Metinlere dokunulmadı.
+- **Ölçüm (şerit açık, fontlar yüklü, iki kanca):** 390×700 kutu altı 548 / şerit 600; 375×667 558 / 567; 360×680 550 / 562; 390×750 548 / 650. 320×568'de form hâlâ şeridin altında (kapsam dışı).
