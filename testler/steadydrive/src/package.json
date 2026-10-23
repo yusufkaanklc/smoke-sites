@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "type": "commonjs",
+  "description": "scene.js is a classic script (CommonJS in Node); a type:module package.json higher up must not turn it into ESM"
+}

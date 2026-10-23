@@ -1,21 +1,8 @@
-/* Steady Drive page script: road scene loop, reveal-on-scroll, sticky CTA.
-   Progressive enhancement: the page reads fully without it. */
+/* Steady Drive page script (v2): sticky CTA on phones. Progressive enhancement: the page reads fully without it.
+   v1's road-scene loop and reveal-on-scroll are gone: the hero frame is static SVG rendered at build time. */
 (function () {
   "use strict";
-  var doc = document;
-  var qs = function (s, el) { return (el || doc).querySelector(s); };
-  var qsa = function (s, el) { return Array.prototype.slice.call((el || doc).querySelectorAll(s)); };
-
-  var svg = qs("#scene");
-  if (svg && window.DriveScene) DriveScene.mount(svg);
-
-  var items = qsa(".rv");
-  if ("IntersectionObserver" in window && items.length) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-    }, { threshold: 0.08 });
-    items.forEach(function (el) { io.observe(el); });
-  } else items.forEach(function (el) { el.classList.add("in"); });
+  var qs = function (s) { return document.querySelector(s); };
 
   /* sticky CTA (phones): appears once the hero form has scrolled away, hides at the closing band */
   var sticky = qs(".sticky"), heroForm = qs(".hero .lead-inline"), closing = qs(".close");
